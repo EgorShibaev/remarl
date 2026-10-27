@@ -1,0 +1,38 @@
+{
+  "time": 1792858403.6847255,
+  "root": "/data/horse/ws/egsh587h-ldlm/remasking/baseline-reevaluation-i8022-20261024",
+  "holder": "2362070",
+  "node": "i8022",
+  "gpus": 8,
+  "cpus": 32,
+  "memory": "320G",
+  "no_training": true,
+  "model": "frozen LLaDA-8B-Instruct",
+  "answer_length": 256,
+  "token_temperature": 0.0,
+  "protocols": {
+    "math": {
+      "rows_sha256": "6dbd873a44deecdd4f6aa9102006abe4f7a79a04da441c06e1ccaf7dbaa5b8a0",
+      "model_sha256": "73cac7db80542a3c25e1448332175864b5a9e53cd7c943fe76e107b736b3c0bd",
+      "expected_cells": 168,
+      "reused_cells": 18,
+      "source": "/data/horse/ws/egsh587h-ldlm/remasking/high-nfe-reproduction-i8022-20261023-v2/math"
+    },
+    "code": {
+      "rows_sha256": "0b0de7cd05b4425fcfc54a27b47c28bbb20c9d3aa95c4ebcd715cb957e1da6f5",
+      "model_sha256": "73cac7db80542a3c25e1448332175864b5a9e53cd7c943fe76e107b736b3c0bd",
+      "expected_cells": 60,
+      "reused_cells": 0,
+      "source": "/data/horse/ws/egsh587h-ldlm/remasking/high-nfe-reproduction-i8022-20261023-v2/code"
+    }
+  },
+  "tasks": 9915,
+  "new_answers": 156345,
+  "seeds": "one deterministic; three inference seeds for Random",
+  "adaptive": "EB entropy budgets .001/.01/.1/1/10; KLASS confidence .6, KL .001/.01/.015/.1; actual NFE recorded",
+  "checkpoints": "SAS released GSM8K weights have 512 positional slots; 1 GSM8K and37 MATH prompts exceed limit. APPLe/UPO matching weights unverified.",
+  "pending_adapters": [
+    "WINO custom attention/positions",
+    "ReMDM faithful schedule/budget mapping"
+  ]
+}

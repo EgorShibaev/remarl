@@ -1,0 +1,27 @@
+{
+  "train": 9148,
+  "inputs_sha256": "0f8d2d9c748af654bc40c40ec0177358067b8e5c9f9139f352560ae5dc4e31d3",
+  "rows_sha256": "60ecf948f0028219cb6cdff757889f9a0eb10624b6411a5c409bcf4562d3268d",
+  "required_canvas": 4726,
+  "cohort_manifest_sha256": "df4cbe2c26d7220e581a0927c40ab74b485a70af02a46eefaffb475748323fac",
+  "raw_hashes": {
+    "mbpp-test.parquet": "566fd53060ffba5766dace1d1e2f4c38906781526de222b0dfbdbc325b696c77",
+    "kodcode.parquet": "cd777b078dd700d7e87c2f42ae2cb1d28de91625da92066fffda219eb9193c93",
+    "mbpp-prompt.parquet": "a053e4bb85ceb77430ae80592addb4ca4dc6ba087592f9e04537800ee88b7431",
+    "humaneval.parquet": "2f2871a15fbc95b6c683043359f4ed8e144c5a1c4f24f25f66bc51f598dfcfb6"
+  },
+  "exact_APPLe_train_and_test_prompts": true,
+  "no_prompt_truncation": true,
+  "benchmark_counts": {
+    "humaneval": 164,
+    "mbpp": 500
+  },
+  "probe_is_training_only": true,
+  "continuation_quarantine_sources": [
+    6395,
+    6941,
+    8633
+  ],
+  "train_probe_changed": false,
+  "benchmark_prompts_tokens_tests_unchanged": true
+}

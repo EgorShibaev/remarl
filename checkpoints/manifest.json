@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-27",
+  "drive_folder": "https://drive.google.com/drive/u/0/folders/1UFagh30vsvA-3jK-3sAf_iREaiQ3mxki",
+  "backbone": {
+    "repo": "GSAI-ML/LLaDA-8B-Instruct",
+    "revision": "08b83a6feb34df1a6011b80c3c00c7563e963b07",
+    "distributed": false
+  },
+  "checkpoints": [
+    {
+      "file": "code16-32k.pt",
+      "domain": "code",
+      "train_nfe": 16,
+      "accepted_groups": 32768,
+      "sha256": "60014f2d7655360cacddcb405f7e7a5659f0bd0c685eee0126e263996561dd51",
+      "bytes": 3461002,
+      "policy_sha256": "826a88b56d3c6bf6168f1ba4ba6ca58bfd8c4f5257903d787d1b0bd605a865b5",
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+    },
+    {
+      "file": "code32-32k.pt",
+      "domain": "code",
+      "train_nfe": 32,
+      "accepted_groups": 32768,
+      "sha256": "2bb9dcd5c19668160d773deebc1e9e513a9b0243b305720a32dae048230eb1cb",
+      "bytes": 3442506,
+      "policy_sha256": "99dd33cf3fb71f166be0ec6243e118f7b5b0697da68a891a6323c455665001df",
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+    },
+    {
+      "file": "code8-32k.pt",
+      "domain": "code",
+      "train_nfe": 8,
+      "accepted_groups": 32768,
+      "sha256": "3c9f4e6028e5f01da97f848f4a340d2f1c91b91e87f4a265206daecfe9f2b8c2",
+      "bytes": 3444170,
+      "policy_sha256": "cd29d19dbc27b9c3bb37b3eb6ff94d260745e871b866fd75f689b70d576ac401",
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+    },
+    {
+      "file": "math16-32k.pt",
+      "domain": "math",
+      "train_nfe": 16,
+      "accepted_groups": 32768,
+      "sha256": "add545dd944fe73a2302200b8411c6b928cc0c7685b24bef663ccb55817d9705",
+      "bytes": 3479306,
+      "policy_sha256": "cd5154ff262d94b876819873259594f8f2d9ab7ccd5af76174237178848fd727",
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+    },
+    {
+      "file": "math32-32k.pt",
+      "domain": "math",
+      "train_nfe": 32,
+      "accepted_groups": 32768,
+      "sha256": "bb7ee666fd31223d82e372256249eb51df6e3460b46cd1065309d7070c32fd43",
+      "bytes": 3467850,
+      "policy_sha256": "1e094cc10f7f3d3cf762fdbfd3aeee466467095110bc4d0544da5666abe69d0c",
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+    },
+    {
+      "file": "math4-32k.pt",
+      "domain": "math",
+      "train_nfe": 4,
+      "accepted_groups": 32768,
+      "sha256": "a1d5d06143d89a98f52c72571892951ec7db44e9e8be60c2345907ff183c70c5",
+      "bytes": 3440842,
+      "policy_sha256": "0e22ff43d93a5fa0fe526a2d6e9ab814f86974211a7398e15ff49cf878768987",
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+    },
+    {
+      "file": "math64-32k.pt",
+      "domain": "math",
+      "train_nfe": 64,
+      "accepted_groups": 32768,
+      "sha256": "58556599a9c0a568cb14d0def426fcf19ebd7b67acdb523c432380d7a00b8824",
+      "bytes": 3482826,
+      "policy_sha256": "ed750039ac736242a85c0fbde9ef46d52b76da3d779fa4cb0387411ffeef04bc",
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+    },
+    {
+      "file": "math8-32k.pt",
+      "domain": "math",
+      "train_nfe": 8,
+      "accepted_groups": 32768,
+      "sha256": "39bf7fcdf2f4574a8344a46c62e22309eb7ff5184dd135fc4456acf41055ac52",
+      "bytes": 3483594,
+      "policy_sha256": "906cbcb371135667593ca29b18542c1c1c994bd8287e985dbf13d3ad08986f76",
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+    }
+  ],
+  "training_architecture_asset": {
+    "file": "sota-selector.pt",
+    "sha256": "36b2938e70b2d82d8447f2035c6e864d61fcf42a990965ac577aef61cc87d3bc",
+    "note": "Fresh paper runs use its architecture configuration, not its trained weights."
+  }
+}

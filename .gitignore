@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.DS_Store
+*.pt
+*.safetensors
+*.arrow
+*.parquet
+*.log
+.env
+.env.*
+checkpoints/*.zip
+runs/
+assets/

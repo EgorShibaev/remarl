@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "created_utc": "2026-10-09T18:35:28.804519+00:00",
+  "status": "TRAINING_DATA_READY_FOR_RUNTIME_PREFLIGHT; no training launched",
+  "counts": {
+    "raw": 10000,
+    "reference_passed": 9311,
+    "retained": 9148,
+    "excluded": 852,
+    "reason_counts_nonexclusive": {
+      "reference_not_compatible": 689,
+      "bare_call_requires_arguments": 148,
+      "benchmark_overlap_candidate_quarantine": 156,
+      "no_statically_visible_test_checks": 43,
+      "runtime_reference_unstable": 5
+    },
+    "primary_reason_counts": {
+      "reference_not_compatible": 689,
+      "benchmark_overlap_candidate_quarantine": 155,
+      "bare_call_requires_arguments": 2,
+      "no_statically_visible_test_checks": 1,
+      "runtime_reference_unstable": 5
+    },
+    "reference_failure_categories": {
+      "required_argument_or_fixture": 106,
+      "missing_module": 148,
+      "other": 241,
+      "undefined_name": 172,
+      "empty_assertion_message": 22
+    },
+    "overlap_candidate_pairs": 192,
+    "overlap_candidate_rows": 156,
+    "overlap_candidate_benchmark_counts": {
+      "mbpp": 91,
+      "humaneval": 8
+    }
+  },
+  "source_revisions": {
+    "apple_commit": "1309c06470deeea529645efcb79bd0744a16c445",
+    "kodcode_revision": "dcf78a8bbba9a613b596ce993c4921a38687dfcc",
+    "humaneval_revision": "7dce6050a7d6d172f3cc5c32aa97f52fa1a2e544",
+    "mbpp_revision": "4bb6404fdc6cacfda99d4ac4205087b89d32030c",
+    "metric_revision": "b9bbd07a81faa38c020f938c01bfdcbf035b7f9b"
+  },
+  "raw_hashes": {
+    "mbpp-test.parquet": "566fd53060ffba5766dace1d1e2f4c38906781526de222b0dfbdbc325b696c77",
+    "kodcode.parquet": "cd777b078dd700d7e87c2f42ae2cb1d28de91625da92066fffda219eb9193c93",
+    "mbpp-prompt.parquet": "a053e4bb85ceb77430ae80592addb4ca4dc6ba087592f9e04537800ee88b7431",
+    "humaneval.parquet": "2f2871a15fbc95b6c683043359f4ed8e144c5a1c4f24f25f66bc51f598dfcfb6"
+  },
+  "audit_hashes": {
+    "data-audit.json": "2ebe39d344d02789b067bf82cc6f1822e2db18b863ac0078212b316206809af0",
+    "REFERENCE_AUDIT_COMPLETE.json": "b558538e04623a806de15ff98a70f963c6cd1aa58bf21af5b7f4837b8d15d91a",
+    "reference-kodcode.jsonl": "da4a07f4c24bf4b4bbeaaa4c712a0c850eeb77c2c5ec5653a595c31ccebddc34",
+    "reference-kodcode-summary.json": "9c7e2d8e60280cc5fd97b2c8e8a9568cd23460702812f7f1a3a2649e495d7059",
+    "sandbox-validation.json": "ec8ba28e291332a01109b2ad0779e0b86cfafc63155f678936c9a34f9c58128a",
+    "CPU_PREFLIGHT.json": "0812d3acfc2393e1b553abf0f6d5c5e3e80ca0c7b178fee0a18b9ffc91fc459e"
+  },
+  "protocol_hashes": {
+    "official/mbpp.py": "704a1d5d52cdfea76b4b09c89c872208ec10646540c59809367c808db5641a58",
+    "official/execute.py": "1c905e8de742d67e73f9bf4cd217d8ccd5e327bfc0f8db9d89077d7551e9cdb6",
+    "official/code_eval.py": "5bf43a92a8548f834396a3a2c0cfcd8b015d10e25bb3c1ed0ef93b6033d9e0a5",
+    "official/data_utils.py": "c4b522e535ab61a1ab53deded173e66ad96313f030a832182e4365ec4bd6381d",
+    "official/sanitize.py": "a524adcb35391e4ac95c5e3562d1b81a845613dddf787006bfe73c9764c69541",
+    "official/humaneval.py": "4bb2f73f1c48037f406777a007b6a6a207b3d049ffc8321cdc415d364f5107b2",
+    "sandbox.py": "2cd70259cf427134789e402bd5d291194f4a2c537ebe1964cf12d918b0be391a",
+    "sandbox_runner.py": "6bb7fa7c8e9eff1117fce291f132fcc9b3fa0a0d3dbfb40aca9ab4babc27472a",
+    "audit_references.py": "99d6007d022d2bbfcccc490b877ee2998b64f4ec4edd1dbb6af11fb5fdcff322",
+    "prepare.py": "43aa62797206972434a1617db07ffe3a7858676aab0af2b138c556d01f3c4938",
+    "build_seccomp.py": "09392b8d733d6d0ac1bcc7164fe134f9a8c1af82ac2047caefeebdc876794767",
+    "security_probe.py": "f8a98ea755f1ac8ef351dc091e18ed0dffa33bd1bfee33513401a7ef81649447",
+    "network-deny.bpf": "0eff3b9087bb5a3d600d7b545ca007217bfdf305babc992de73c3999b5e4a2df",
+    "network-deny.json": "a6cef60fa8750c43096aca36f23eaf35202134adf698115b95ce0fa96b2ef6b8"
+  },
+  "filter_sources": {
+    "screen.py": "af697b269723312422b9262a214e0e4d9948b21f00797ef509e8aa6f23c625f0",
+    "build_subset.py": "cc72b098d90984c1876f001ca9f479d2fca03601767048dbef7418d6274bee27"
+  },
+  "screening_sha256": "a3e3b9a4b52dd5db7ebb93dad1e3a26d7269f8bc0837307f43d01172b53fd21f",
+  "artifact_hashes": {
+    "train.parquet": "6ded9d1fcb6f37898ac9eecc9d151ee254848ab4b692cb45e8cda8f86befd9ed",
+    "allowlist.jsonl": "96c916b856d17202c519a59abf0b2051aa23f0278bf62d91480ecd165ab69ec8",
+    "exclusions.jsonl": "1c2e54224a3e03198882a73073f4919a737b245c64a10d90f58a76a5255a66ca"
+  },
+  "policy": "Keep reference-passing rows with visible checks, no required bare-call arguments, and no lexical/structural overlap candidate. Original rows preserved exactly. Additionally quarantine any previously retained reference failing any of three isolated runtime repeats or the 24-run instability probe. No reference/test repairs.",
+  "screening_rules": "literal5gram + TFIDF word1/2>=0.5 + char3/5>=0.65 + identifier-normalized exactAST",
+  "limitation": "Conservative candidate quarantine, not exhaustive semantic decontamination or proof of strong tests. Protocol/dependency/resource changes require re-audit. Three passing repeats are a practical stability screen, not a proof of deterministic tests.",
+  "benchmark_policy": "All 164 HumanEval and 500 MBPP questions retained unchanged, including benchmark reference failures. No benchmark-driven checkpoint selection.",
+  "runtime_policy": "Sandbox/process/protocol failures raise and abort collection; never zero reward. Health probes required before training and each collection; generated-program test failures remain ordinary zero reward. Full candidate program expected.",
+  "runtime_limits": {
+    "official_seconds": 3,
+    "outer_seconds": 8,
+    "address_space_bytes": 1073741824,
+    "no_home": true,
+    "no_network": true
+  },
+  "raw_data_unchanged": true,
+  "live_jobs_changed": false,
+  "data_revision": "validated-kodcode-v4",
+  "parent_manifest_sha256": "719019c6989727d6f90cce83f4a7060c6045e93536bf0d253bbfa5ba1f7297cf",
+  "runtime_reaudit_sha256": "5012e2e71c0839a47fa92bb02ce08b0846168c54add0050a8d81b315e82d4c8c",
+  "runtime_additional_quarantine": [
+    4886,
+    6395,
+    6941,
+    8633,
+    8871
+  ],
+  "runtime_packages_sha256": "e2f711818ab4e616dd8182d4cd07a75bd7755d46bf99a387322fbec688aebfa3",
+  "runtime_audit_python": "3.12.13 (main, Mar 24 2026, 22:49:22) [Clang 22.1.1 ]",
+  "continuation_parent_manifest_sha256": "c78167589077ff4d0732921d3e78e53793c8f2e27bacd83ce040ff85e03ecba3",
+  "continuation_audit_sha256": "fc6f788927417248b5b3a6df3356075fca3e2438e3b7491fd251cfc162372be3",
+  "continuation_additional_quarantine": [
+    8633
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "initialization": "fresh",
+  "training_questions": 14973,
+  "accepted_groups_per_batch": 16,
+  "groups_per_minibatch": 16,
+  "passes": 4,
+  "target_accepted_groups": 32768,
+  "lr_schedule": "constant",
+  "learning_rate": 0.0001,
+  "minimum_lr": 3e-06,
+  "policy_width": null,
+  "nfe": 32
+}

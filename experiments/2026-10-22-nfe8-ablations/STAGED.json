@@ -1,0 +1,97 @@
+{
+  "user": "egsh587h",
+  "uid": 2224008,
+  "node": "i8022",
+  "holder": "2362070",
+  "name": "a8abl",
+  "gpus": 8,
+  "root": "/data/horse/ws/egsh587h-ldlm/remasking/nfe8-ablations-i8022-20261022",
+  "original": "/data/horse/ws/ivkl506h-ldlm/egor-recovery-i8035-20261008/nfe8",
+  "runtime_source": "/data/horse/ws/egsh587h-ldlm/remasking/code32-pipeline-i8022-20261022/runtime",
+  "policy_assets": "/data/horse/ws/egsh587h-ldlm/remasking/code32-seccomp-i8025-20261014/runtime",
+  "variants": [
+    "no_revision",
+    "no_hidden",
+    "no_position",
+    "bias_only"
+  ],
+  "nfe": 8,
+  "target_groups": 32768,
+  "training_seed": 7,
+  "inference_seeds": [
+    101,
+    202,
+    303
+  ],
+  "training_questions": 14973,
+  "accepted_groups_per_batch": 16,
+  "answers_per_group": 8,
+  "minibatch_trajectories": 128,
+  "passes": 4,
+  "learning_rate": 0.0001,
+  "initialization": "fresh-stochastic-P2",
+  "checkpoint_groups": [
+    0,
+    4096,
+    8192,
+    16384,
+    32768
+  ],
+  "ablation_definitions": {
+    "1": "P2 position-temperature sweep [0,.05,.1,.25,.5,1,2], argmax token proposals",
+    "2": "Retrain with monotone visibility; ordered-PL support excludes previously visible positions",
+    "3": "Retrain with hidden projection fixed to zero; architecture dimensions otherwise unchanged",
+    "4": "Retrain with position embedding fixed to zero; architecture dimensions otherwise unchanged",
+    "5": "Retrain position[256]+mask[2] additive biases only; no other learned correction",
+    "6": "No-RL P2 retention bonus calibrated to full NFE8 policy revision rate on 256 training questions"
+  },
+  "schedules": {
+    "immediate": {
+      "controls": [
+        0,
+        1
+      ],
+      "no_hidden": [
+        2,
+        3
+      ],
+      "no_position": [
+        4,
+        5
+      ],
+      "bias_only": [
+        6,
+        7
+      ]
+    },
+    "after_controls": {
+      "no_revision": [
+        0,
+        1
+      ]
+    }
+  },
+  "calibration": "128 GSM8K + 128 MATH training questions; no test-based hyperparameter selection",
+  "automatic_retry": false,
+  "staged_at": 1792695453.6631415,
+  "reference_policy_sha256": "906cbcb371135667593ca29b18542c1c1c994bd8287e985dbf13d3ad08986f76",
+  "reference_checkpoint_sha256": "39bf7fcdf2f4574a8344a46c62e22309eb7ff5184dd135fc4456acf41055ac52",
+  "original_source_manifest_sha256": "bde90b8873c18b395b267bb73847dcd75478c457699a76f3daaa830b9dccff2c",
+  "inputs_sha256": "ef62fc23fbd226891aa108ed0d5bc7239a29000a46837424cec080fad5994f7d",
+  "rows_sha256": "6dbd873a44deecdd4f6aa9102006abe4f7a79a04da441c06e1ccaf7dbaa5b8a0",
+  "runtime": "/tmp/egsh587h-remask-code32-20261022.Rnk1Tx",
+  "git_commit": "7db77973abb3b9f5bb38e7ab889242f629f3ee8d",
+  "parent_file_hashes": {
+    "worker.py": "c25fd0b6b76f397144790dff9330c2cf85d7b9aeb591d7bd217184f18db758aa",
+    "train_batch_grpo.py": "5f982ceffd5cf627c366a1131492c622de9bb1b624e3878131ad61d7a1adabf4",
+    "batch_grpo_recipe.py": "e4016633461a94428db79f712e680a22547949d31d52f3b4d8806598902bd46f",
+    "batch_grpo_core.py": "f12150bf8e479317b9bd5994f2a31c302edc7d917639f08f103a5617d1d21c95",
+    "benchmark_native.py": "f90efc38eefffd360c9246c34d728683592df09911c5c62c6e5a839f30d5db42",
+    "evaluate_p2.py": "fc4723ce923cb6ce58fc58c2bed87a11a789a1b5d56ab290e7c1cf5ac509c127",
+    "paper_protocol.py": "7aeee3bb5c0e6876e0e128741767800ddb29ef3bde43a68f71b5126adfca239a",
+    "model.py": "73cac7db80542a3c25e1448332175864b5a9e53cd7c943fe76e107b736b3c0bd",
+    "data-audit.json": "04a5ae7cc609044011935d6d0faf37859a51177c6b11c7c321444c148c674150",
+    "inputs.pt": "ef62fc23fbd226891aa108ed0d5bc7239a29000a46837424cec080fad5994f7d",
+    "rows.json": "6dbd873a44deecdd4f6aa9102006abe4f7a79a04da441c06e1ccaf7dbaa5b8a0"
+  }
+}
