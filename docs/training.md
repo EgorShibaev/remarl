@@ -15,7 +15,7 @@ PYTHONPATH=native python native/train_batch_grpo.py train \
 
 Use a fresh run directory, copy the contents of `native/` there, and copy the chosen `configs/math*-32k.json` to its `recipe.json`. The run must contain `inputs.pt`, `rows.json`, `data-audit.json`, `source.sha256`, and the `official/` scorers. `prepare_paper.py` builds the input tensors and data audit from the four source Arrow files named in that script. It uses the pinned tokenizer and APPLe prompts without truncating prompts.
 
-The asset directory contains `sota-selector.pt` from the Drive archive, `checkpoint_manifest.json` identifying the backbone files, and `local_root.txt`, whose contents are the local directory containing `models/LLaDA-8B-Instruct`. The seed checkpoint supplies architecture settings for fresh training. The recipe sets `initialization: fresh`; it does not initialize from that checkpoint's trained weights.
+The asset directory contains `sota-selector.pt` from the Drive archive, `checkpoint_manifest.json` identifying the backbone files, and `local_root.txt`, whose contents are the local directory containing `models/LLaDA-8B-Instruct`. The recorded backbone manifest is included at `training/code16/runtime/checkpoint_manifest.json`. The seed checkpoint supplies architecture settings for fresh training. The recipe sets `initialization: fresh`; it does not initialize from that checkpoint's trained weights.
 
 The math mixture is GSM8K train plus MATH train. Use the revisions and raw-file hashes in `provenance/*/data-audit.json`. Source manifests are checksums of the copied run files. Recompute manifests for a deliberately relocated run; do not replace historical receipts or disable input checks to force a run through. `--resume` expects the original run state and matching source/data receipts.
 
@@ -44,3 +44,5 @@ python verify_checkpoints.py checkpoints
 ```
 
 The CPU tests use fake backbones. They check ordered probabilities, transitions, rollout/replay agreement, and training utilities without downloading LLaDA or executing generated code.
+
+On 27 October 2026, all 61 tests above passed in the environment recorded in `environments/local-qa-packages.txt`. All eight released policy files and the architecture asset passed SHA256 verification. These checks do not establish GPU parity for the new `generate.py` wrapper.
