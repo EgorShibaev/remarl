@@ -70,4 +70,4 @@ Each candidate runs in a separate process namespace with a private scratch direc
 
 `results/benchmark-observations.csv` contains the saved observations with method, block geometry, measured NFE, score, and source. `data-receipt.json` retains detailed table inputs and original receipt hashes. Historical receipt paths identify the original experiments; commands do not depend on those paths.
 
-Source labels are `C` for computed results, `A` for APPLe, `U` for UPO, and `S` for SAS. The paper displays computed results without a superscript. Plot scripts and full figure data are in [remarl-plots](https://github.com/EgorShibaev/remarl-plots).
+Source labels are `C` for computed results, `A` for APPLe, `U` for UPO, and `S` for SAS. The paper displays computed results without a superscript.

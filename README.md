@@ -4,7 +4,7 @@ Code for **ReMaRL: Learning to Unmask and Remask in Frozen Diffusion Language Mo
 
 ReMaRL learns which answer positions to reveal, retain, or remask while keeping LLaDA-8B-Instruct frozen. A small MLP reads token confidence, mask state, position, and hidden features. GRPO trains the policy using final-answer correctness rewards.
 
-[Public checkpoints](https://drive.google.com/drive/u/0/folders/1UFagh30vsvA-3jK-3sAf_iREaiQ3mxki) · [Training](docs/training.md) · [Evaluation](docs/evaluation.md) · [Inference](docs/inference.md) · [Plotting repository](https://github.com/EgorShibaev/remarl-plots)
+[Public checkpoints](https://drive.google.com/drive/u/0/folders/1UFagh30vsvA-3jK-3sAf_iREaiQ3mxki) · [Training](docs/training.md) · [Evaluation](docs/evaluation.md) · [Inference](docs/inference.md)
 
 ## Install
 
@@ -74,7 +74,7 @@ tests/          Optimizer, checkpoint, rollout, and decoder-reference tests
 environments/   Package inventories for the original experiments and release checks
 ```
 
-Plot rendering and its numerical inputs live in [remarl-plots](https://github.com/EgorShibaev/remarl-plots). Generated weights, datasets, and run outputs are excluded from Git.
+Generated weights, datasets, and run outputs are excluded from Git.
 
 ## Verification
 
