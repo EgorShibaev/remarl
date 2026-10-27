@@ -1,18 +1,24 @@
 # Inference
 
-Use a GPU environment with PyTorch, NumPy, Transformers, safetensors, and the native port's dependencies. The original CUDA package inventory is in `environments/production-packages.txt`. It is a record of the research environment, not a cross-platform lockfile. Inference defaults to the port's PyTorch attention backend; `--backend vllm` selects the production backend when a compatible vLLM build is installed.
+Download the backbone and policies as described in the README, then run:
 
-Download the frozen backbone separately and extract the policy archive into `checkpoints/`. Verify it first:
-
-```sh
-python verify_checkpoints.py checkpoints
-python generate.py --model /absolute/path/to/LLaDA-8B-Instruct \
-  --policy checkpoints/math8-32k.pt --nfe 8 --task gsm8k \
-  --prompt 'A bag has 3 red balls and 4 blue balls. How many balls are in the bag?'
+```bash
+remarl generate --model assets/llada --policy checkpoints/math8-32k.pt \
+  --nfe 8 --task gsm8k \
+  --prompt 'Mia has 12 apples and gives away 5. How many apples remain?'
 ```
 
-The prompt argument is a raw question for `gsm8k` or `math`; the bundled APPLe template is applied. Use `--task raw` only for an already formatted prompt. `raw` is useful for code generation but is not a benchmark evaluation harness. Outputs contain the answer token IDs, decoded answer, seed, and NFE. Generated code is printed, never executed.
+The command prints the answer, token IDs, inference budget, seed, and policy hash. It uses the same decoding loop as training and benchmark evaluation.
 
-This entry point uses the original current-token scoring, greedy token proposals, linear visibility schedule, and stochastic ordered top-k selection at temperature 1. It uses a caller seed for the single example. For published benchmark results, use the original evaluation harness and its per-question seeds; a new prompt or seed does not reproduce a table entry.
+Use `--task math` for the MATH prompt template. `--task raw` accepts an already formatted prompt, including any chat template and generation prefix. Prepare benchmark code prompts through `remarl prepare code` to preserve HumanEval and MBPP formatting.
 
-The backbone and answer canvas need enough GPU memory. The checkpoint's position embeddings require 256 answer positions. Full GPU parity for the new command-line wrapper was not run during packaging; the underlying rollout tests and checkpoint loading are checked on CPU.
+`--device cuda:0` and `--seed 101` are the defaults. Add `--backend torch` to use PyTorch SDPA. Prompts are never truncated.
+
+The policy's training budget and inference budget can differ:
+
+```bash
+remarl generate --model assets/llada --policy checkpoints/math64-32k.pt \
+  --nfe 128 --task gsm8k --prompt 'What is 24 multiplied by 7?'
+```
+
+All released policies use 256 answer positions. Token proposals are greedy; position choices use stochastic ordered sampling. The final call fills the remaining masks.

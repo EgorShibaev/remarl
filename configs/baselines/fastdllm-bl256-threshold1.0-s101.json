@@ -1,0 +1,6 @@
+{
+  "mode": "fastdllm",
+  "block": 256,
+  "threshold": 1.0,
+  "seed": 101
+}

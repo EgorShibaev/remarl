@@ -1,0 +1,6 @@
+{
+  "mode": "core",
+  "block": 256,
+  "budget": 128,
+  "seed": 101
+}

@@ -1,0 +1,6 @@
+{
+  "mode": "dapd",
+  "variant": "dapd_direct",
+  "block": 256,
+  "seed": 101
+}

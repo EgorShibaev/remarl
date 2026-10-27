@@ -1,0 +1,8 @@
+{
+  "mode": "remdm_uncode",
+  "block": 256,
+  "steps": 128,
+  "k": 4,
+  "loops": 32,
+  "seed": 101
+}

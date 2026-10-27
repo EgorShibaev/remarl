@@ -1,0 +1,253 @@
+{
+  "inputs": {
+    "outputs/cluster_runs/2026-10-07-apple-mixture-native/training-snapshot-latest.json": "49db79229dce13091a4845f98b5046f80d25ad51c2c4627f4fee8e12247366d2",
+    "outputs/cluster_runs/2026-10-10-code-resume-i8027-v2/STATUS_AUDITED.json": "cc06ec3a95dd37696dcc6319c76d1a6c201dbd3cf4473a42f293a3af09294272",
+    "outputs/cluster_runs/2026-10-11-code16-after-code8/STATUS_AUDITED.json": "2f183901177aa9d5e983d9ca0d2a68a9214cdbb754dad39e4359e0811361d70d",
+    "outputs/cluster_runs/2026-10-14-code32-code64-start/STATUS_AUDITED-32.json": "0f7991aad0586454f2eba2a765bec7ba5ea3a48ab6962e1fbdf647e2d080c46d",
+    "outputs/cluster_runs/2026-10-22-nfe8-ablations/RESULTS_AUDITED.json": "b6f718bc2cf6351bcc8494f2155eb459cf4ce6294831942df348f8ff12b0e42e",
+    "outputs/cluster_runs/2026-10-24-nfe8-data-scale/STATUS.json": "afa3ac5b0a61a470cc3472fcf5cfdb388822f5423f3ef551038f840261f2c233"
+  },
+  "records": [
+    {
+      "run": "Math, NFE4",
+      "nfe": 4,
+      "accepted_groups": 32768,
+      "attempted_groups": 74845,
+      "attempted_trajectories": 598760,
+      "accepted_fraction": 0.43781147705257534,
+      "collection_update_hours": 12.695940518837483,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "Math, NFE8",
+      "nfe": 8,
+      "accepted_groups": 32768,
+      "attempted_groups": 60539,
+      "attempted_trajectories": 484312,
+      "accepted_fraction": 0.5412709162688515,
+      "collection_update_hours": 11.39729250400478,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "Math, NFE16",
+      "nfe": 16,
+      "accepted_groups": 32768,
+      "attempted_groups": 61974,
+      "attempted_trajectories": 495792,
+      "accepted_fraction": 0.5287378578113402,
+      "collection_update_hours": 29.21065165572051,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "Math, NFE32",
+      "nfe": 32,
+      "accepted_groups": 32768,
+      "attempted_groups": 65803,
+      "attempted_trajectories": 526424,
+      "accepted_fraction": 0.4979712171177606,
+      "collection_update_hours": 50.73501107945531,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "Math, NFE64",
+      "nfe": 64,
+      "accepted_groups": 32768,
+      "attempted_groups": 75748,
+      "attempted_trajectories": 605984,
+      "accepted_fraction": 0.43259227966414954,
+      "collection_update_hours": 116.43955989510478,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "Code, NFE8",
+      "nfe": 8,
+      "accepted_groups": 32768,
+      "attempted_groups": 99632,
+      "attempted_trajectories": 797056,
+      "accepted_fraction": 0.32889031636422034,
+      "collection_update_hours": 37.17372685598628,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "Code, NFE16",
+      "nfe": 16,
+      "accepted_groups": 32768,
+      "attempted_groups": 84817,
+      "attempted_trajectories": 678536,
+      "accepted_fraction": 0.3863376445759694,
+      "collection_update_hours": 53.13325031683764,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "Code, NFE32",
+      "nfe": 32,
+      "accepted_groups": 32768,
+      "attempted_groups": 81877,
+      "attempted_trajectories": 655016,
+      "accepted_fraction": 0.4002100712043675,
+      "collection_update_hours": 88.86722098797111,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "no_revision",
+      "nfe": 8,
+      "accepted_groups": 16384,
+      "attempted_groups": 31111,
+      "attempted_trajectories": 248888,
+      "accepted_fraction": 0.5266304522516152,
+      "collection_update_hours": 5.929871455715216,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "no_hidden",
+      "nfe": 8,
+      "accepted_groups": 16384,
+      "attempted_groups": 30973,
+      "attempted_trajectories": 247784,
+      "accepted_fraction": 0.5289768508055404,
+      "collection_update_hours": 12.522986408219989,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "no_position",
+      "nfe": 8,
+      "accepted_groups": 16384,
+      "attempted_groups": 31094,
+      "attempted_trajectories": 248752,
+      "accepted_fraction": 0.5269183765356661,
+      "collection_update_hours": 12.478207229137801,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "bias_only",
+      "nfe": 8,
+      "accepted_groups": 16384,
+      "attempted_groups": 30516,
+      "attempted_trajectories": 244128,
+      "accepted_fraction": 0.5368986761043387,
+      "collection_update_hours": 12.450347002862125,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "n4096-seed17",
+      "nfe": 8,
+      "accepted_groups": 16384,
+      "attempted_groups": 30826,
+      "attempted_trajectories": 246608,
+      "accepted_fraction": 0.5314993836371894,
+      "collection_update_hours": 12.549963798854183,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "n4096-seed27",
+      "nfe": 8,
+      "accepted_groups": 16384,
+      "attempted_groups": 30530,
+      "attempted_trajectories": 244240,
+      "accepted_fraction": 0.5366524729773993,
+      "collection_update_hours": 12.419088273091507,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "n4096-seed7",
+      "nfe": 8,
+      "accepted_groups": 16384,
+      "attempted_groups": 30636,
+      "attempted_trajectories": 245088,
+      "accepted_fraction": 0.5347956652304479,
+      "collection_update_hours": 12.413663083373395,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "n512-seed17",
+      "nfe": 8,
+      "accepted_groups": 16384,
+      "attempted_groups": 30475,
+      "attempted_trajectories": 243800,
+      "accepted_fraction": 0.5376210008203446,
+      "collection_update_hours": 12.192663628024327,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "n512-seed27",
+      "nfe": 8,
+      "accepted_groups": 16384,
+      "attempted_groups": 29922,
+      "attempted_trajectories": 239376,
+      "accepted_fraction": 0.5475569814851948,
+      "collection_update_hours": 11.961664341440224,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "n512-seed7",
+      "nfe": 8,
+      "accepted_groups": 16384,
+      "attempted_groups": 32137,
+      "attempted_trajectories": 257096,
+      "accepted_fraction": 0.5098173444938856,
+      "collection_update_hours": 13.009044524354879,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "n64-seed17",
+      "nfe": 8,
+      "accepted_groups": 16384,
+      "attempted_groups": 31716,
+      "attempted_trajectories": 253728,
+      "accepted_fraction": 0.5165846891159036,
+      "collection_update_hours": 12.914751805336337,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "n64-seed27",
+      "nfe": 8,
+      "accepted_groups": 16384,
+      "attempted_groups": 26784,
+      "attempted_trajectories": 214272,
+      "accepted_fraction": 0.6117084826762246,
+      "collection_update_hours": 11.132726868775142,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "n64-seed7",
+      "nfe": 8,
+      "accepted_groups": 16384,
+      "attempted_groups": 35983,
+      "attempted_trajectories": 287864,
+      "accepted_fraction": 0.4553261262262735,
+      "collection_update_hours": 14.369179319233226,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "n8-seed17",
+      "nfe": 8,
+      "accepted_groups": 16384,
+      "attempted_groups": 32807,
+      "attempted_trajectories": 262456,
+      "accepted_fraction": 0.4994056146554089,
+      "collection_update_hours": 12.167201388825909,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "n8-seed27",
+      "nfe": 8,
+      "accepted_groups": 16384,
+      "attempted_groups": 36306,
+      "attempted_trajectories": 290448,
+      "accepted_fraction": 0.45127527130501843,
+      "collection_update_hours": 14.862722538747088,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    },
+    {
+      "run": "n8-seed7",
+      "nfe": 8,
+      "accepted_groups": 16384,
+      "attempted_groups": 42863,
+      "attempted_trajectories": 342904,
+      "accepted_fraction": 0.382241093717192,
+      "collection_update_hours": 15.609681919994117,
+      "excludes": "evaluation, validation, failed or abandoned work, queue time and interruptions"
+    }
+  ],
+  "unit": "recorded elapsed collection-plus-update hours, not GPU-hours"
+}

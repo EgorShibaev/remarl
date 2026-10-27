@@ -88,9 +88,7 @@
       "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
     }
   ],
-  "training_architecture_asset": {
-    "file": "sota-selector.pt",
-    "sha256": "36b2938e70b2d82d8447f2035c6e864d61fcf42a990965ac577aef61cc87d3bc",
-    "note": "Fresh paper runs use its architecture configuration, not its trained weights."
-  }
+  "archive_url": "https://drive.google.com/file/d/11OaCmTI9Zz4Yyas4PT7rqWUtpNRIP7mn/view",
+  "archive_sha256": "fadb5dfc42bf8bee908beef3e98a583bd484a59504c70d7d47e3b0c7b534025c",
+  "access": "public, anyone with the link, viewer"
 }

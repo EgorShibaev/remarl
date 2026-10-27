@@ -1,0 +1,292 @@
+{
+  "inputs": {
+    "outputs/cluster_runs/2026-10-26-review-followup/paired-outcomes.json": "03080bc60bcab680cd62269eddc14f3ecf8bd1c2bf681bd0ab2e06584846114d",
+    "outputs/cluster_runs/2026-10-26-review-followup/calibration-results/results.json": "745696550135abbdea313d3325d37348b948aa1f47e0a2d63f35b67595f7fed5"
+  },
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 20261026,
+  "resampling_unit": "question; all inference seeds remain together",
+  "training_seed_uncertainty": false,
+  "results": [
+    {
+      "left": "math8-32768",
+      "right": "math8-0",
+      "label": "ReMaRL (32k) vs. P2$^{\\prime}$, $\\tau=1$",
+      "split": "test_gsm8k",
+      "difference": 24.842052059641137,
+      "ci95": [
+        22.870861763962598,
+        26.81324235531968
+      ],
+      "questions": 1319,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "math8-32768",
+      "right": "math8-0",
+      "label": "ReMaRL (32k) vs. P2$^{\\prime}$, $\\tau=1$",
+      "split": "test_math",
+      "difference": 5.266666666666666,
+      "ci95": [
+        2.999999999999999,
+        7.6
+      ],
+      "questions": 500,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "math8-32768",
+      "right": "p2-temp-0.25",
+      "label": "ReMaRL (32k) vs. calibrated P2$^{\\prime}$",
+      "split": "test_gsm8k",
+      "difference": 11.296436694465504,
+      "ci95": [
+        9.476876421531461,
+        13.115996967399544
+      ],
+      "questions": 1319,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "math8-32768",
+      "right": "p2-temp-0.25",
+      "label": "ReMaRL (32k) vs. calibrated P2$^{\\prime}$",
+      "split": "test_math",
+      "difference": 1.133333333333333,
+      "ci95": [
+        -0.9333333333333335,
+        3.266666666666666
+      ],
+      "questions": 500,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "math8-16384",
+      "right": "p2-temp-0.25",
+      "label": "ReMaRL (16k) vs. calibrated P2$^{\\prime}$",
+      "split": "test_gsm8k",
+      "difference": 7.733131159969674,
+      "ci95": [
+        5.863027546120799,
+        9.603234773818548
+      ],
+      "questions": 1319,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "math8-16384",
+      "right": "p2-temp-0.25",
+      "label": "ReMaRL (16k) vs. calibrated P2$^{\\prime}$",
+      "split": "test_math",
+      "difference": 2.133333333333333,
+      "ci95": [
+        -2.280842181789915e-16,
+        4.333333333333333
+      ],
+      "questions": 500,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "math8-32768",
+      "right": "p2-revision-matched",
+      "label": "ReMaRL (32k) vs. revision-matched P2$^{\\prime}$",
+      "split": "test_gsm8k",
+      "difference": 25.296942127874644,
+      "ci95": [
+        23.351023502653522,
+        27.268132423553194
+      ],
+      "questions": 1319,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "math8-32768",
+      "right": "p2-revision-matched",
+      "label": "ReMaRL (32k) vs. revision-matched P2$^{\\prime}$",
+      "split": "test_math",
+      "difference": 4.466666666666666,
+      "ci95": [
+        2.333333333333333,
+        6.599999999999999
+      ],
+      "questions": 500,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "math8-16384",
+      "right": "no_revision",
+      "label": "ReMaRL (16k) vs. no revision",
+      "split": "test_gsm8k",
+      "difference": 11.776598433156432,
+      "ci95": [
+        9.982309830679807,
+        13.570887035633055
+      ],
+      "questions": 1319,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "math8-16384",
+      "right": "no_revision",
+      "label": "ReMaRL (16k) vs. no revision",
+      "split": "test_math",
+      "difference": 5.0,
+      "ci95": [
+        2.8,
+        7.2
+      ],
+      "questions": 500,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "math8-16384",
+      "right": "no_hidden",
+      "label": "ReMaRL (16k) vs. no hidden states",
+      "split": "test_gsm8k",
+      "difference": 4.953247409653777,
+      "ci95": [
+        3.209502148091988,
+        6.722264341672984
+      ],
+      "questions": 1319,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "math8-16384",
+      "right": "no_hidden",
+      "label": "ReMaRL (16k) vs. no hidden states",
+      "split": "test_math",
+      "difference": 1.8000000000000003,
+      "ci95": [
+        -0.06666666666666689,
+        3.733333333333333
+      ],
+      "questions": 500,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "math8-16384",
+      "right": "no_position",
+      "label": "ReMaRL (16k) vs. no added position embeddings",
+      "split": "test_gsm8k",
+      "difference": 1.0614101592115237,
+      "ci95": [
+        -0.631791761435431,
+        2.7293404094010616
+      ],
+      "questions": 1319,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "math8-16384",
+      "right": "no_position",
+      "label": "ReMaRL (16k) vs. no added position embeddings",
+      "split": "test_math",
+      "difference": 0.2666666666666665,
+      "ci95": [
+        -1.6666666666666665,
+        2.1999999999999997
+      ],
+      "questions": 500,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "math8-16384",
+      "right": "bias_only",
+      "label": "ReMaRL (16k) vs. position and mask biases",
+      "split": "test_gsm8k",
+      "difference": 20.874399797826637,
+      "ci95": [
+        18.953752843062926,
+        22.769775082132927
+      ],
+      "questions": 1319,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "math8-16384",
+      "right": "bias_only",
+      "label": "ReMaRL (16k) vs. position and mask biases",
+      "split": "test_math",
+      "difference": 5.933333333333333,
+      "ci95": [
+        3.533333333333333,
+        8.333333333333332
+      ],
+      "questions": 500,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "code16-32768",
+      "right": "code16-0",
+      "label": "ReMaRL (32k) vs. P2$^{\\prime}$, $\\tau=1$",
+      "split": "test_humaneval",
+      "difference": 14.634146341463412,
+      "ci95": [
+        10.16260162601626,
+        19.51219512195122
+      ],
+      "questions": 164,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "code16-32768",
+      "right": "code16-0",
+      "label": "ReMaRL (32k) vs. P2$^{\\prime}$, $\\tau=1$",
+      "split": "test_mbpp",
+      "difference": 9.066666666666666,
+      "ci95": [
+        6.4,
+        11.8
+      ],
+      "questions": 500,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "code16-32768",
+      "right": "code16-calibrated",
+      "label": "ReMaRL (32k) vs. calibrated P2$^{\\prime}$",
+      "split": "test_humaneval",
+      "difference": 10.56910569105691,
+      "ci95": [
+        6.097560975609756,
+        15.447154471544714
+      ],
+      "questions": 164,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    },
+    {
+      "left": "code16-32768",
+      "right": "code16-calibrated",
+      "label": "ReMaRL (32k) vs. calibrated P2$^{\\prime}$",
+      "split": "test_mbpp",
+      "difference": 14.666666666666664,
+      "ci95": [
+        11.8,
+        17.6
+      ],
+      "questions": 500,
+      "left_inference_seeds": 3,
+      "right_inference_seeds": 3
+    }
+  ]
+}

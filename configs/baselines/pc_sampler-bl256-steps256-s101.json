@@ -1,0 +1,6 @@
+{
+  "mode": "pc_sampler",
+  "block": 256,
+  "steps": 256,
+  "seed": 101
+}

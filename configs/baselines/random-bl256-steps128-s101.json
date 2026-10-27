@@ -1,0 +1,6 @@
+{
+  "mode": "random",
+  "block": 256,
+  "steps": 128,
+  "seed": 101
+}

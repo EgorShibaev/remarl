@@ -1,2 +1,0 @@
-"""Masked decoding algorithms."""
-

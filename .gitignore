@@ -13,3 +13,7 @@ __pycache__/
 checkpoints/*.zip
 runs/
 assets/
+build/
+dist/
+*.egg-info/
+.ruff_cache/

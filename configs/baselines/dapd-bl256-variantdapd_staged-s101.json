@@ -1,0 +1,6 @@
+{
+  "mode": "dapd",
+  "variant": "dapd_staged",
+  "block": 256,
+  "seed": 101
+}

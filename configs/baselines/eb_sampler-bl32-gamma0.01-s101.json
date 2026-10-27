@@ -1,0 +1,6 @@
+{
+  "mode": "eb_sampler",
+  "block": 32,
+  "gamma": 0.01,
+  "seed": 101
+}

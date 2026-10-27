@@ -1,0 +1,518 @@
+benchmark,group,method,blocks,mean_nfe,score_percent,source
+gsm8k,fixed,ReMaRL,1x256,4.0,36.13848875410664,C
+gsm8k,fixed,ReMaRL,1x256,8.0,53.60121304018196,C
+gsm8k,fixed,ReMaRL,1x256,16.0,65.12509476876421,C
+gsm8k,fixed,ReMaRL,1x256,32.0,72.80768258781906,C
+gsm8k,fixed,ReMaRL,1x256,64.0,79.70684862269395,C
+gsm8k,fixed,"ReMaRL, fixed NFE64",1x256,64.0,79.70684862269395,C
+gsm8k,fixed,"ReMaRL, fixed NFE64",1x256,128.0,80.38918372504422,C
+gsm8k,fixed,"ReMaRL, fixed NFE64",1x256,256.0,82.48673237300986,C
+gsm8k,fixed,P2' (tau=1),1x256,4.0,16.173869092747033,C
+gsm8k,fixed,P2' (tau=1),1x256,8.0,28.759160980540816,C
+gsm8k,fixed,P2' (tau=1),1x256,16.0,43.593631539044736,C
+gsm8k,fixed,P2' (tau=1),1x256,32.0,59.18625221127116,C
+gsm8k,fixed,P2' (tau=1),1x256,64.0,68.10715188273944,C
+gsm8k,fixed,P2' (tau=1),1x256,128.0,70.58377558756634,C
+gsm8k,fixed,P2' (tau=1),1x256,256.0,73.1614859742229,C
+gsm8k,fixed,P2' (greedy),1x256,4.0,13.419257012888552,C
+gsm8k,fixed,P2' (greedy),1x256,8.0,23.502653525398028,C
+gsm8k,fixed,P2' (greedy),1x256,16.0,42.68385140257771,C
+gsm8k,fixed,P2' (greedy),1x256,32.0,48.44579226686884,C
+gsm8k,fixed,P2' (greedy),1x256,64.0,44.95830174374526,C
+gsm8k,fixed,P2' (greedy),1x256,128.0,38.81728582259287,C
+gsm8k,fixed,P2' (greedy),1x256,256.0,41.77407126611069,C
+gsm8k,fixed,Confidence,1x256,4.0,4.397270659590599,C
+gsm8k,fixed,Confidence,1x256,8.0,12.736921910538287,C
+gsm8k,fixed,Confidence,1x256,16.0,37.37680060652009,C
+gsm8k,fixed,Confidence,1x256,32.0,43.821076573161484,C
+gsm8k,fixed,Confidence,1x256,64.0,37.6800606520091,C
+gsm8k,fixed,Confidence,1x256,128.0,31.614859742228962,C
+gsm8k,fixed,Confidence,1x256,256.0,33.73768006065201,C
+gsm8k,fixed,Confidence,8x32,8.0,20.84912812736922,C
+gsm8k,fixed,Confidence,8x32,16.0,31.690674753601215,C
+gsm8k,fixed,Confidence,8x32,32.0,45.109931766489765,C
+gsm8k,fixed,Confidence,8x32,64.0,71.1144806671721,C
+gsm8k,fixed,Confidence,8x32,128.0,77.25549658832449,C
+gsm8k,fixed,Confidence,8x32,256.0,79.83320697498105,C
+gsm8k,fixed,Random,1x256,4.0,11.346980035380339,C
+gsm8k,fixed,Random,1x256,8.0,19.787717968157697,C
+gsm8k,fixed,Random,1x256,16.0,30.022744503411676,C
+gsm8k,fixed,Random,1x256,32.0,40.81374778872883,C
+gsm8k,fixed,Random,1x256,64.0,45.387920141521356,C
+gsm8k,fixed,Random,1x256,128.0,50.06317917614354,C
+gsm8k,fixed,Random,1x256,256.0,52.41344452868334,C
+gsm8k,fixed,Random,8x32,8.0,20.84912812736922,C
+gsm8k,fixed,Random,8x32,16.0,24.437705332322466,C
+gsm8k,fixed,Random,8x32,32.0,29.845842810209756,C
+gsm8k,fixed,Random,8x32,64.0,46.24715693707354,C
+gsm8k,fixed,Random,8x32,128.0,63.608794541319185,C
+gsm8k,fixed,Random,8x32,256.0,71.99898913318171,C
+gsm8k,fixed,Margin,1x256,4.0,9.855951478392722,C
+gsm8k,fixed,Margin,1x256,8.0,20.242608036391207,C
+gsm8k,fixed,Margin,1x256,16.0,38.66565579984837,C
+gsm8k,fixed,Margin,1x256,32.0,45.489006823351026,C
+gsm8k,fixed,Margin,1x256,64.0,39.95451099317665,C
+gsm8k,fixed,Margin,1x256,128.0,31.387414708112207,C
+gsm8k,fixed,Margin,1x256,256.0,34.040940106141015,C
+gsm8k,fixed,Margin,8x32,8.0,20.84912812736922,C
+gsm8k,fixed,Margin,8x32,16.0,31.008339651250946,C
+gsm8k,fixed,Margin,8x32,32.0,47.384382107657316,C
+gsm8k,fixed,Margin,8x32,64.0,71.19029567854435,C
+gsm8k,fixed,Margin,8x32,128.0,76.87642153146324,C
+gsm8k,fixed,Margin,8x32,256.0,78.31690674753601,C
+gsm8k,fixed,P2 (original self-planner),1x256,4.0,5.686125852918878,C
+gsm8k,fixed,P2 (original self-planner),1x256,8.0,17.134192570128885,C
+gsm8k,fixed,P2 (original self-planner),1x256,16.0,40.030326004548904,C
+gsm8k,fixed,P2 (original self-planner),1x256,32.0,49.81046247156937,C
+gsm8k,fixed,P2 (original self-planner),1x256,64.0,44.4275966641395,C
+gsm8k,fixed,P2 (original self-planner),1x256,128.0,39.8786959818044,C
+gsm8k,fixed,P2 (original self-planner),1x256,256.0,42.2289613343442,C
+gsm8k,fixed,ReMDM (UNCODE),1x256,16.0,33.206974981046244,C
+gsm8k,fixed,ReMDM (UNCODE),1x256,32.0,42.759666413949965,C
+gsm8k,fixed,ReMDM (UNCODE),1x256,64.0,44.80667172100076,C
+gsm8k,fixed,ReMDM (UNCODE),1x256,128.0,37.6800606520091,C
+gsm8k,fixed,ReMDM (UNCODE),1x256,256.0,31.614859742228962,C
+gsm8k,adaptive,WINO,1x256,45.21607278241092,53.67702805155421,C
+gsm8k,adaptive,WINO,2x128,46.59969673995451,75.28430629264595,C
+gsm8k,fixed,UNCODE/PC-Sampler,1x256,4.0,15.011372251705838,C
+gsm8k,fixed,UNCODE/PC-Sampler,1x256,8.0,16.830932524639877,C
+gsm8k,fixed,UNCODE/PC-Sampler,1x256,16.0,26.535253980288097,C
+gsm8k,fixed,UNCODE/PC-Sampler,1x256,32.0,35.10235026535254,C
+gsm8k,fixed,UNCODE/PC-Sampler,1x256,64.0,62.4715693707354,C
+gsm8k,fixed,UNCODE/PC-Sampler,1x256,128.0,76.87642153146324,C
+gsm8k,fixed,UNCODE/PC-Sampler,1x256,256.0,80.51554207733132,C
+gsm8k,adaptive,KLASS,1x256,189.52539802880972,34.571645185746775,C
+gsm8k,adaptive,KLASS,1x256,106.32448824867323,42.98711144806672,C
+gsm8k,adaptive,KLASS,1x256,98.71114480667173,44.124336618650496,C
+gsm8k,adaptive,KLASS,1x256,74.9294920394238,41.849886277482945,C
+gsm8k,adaptive,KLASS,4x64,158.1887793783169,81.80439727065959,C
+gsm8k,adaptive,KLASS,4x64,112.0166793025019,80.43972706595906,C
+gsm8k,adaptive,KLASS,4x64,105.29264594389689,79.45413191811978,C
+gsm8k,adaptive,KLASS,4x64,84.36087945413192,76.34571645185747,C
+gsm8k,fixed,RCR,1x256,4.0,7.657316148597422,C
+gsm8k,fixed,RCR,1x256,8.0,22.97194844579227,C
+gsm8k,fixed,RCR,1x256,16.0,38.81728582259287,C
+gsm8k,fixed,RCR,1x256,32.0,45.26156178923427,C
+gsm8k,fixed,RCR,1x256,64.0,41.16755117513268,C
+gsm8k,fixed,RCR,1x256,128.0,36.23957543593632,C
+gsm8k,fixed,RCR,1x256,256.0,37.98332069749811,C
+gsm8k,adaptive,CoRe,1x256,4.0,4.169825625473844,C
+gsm8k,adaptive,CoRe,1x256,8.0,13.115996967399544,C
+gsm8k,adaptive,CoRe,1x256,16.0,34.571645185746775,C
+gsm8k,adaptive,CoRe,1x256,32.0,40.71266110689917,C
+gsm8k,adaptive,CoRe,1x256,64.0,35.55724033358605,C
+gsm8k,adaptive,CoRe,1x256,128.0,34.34420015163002,C
+gsm8k,adaptive,CoRe,1x256,256.0,33.2827899924185,C
+gsm8k,adaptive,DAPD-Direct,1x256,24.458680818802122,55.11751326762699,C
+gsm8k,adaptive,DAPD-Direct,4x64,52.56103108415466,71.72100075815011,C
+gsm8k,adaptive,DAPD-Staged,1x256,32.89764973464746,59.43896891584534,C
+gsm8k,adaptive,DAPD-Staged,4x64,92.16755117513267,72.70659590598939,C
+gsm8k,adaptive,Fast-dLLM,1x256,2.6504927975739196,4.018195602729341,C
+gsm8k,adaptive,Fast-dLLM,1x256,11.263078089461713,20.166793025018954,C
+gsm8k,adaptive,Fast-dLLM,1x256,22.588324488248674,37.300985595147836,C
+gsm8k,adaptive,Fast-dLLM,1x256,44.34874905231236,35.405610310841546,C
+gsm8k,adaptive,Fast-dLLM,1x256,91.41622441243366,33.661865049279754,C
+gsm8k,adaptive,Fast-dLLM,1x256,122.78013646702047,33.73768006065201,C
+gsm8k,adaptive,Fast-dLLM,1x256,153.8483699772555,33.73768006065201,C
+gsm8k,adaptive,Fast-dLLM,1x256,169.6194086429113,33.81349507202426,C
+gsm8k,adaptive,Fast-dLLM,1x256,201.2456406368461,33.81349507202426,C
+gsm8k,adaptive,Fast-dLLM,1x256,256.0,33.73768006065201,C
+gsm8k,adaptive,Fast-dLLM,8x32,10.52691432903715,20.166793025018954,C
+gsm8k,adaptive,Fast-dLLM,8x32,28.450341167551176,39.120545868081884,C
+gsm8k,adaptive,Fast-dLLM,8x32,37.13267626990144,63.76042456406368,C
+gsm8k,adaptive,Fast-dLLM,8x32,51.83017437452616,77.78620166793026,C
+gsm8k,adaptive,Fast-dLLM,8x32,81.22289613343442,80.13646702047005,C
+gsm8k,adaptive,Fast-dLLM,8x32,96.38362395754359,80.2122820318423,C
+gsm8k,adaptive,Fast-dLLM,8x32,114.98786959818044,79.98483699772555,C
+gsm8k,adaptive,Fast-dLLM,8x32,124.99924184988627,79.9090219863533,C
+gsm8k,adaptive,Fast-dLLM,8x32,152.70280515542078,79.83320697498105,C
+gsm8k,adaptive,Fast-dLLM,8x32,256.0,79.83320697498105,C
+gsm8k,adaptive,EB-Sampler,1x256,219.71493555724032,31.690674753601215,C
+gsm8k,adaptive,EB-Sampler,1x256,179.0128885519333,31.766489764973464,C
+gsm8k,adaptive,EB-Sampler,1x256,116.99772554965884,34.495830174374525,C
+gsm8k,adaptive,EB-Sampler,1x256,57.21152388172858,28.05155420773313,C
+gsm8k,adaptive,EB-Sampler,1x256,21.69598180439727,34.64746019711903,C
+gsm8k,adaptive,EB-Sampler,8x32,187.27824109173616,81.57695223654284,C
+gsm8k,adaptive,EB-Sampler,8x32,138.07126611068992,81.12206216830933,C
+gsm8k,adaptive,EB-Sampler,8x32,93.23047763457164,80.59135708870356,C
+gsm8k,adaptive,EB-Sampler,8x32,54.034116755117516,77.02805155420774,C
+gsm8k,adaptive,EB-Sampler,8x32,30.71948445792267,48.06671721000758,C
+gsm8k,adaptive,APPLe,1x256,13.0,48.3,A
+gsm8k,adaptive,APPLe,1x256,18.5,51.9,A
+gsm8k,adaptive,APPLe,1x256,27.1,54.8,A
+gsm8k,adaptive,APPLe,1x256,50.5,56.1,A
+gsm8k,adaptive,APPLe,1x256,93.3,61.8,A
+gsm8k,adaptive,APPLe + expert steering,1x256,15.7,50.6,A
+gsm8k,adaptive,APPLe + expert steering,1x256,20.6,51.9,A
+gsm8k,adaptive,APPLe + expert steering,1x256,70.5,77.2,A
+gsm8k,adaptive,APPLe + expert steering,1x256,72.4,76.7,A
+gsm8k,adaptive,APPLe + expert steering,1x256,87.9,75.1,A
+gsm8k,adaptive,APPLe (\alpha sweep),8x32,10.3,35.2,A
+gsm8k,adaptive,APPLe (\alpha sweep),8x32,46.2,75.5,A
+gsm8k,adaptive,APPLe (\alpha sweep),8x32,50.7,76.6,A
+gsm8k,adaptive,APPLe (\alpha sweep),8x32,82.7,80.0,A
+gsm8k,adaptive,APPLe (\alpha sweep),8x32,135.8,80.5,A
+gsm8k,published,SAS (5-shot),1x256,256.0,76.0,S
+gsm8k,published,SAS (5-shot),4x64,32.0,58.0,S
+gsm8k,published,SAS (5-shot),4x64,64.0,61.0,S
+gsm8k,published,SAS (5-shot),4x64,256.0,81.0,S
+gsm8k,published,SAS (5-shot),8x32,256.0,80.0,S
+gsm8k,reference,UPO (128-token answers),4x32,128.0,70.3,U
+math500,fixed,ReMaRL,1x256,4.0,17.066666666666666,C
+math500,fixed,ReMaRL,1x256,8.0,19.000000000000004,C
+math500,fixed,ReMaRL,1x256,16.0,24.866666666666667,C
+math500,fixed,ReMaRL,1x256,32.0,27.266666666666666,C
+math500,fixed,ReMaRL,1x256,64.0,31.066666666666663,C
+math500,fixed,"ReMaRL, fixed NFE64",1x256,64.0,31.066666666666666,C
+math500,fixed,"ReMaRL, fixed NFE64",1x256,128.0,32.93333333333333,C
+math500,fixed,"ReMaRL, fixed NFE64",1x256,256.0,33.266666666666666,C
+math500,fixed,P2' (tau=1),1x256,4.0,11.066666666666668,C
+math500,fixed,P2' (tau=1),1x256,8.0,13.733333333333334,C
+math500,fixed,P2' (tau=1),1x256,16.0,17.733333333333334,C
+math500,fixed,P2' (tau=1),1x256,32.0,21.266666666666666,C
+math500,fixed,P2' (tau=1),1x256,64.0,24.4,C
+math500,fixed,P2' (tau=1),1x256,128.0,27.066666666666666,C
+math500,fixed,P2' (tau=1),1x256,256.0,27.2,C
+math500,fixed,P2' (greedy),1x256,4.0,10.8,C
+math500,fixed,P2' (greedy),1x256,8.0,13.600000000000001,C
+math500,fixed,P2' (greedy),1x256,16.0,19.0,C
+math500,fixed,P2' (greedy),1x256,32.0,20.8,C
+math500,fixed,P2' (greedy),1x256,64.0,20.200000000000003,C
+math500,fixed,P2' (greedy),1x256,128.0,20.8,C
+math500,fixed,P2' (greedy),1x256,256.0,23.4,C
+math500,fixed,Confidence,1x256,4.0,6.4,C
+math500,fixed,Confidence,1x256,8.0,8.4,C
+math500,fixed,Confidence,1x256,16.0,16.8,C
+math500,fixed,Confidence,1x256,32.0,18.8,C
+math500,fixed,Confidence,1x256,64.0,19.2,C
+math500,fixed,Confidence,1x256,128.0,19.2,C
+math500,fixed,Confidence,1x256,256.0,18.4,C
+math500,fixed,Confidence,8x32,8.0,7.6,C
+math500,fixed,Confidence,8x32,16.0,17.0,C
+math500,fixed,Confidence,8x32,32.0,21.2,C
+math500,fixed,Confidence,8x32,64.0,29.2,C
+math500,fixed,Confidence,8x32,128.0,32.0,C
+math500,fixed,Confidence,8x32,256.0,35.2,C
+math500,fixed,Random,1x256,4.0,8.866666666666667,C
+math500,fixed,Random,1x256,8.0,11.666666666666666,C
+math500,fixed,Random,1x256,16.0,13.4,C
+math500,fixed,Random,1x256,32.0,17.333333333333332,C
+math500,fixed,Random,1x256,64.0,16.133333333333333,C
+math500,fixed,Random,1x256,128.0,19.0,C
+math500,fixed,Random,1x256,256.0,19.666666666666668,C
+math500,fixed,Random,8x32,8.0,7.6,C
+math500,fixed,Random,8x32,16.0,10.533333333333333,C
+math500,fixed,Random,8x32,32.0,13.066666666666666,C
+math500,fixed,Random,8x32,64.0,16.8,C
+math500,fixed,Random,8x32,128.0,23.266666666666666,C
+math500,fixed,Random,8x32,256.0,27.666666666666668,C
+math500,fixed,Margin,1x256,4.0,9.4,C
+math500,fixed,Margin,1x256,8.0,13.8,C
+math500,fixed,Margin,1x256,16.0,16.8,C
+math500,fixed,Margin,1x256,32.0,20.4,C
+math500,fixed,Margin,1x256,64.0,21.0,C
+math500,fixed,Margin,1x256,128.0,18.4,C
+math500,fixed,Margin,1x256,256.0,21.0,C
+math500,fixed,Margin,8x32,8.0,7.6,C
+math500,fixed,Margin,8x32,16.0,13.0,C
+math500,fixed,Margin,8x32,32.0,21.4,C
+math500,fixed,Margin,8x32,64.0,29.6,C
+math500,fixed,Margin,8x32,128.0,30.8,C
+math500,fixed,Margin,8x32,256.0,35.6,C
+math500,fixed,P2 (original self-planner),1x256,4.0,7.2,C
+math500,fixed,P2 (original self-planner),1x256,8.0,10.0,C
+math500,fixed,P2 (original self-planner),1x256,16.0,17.4,C
+math500,fixed,P2 (original self-planner),1x256,32.0,18.8,C
+math500,fixed,P2 (original self-planner),1x256,64.0,21.8,C
+math500,fixed,P2 (original self-planner),1x256,128.0,19.6,C
+math500,fixed,P2 (original self-planner),1x256,256.0,22.2,C
+math500,fixed,ReMDM (UNCODE),1x256,16.0,17.4,C
+math500,fixed,ReMDM (UNCODE),1x256,32.0,19.6,C
+math500,fixed,ReMDM (UNCODE),1x256,64.0,21.0,C
+math500,fixed,ReMDM (UNCODE),1x256,128.0,20.4,C
+math500,fixed,ReMDM (UNCODE),1x256,256.0,19.2,C
+math500,adaptive,WINO,1x256,71.29,24.4,C
+math500,adaptive,WINO,2x128,63.09,31.2,C
+math500,fixed,UNCODE/PC-Sampler,1x256,4.0,6.0,C
+math500,fixed,UNCODE/PC-Sampler,1x256,8.0,6.4,C
+math500,fixed,UNCODE/PC-Sampler,1x256,16.0,13.2,C
+math500,fixed,UNCODE/PC-Sampler,1x256,32.0,16.2,C
+math500,fixed,UNCODE/PC-Sampler,1x256,64.0,25.0,C
+math500,fixed,UNCODE/PC-Sampler,1x256,128.0,33.2,C
+math500,fixed,UNCODE/PC-Sampler,1x256,256.0,36.4,C
+math500,adaptive,KLASS,1x256,191.272,19.6,C
+math500,adaptive,KLASS,1x256,133.044,21.2,C
+math500,adaptive,KLASS,1x256,124.706,21.8,C
+math500,adaptive,KLASS,1x256,99.4,22.0,C
+math500,adaptive,KLASS,4x64,179.242,35.2,C
+math500,adaptive,KLASS,4x64,133.18,35.2,C
+math500,adaptive,KLASS,4x64,126.89,34.6,C
+math500,adaptive,KLASS,4x64,104.592,30.2,C
+math500,fixed,RCR,1x256,4.0,7.6,C
+math500,fixed,RCR,1x256,8.0,14.2,C
+math500,fixed,RCR,1x256,16.0,17.0,C
+math500,fixed,RCR,1x256,32.0,20.2,C
+math500,fixed,RCR,1x256,64.0,20.6,C
+math500,fixed,RCR,1x256,128.0,19.6,C
+math500,fixed,RCR,1x256,256.0,22.2,C
+math500,adaptive,CoRe,1x256,4.0,6.0,C
+math500,adaptive,CoRe,1x256,8.0,10.4,C
+math500,adaptive,CoRe,1x256,16.0,16.8,C
+math500,adaptive,CoRe,1x256,32.0,19.8,C
+math500,adaptive,CoRe,1x256,64.0,20.2,C
+math500,adaptive,CoRe,1x256,128.0,18.0,C
+math500,adaptive,CoRe,1x256,256.0,18.8,C
+math500,adaptive,DAPD-Direct,1x256,30.286,22.8,C
+math500,adaptive,DAPD-Direct,4x64,63.906,30.4,C
+math500,adaptive,DAPD-Staged,1x256,36.782,24.2,C
+math500,adaptive,DAPD-Staged,4x64,99.14,29.6,C
+math500,adaptive,Fast-dLLM,1x256,2.908,6.0,C
+math500,adaptive,Fast-dLLM,1x256,17.138,13.8,C
+math500,adaptive,Fast-dLLM,1x256,36.808,17.8,C
+math500,adaptive,Fast-dLLM,1x256,64.25,20.0,C
+math500,adaptive,Fast-dLLM,1x256,106.966,18.6,C
+math500,adaptive,Fast-dLLM,1x256,127.582,18.6,C
+math500,adaptive,Fast-dLLM,1x256,151.912,18.4,C
+math500,adaptive,Fast-dLLM,1x256,164.64,18.4,C
+math500,adaptive,Fast-dLLM,1x256,194.584,18.4,C
+math500,adaptive,Fast-dLLM,1x256,256.0,18.4,C
+math500,adaptive,Fast-dLLM,8x32,11.326,9.2,C
+math500,adaptive,Fast-dLLM,8x32,37.526,17.2,C
+math500,adaptive,Fast-dLLM,8x32,49.638,26.6,C
+math500,adaptive,Fast-dLLM,8x32,68.742,32.8,C
+math500,adaptive,Fast-dLLM,8x32,101.328,35.0,C
+math500,adaptive,Fast-dLLM,8x32,117.21,35.0,C
+math500,adaptive,Fast-dLLM,8x32,136.92,35.4,C
+math500,adaptive,Fast-dLLM,8x32,147.7,35.2,C
+math500,adaptive,Fast-dLLM,8x32,177.106,35.2,C
+math500,adaptive,Fast-dLLM,8x32,256.0,35.2,C
+math500,adaptive,EB-Sampler,1x256,225.878,20.6,C
+math500,adaptive,EB-Sampler,1x256,179.748,20.4,C
+math500,adaptive,EB-Sampler,1x256,122.996,22.0,C
+math500,adaptive,EB-Sampler,1x256,67.688,19.0,C
+math500,adaptive,EB-Sampler,1x256,26.488,20.2,C
+math500,adaptive,EB-Sampler,8x32,213.732,34.6,C
+math500,adaptive,EB-Sampler,8x32,164.68,35.2,C
+math500,adaptive,EB-Sampler,8x32,114.996,33.2,C
+math500,adaptive,EB-Sampler,8x32,67.974,33.2,C
+math500,adaptive,EB-Sampler,8x32,34.392,17.6,C
+math500,adaptive,APPLe,1x256,14.5,18.8,A
+math500,adaptive,APPLe,1x256,22.3,19.8,A
+math500,adaptive,APPLe,1x256,33.7,19.9,A
+math500,adaptive,APPLe,1x256,61.6,21.0,A
+math500,adaptive,APPLe,1x256,121.5,22.9,A
+math500,adaptive,APPLe + expert steering,1x256,17.5,17.7,A
+math500,adaptive,APPLe + expert steering,1x256,23.1,19.8,A
+math500,adaptive,APPLe + expert steering,1x256,86.7,31.4,A
+math500,adaptive,APPLe + expert steering,1x256,90.1,30.1,A
+math500,adaptive,APPLe + expert steering,1x256,98.0,31.0,A
+math500,adaptive,APPLe (\alpha sweep),8x32,10.8,15.3,A
+math500,adaptive,APPLe (\alpha sweep),8x32,59.1,31.5,A
+math500,adaptive,APPLe (\alpha sweep),8x32,64.6,31.9,A
+math500,adaptive,APPLe (\alpha sweep),8x32,100.2,34.1,A
+math500,adaptive,APPLe (\alpha sweep),8x32,153.4,35.1,A
+math500,published,SAS,1x256,256.0,24.67,S
+math500,published,SAS,8x32,256.0,30.0,S
+math500,reference,UPO (128-token answers),4x32,128.0,28.4,U
+humaneval,fixed,ReMaRL,1x256,8.0,20.73170731707317,C
+humaneval,fixed,ReMaRL,1x256,16.0,29.471544715447155,C
+humaneval,fixed,ReMaRL,1x256,32.0,31.70731707317073,C
+humaneval,fixed,"ReMaRL, fixed NFE32",1x256,32.0,31.70731707317073,C
+humaneval,fixed,"ReMaRL, fixed NFE32",1x256,64.0,38.41463414634146,C
+humaneval,fixed,"ReMaRL, fixed NFE32",1x256,128.0,38.61788617886179,C
+humaneval,fixed,"ReMaRL, fixed NFE32",1x256,256.0,39.22764227642276,C
+humaneval,fixed,P2' (tau=1),1x256,8.0,11.585365853658535,C
+humaneval,fixed,P2' (tau=1),1x256,16.0,14.83739837398374,C
+humaneval,fixed,P2' (tau=1),1x256,32.0,19.91869918699187,C
+humaneval,fixed,P2' (tau=1),1x256,64.0,26.21951219512195,C
+humaneval,fixed,P2' (tau=1),1x256,128.0,22.35772357723577,C
+humaneval,fixed,P2' (tau=1),1x256,256.0,24.796747967479675,C
+humaneval,fixed,P2' (greedy),1x256,8.0,14.02439024390244,C
+humaneval,fixed,P2' (greedy),1x256,16.0,17.682926829268293,C
+humaneval,fixed,P2' (greedy),1x256,32.0,21.951219512195124,C
+humaneval,fixed,P2' (greedy),1x256,64.0,31.097560975609756,C
+humaneval,fixed,P2' (greedy),1x256,128.0,34.756097560975604,C
+humaneval,fixed,P2' (greedy),1x256,256.0,42.68292682926829,C
+humaneval,fixed,Confidence,1x256,8.0,13.414634146341463,C
+humaneval,fixed,Confidence,1x256,16.0,17.073170731707318,C
+humaneval,fixed,Confidence,1x256,32.0,15.24390243902439,C
+humaneval,fixed,Confidence,1x256,64.0,23.78048780487805,C
+humaneval,fixed,Confidence,1x256,128.0,34.146341463414636,C
+humaneval,fixed,Confidence,1x256,256.0,44.51219512195122,C
+humaneval,fixed,Confidence,8x32,8.0,3.048780487804878,C
+humaneval,fixed,Confidence,8x32,16.0,3.658536585365854,C
+humaneval,fixed,Confidence,8x32,32.0,10.365853658536585,C
+humaneval,fixed,Confidence,8x32,64.0,20.73170731707317,C
+humaneval,fixed,Confidence,8x32,128.0,37.19512195121951,C
+humaneval,fixed,Confidence,8x32,256.0,43.90243902439025,C
+humaneval,fixed,Random,8x32,8.0,3.048780487804878,C
+humaneval,fixed,Random,8x32,16.0,5.08130081300813,C
+humaneval,fixed,Random,8x32,32.0,6.504065040650406,C
+humaneval,fixed,Random,8x32,64.0,10.975609756097562,C
+humaneval,fixed,Random,8x32,128.0,15.853658536585366,C
+humaneval,fixed,Random,8x32,256.0,21.747967479674795,C
+humaneval,fixed,P2 (original self-planner),1x256,8.0,15.24390243902439,C
+humaneval,fixed,P2 (original self-planner),1x256,16.0,18.902439024390244,C
+humaneval,fixed,P2 (original self-planner),1x256,32.0,21.951219512195124,C
+humaneval,fixed,P2 (original self-planner),1x256,64.0,31.70731707317073,C
+humaneval,fixed,P2 (original self-planner),1x256,128.0,38.41463414634146,C
+humaneval,fixed,P2 (original self-planner),1x256,256.0,43.90243902439025,C
+humaneval,fixed,ReMDM (UNCODE),1x256,16.0,14.024390243902438,C
+humaneval,fixed,ReMDM (UNCODE),1x256,32.0,18.902439024390244,C
+humaneval,fixed,ReMDM (UNCODE),1x256,64.0,17.073170731707318,C
+humaneval,fixed,ReMDM (UNCODE),1x256,128.0,25.0,C
+humaneval,fixed,ReMDM (UNCODE),1x256,256.0,33.53658536585366,C
+humaneval,adaptive,WINO,1x256,88.0,35.97560975609756,C
+humaneval,adaptive,WINO,2x128,79.90853658536585,42.073170731707314,C
+humaneval,fixed,UNCODE/PC-Sampler,1x256,8.0,3.048780487804878,C
+humaneval,fixed,UNCODE/PC-Sampler,1x256,16.0,3.658536585365854,C
+humaneval,fixed,UNCODE/PC-Sampler,1x256,32.0,7.317073170731708,C
+humaneval,fixed,UNCODE/PC-Sampler,1x256,64.0,17.073170731707318,C
+humaneval,fixed,UNCODE/PC-Sampler,1x256,128.0,33.53658536585366,C
+humaneval,fixed,UNCODE/PC-Sampler,1x256,256.0,42.073170731707314,C
+humaneval,fixed,RCR,1x256,8.0,15.853658536585366,C
+humaneval,fixed,RCR,1x256,16.0,19.51219512195122,C
+humaneval,fixed,RCR,1x256,32.0,25.609756097560975,C
+humaneval,fixed,RCR,1x256,64.0,31.70731707317073,C
+humaneval,fixed,RCR,1x256,128.0,41.46341463414634,C
+humaneval,fixed,RCR,1x256,256.0,41.46341463414634,C
+humaneval,adaptive,CoRe,1x256,8.0,14.024390243902438,C
+humaneval,adaptive,CoRe,1x256,16.0,13.414634146341463,C
+humaneval,adaptive,CoRe,1x256,32.0,15.853658536585366,C
+humaneval,adaptive,CoRe,1x256,64.0,26.829268292682926,C
+humaneval,adaptive,CoRe,1x256,128.0,34.146341463414636,C
+humaneval,adaptive,CoRe,1x256,256.0,39.02439024390244,C
+humaneval,adaptive,DAPD-Direct,1x256,32.00609756097561,32.926829268292686,C
+humaneval,adaptive,DAPD-Direct,4x64,66.45731707317073,35.36585365853659,C
+humaneval,adaptive,DAPD-Staged,1x256,37.44512195121951,34.75609756097561,C
+humaneval,adaptive,DAPD-Staged,4x64,99.4939024390244,36.58536585365854,C
+humaneval,adaptive,Fast-dLLM,1x256,19.823170731707318,9.146341463414634,C
+humaneval,adaptive,Fast-dLLM,1x256,47.31707317073171,23.78048780487805,C
+humaneval,adaptive,Fast-dLLM,1x256,77.16463414634147,35.36585365853659,C
+humaneval,adaptive,Fast-dLLM,1x256,117.71951219512195,43.90243902439025,C
+humaneval,adaptive,Fast-dLLM,1x256,134.8780487804878,44.51219512195122,C
+humaneval,adaptive,Fast-dLLM,1x256,155.91463414634146,44.51219512195122,C
+humaneval,adaptive,Fast-dLLM,1x256,167.3658536585366,44.51219512195122,C
+humaneval,adaptive,Fast-dLLM,1x256,198.640243902439,44.51219512195122,C
+humaneval,adaptive,Fast-dLLM,1x256,256.0,44.51219512195122,C
+humaneval,adaptive,Fast-dLLM,8x32,8.926829268292684,3.048780487804878,C
+humaneval,adaptive,Fast-dLLM,8x32,30.21951219512195,6.097560975609756,C
+humaneval,adaptive,Fast-dLLM,8x32,52.5,24.390243902439025,C
+humaneval,adaptive,Fast-dLLM,8x32,80.3719512195122,37.80487804878049,C
+humaneval,adaptive,Fast-dLLM,8x32,118.1890243902439,43.90243902439025,C
+humaneval,adaptive,Fast-dLLM,8x32,134.2012195121951,43.90243902439025,C
+humaneval,adaptive,Fast-dLLM,8x32,154.640243902439,43.90243902439025,C
+humaneval,adaptive,Fast-dLLM,8x32,165.78658536585365,43.90243902439025,C
+humaneval,adaptive,Fast-dLLM,8x32,195.8109756097561,43.90243902439025,C
+humaneval,adaptive,Fast-dLLM,8x32,256.0,43.90243902439025,C
+humaneval,adaptive,APPLe (math-trained),8x32,64.36382097025653,23.780487731651416,A
+humaneval,adaptive,APPLe (math-trained),8x32,72.4613818191181,28.65853640474011,A
+humaneval,adaptive,APPLe (math-trained),8x32,113.48983682858825,40.243902253516865,A
+humaneval,adaptive,APPLe (math-trained),8x32,163.65853503918692,41.46341472201832,A
+humaneval,adaptive,APPLe (code-trained),8x32,36.640244080108836,26.82926830244649,A
+humaneval,adaptive,APPLe (code-trained),8x32,67.43292657381959,37.195122083027535,A
+humaneval,adaptive,APPLe (code-trained),8x32,76.07317042451726,42.07317075611623,A
+humaneval,adaptive,APPLe (code-trained),8x32,120.3475600520958,40.85365868792041,A
+mbpp,fixed,ReMaRL,1x256,8.0,25.4,C
+mbpp,fixed,ReMaRL,1x256,16.0,32.4,C
+mbpp,fixed,ReMaRL,1x256,32.0,36.46666666666667,C
+mbpp,fixed,"ReMaRL, fixed NFE32",1x256,32.0,36.46666666666667,C
+mbpp,fixed,"ReMaRL, fixed NFE32",1x256,64.0,39.53333333333333,C
+mbpp,fixed,"ReMaRL, fixed NFE32",1x256,128.0,41.333333333333336,C
+mbpp,fixed,"ReMaRL, fixed NFE32",1x256,256.0,43.53333333333333,C
+mbpp,fixed,P2' (tau=1),1x256,8.0,15.733333333333333,C
+mbpp,fixed,P2' (tau=1),1x256,16.0,23.333333333333332,C
+mbpp,fixed,P2' (tau=1),1x256,32.0,28.066666666666666,C
+mbpp,fixed,P2' (tau=1),1x256,64.0,32.266666666666666,C
+mbpp,fixed,P2' (tau=1),1x256,128.0,32.46666666666667,C
+mbpp,fixed,P2' (tau=1),1x256,256.0,35.93333333333334,C
+mbpp,fixed,P2' (greedy),1x256,8.0,3.0,C
+mbpp,fixed,P2' (greedy),1x256,16.0,11.4,C
+mbpp,fixed,P2' (greedy),1x256,32.0,19.8,C
+mbpp,fixed,P2' (greedy),1x256,64.0,25.6,C
+mbpp,fixed,P2' (greedy),1x256,128.0,26.8,C
+mbpp,fixed,P2' (greedy),1x256,256.0,28.799999999999997,C
+mbpp,fixed,Confidence,1x256,8.0,4.4,C
+mbpp,fixed,Confidence,1x256,16.0,8.8,C
+mbpp,fixed,Confidence,1x256,32.0,17.4,C
+mbpp,fixed,Confidence,1x256,64.0,26.8,C
+mbpp,fixed,Confidence,1x256,128.0,27.4,C
+mbpp,fixed,Confidence,1x256,256.0,30.0,C
+mbpp,fixed,Confidence,8x32,8.0,0.8,C
+mbpp,fixed,Confidence,8x32,16.0,5.6,C
+mbpp,fixed,Confidence,8x32,32.0,13.6,C
+mbpp,fixed,Confidence,8x32,64.0,20.0,C
+mbpp,fixed,Confidence,8x32,128.0,29.4,C
+mbpp,fixed,Confidence,8x32,256.0,40.2,C
+mbpp,fixed,Random,8x32,8.0,0.8,C
+mbpp,fixed,Random,8x32,16.0,2.7333333333333334,C
+mbpp,fixed,Random,8x32,32.0,5.466666666666667,C
+mbpp,fixed,Random,8x32,64.0,12.6,C
+mbpp,fixed,Random,8x32,128.0,19.2,C
+mbpp,fixed,Random,8x32,256.0,26.2,C
+mbpp,fixed,P2 (original self-planner),1x256,8.0,3.0,C
+mbpp,fixed,P2 (original self-planner),1x256,16.0,10.2,C
+mbpp,fixed,P2 (original self-planner),1x256,32.0,17.8,C
+mbpp,fixed,P2 (original self-planner),1x256,64.0,25.8,C
+mbpp,fixed,P2 (original self-planner),1x256,128.0,29.4,C
+mbpp,fixed,P2 (original self-planner),1x256,256.0,29.0,C
+mbpp,fixed,ReMDM (UNCODE),1x256,16.0,5.0,C
+mbpp,fixed,ReMDM (UNCODE),1x256,32.0,10.0,C
+mbpp,fixed,ReMDM (UNCODE),1x256,64.0,16.8,C
+mbpp,fixed,ReMDM (UNCODE),1x256,128.0,25.6,C
+mbpp,fixed,ReMDM (UNCODE),1x256,256.0,26.8,C
+mbpp,adaptive,WINO,1x256,49.716,28.0,C
+mbpp,adaptive,WINO,2x128,52.292,31.6,C
+mbpp,fixed,UNCODE/PC-Sampler,1x256,8.0,0.8,C
+mbpp,fixed,UNCODE/PC-Sampler,1x256,16.0,2.8,C
+mbpp,fixed,UNCODE/PC-Sampler,1x256,32.0,10.0,C
+mbpp,fixed,UNCODE/PC-Sampler,1x256,64.0,21.0,C
+mbpp,fixed,UNCODE/PC-Sampler,1x256,128.0,30.6,C
+mbpp,fixed,UNCODE/PC-Sampler,1x256,256.0,40.8,C
+mbpp,fixed,RCR,1x256,8.0,3.8,C
+mbpp,fixed,RCR,1x256,16.0,10.2,C
+mbpp,fixed,RCR,1x256,32.0,21.6,C
+mbpp,fixed,RCR,1x256,64.0,28.2,C
+mbpp,fixed,RCR,1x256,128.0,31.0,C
+mbpp,fixed,RCR,1x256,256.0,30.2,C
+mbpp,adaptive,CoRe,1x256,8.0,4.6,C
+mbpp,adaptive,CoRe,1x256,16.0,9.0,C
+mbpp,adaptive,CoRe,1x256,32.0,16.2,C
+mbpp,adaptive,CoRe,1x256,64.0,24.4,C
+mbpp,adaptive,CoRe,1x256,128.0,26.4,C
+mbpp,adaptive,CoRe,1x256,256.0,27.6,C
+mbpp,adaptive,DAPD-Direct,1x256,23.348,29.6,C
+mbpp,adaptive,DAPD-Direct,4x64,38.334,38.4,C
+mbpp,adaptive,DAPD-Staged,1x256,40.438,30.6,C
+mbpp,adaptive,DAPD-Staged,4x64,96.8,36.0,C
+mbpp,adaptive,Fast-dLLM,1x256,22.382,24.4,C
+mbpp,adaptive,Fast-dLLM,1x256,43.576,29.2,C
+mbpp,adaptive,Fast-dLLM,1x256,77.27,29.8,C
+mbpp,adaptive,Fast-dLLM,1x256,91.952,30.0,C
+mbpp,adaptive,Fast-dLLM,1x256,110.936,30.2,C
+mbpp,adaptive,Fast-dLLM,1x256,121.564,30.0,C
+mbpp,adaptive,Fast-dLLM,1x256,157.27,30.0,C
+mbpp,adaptive,Fast-dLLM,1x256,256.0,30.0,C
+mbpp,adaptive,Fast-dLLM,8x32,8.936,0.8,C
+mbpp,adaptive,Fast-dLLM,8x32,23.976,11.0,C
+mbpp,adaptive,Fast-dLLM,8x32,42.586,19.6,C
+mbpp,adaptive,Fast-dLLM,8x32,51.504,34.4,C
+mbpp,adaptive,Fast-dLLM,8x32,62.538,39.8,C
+mbpp,adaptive,Fast-dLLM,8x32,71.516,40.2,C
+mbpp,adaptive,Fast-dLLM,8x32,83.214,40.2,C
+mbpp,adaptive,Fast-dLLM,8x32,89.098,40.2,C
+mbpp,adaptive,Fast-dLLM,8x32,103.66,40.2,C
+mbpp,adaptive,Fast-dLLM,8x32,256.0,40.2,C
+mbpp,adaptive,APPLe (math-trained),8x32,52.5573331193054,23.999999999999932,A
+mbpp,adaptive,APPLe (math-trained),8x32,56.816666638937996,27.666666549567854,A
+mbpp,adaptive,APPLe (math-trained),8x32,79.2739993484013,36.86666654956786,A
+mbpp,adaptive,APPLe (math-trained),8x32,116.14999900607901,38.19999999999994,A
+mbpp,adaptive,APPLe (code-trained),8x32,29.226000097095508,23.799999999999933,A
+mbpp,adaptive,APPLe (code-trained),8x32,52.67200005143106,30.799999999999933,A
+mbpp,adaptive,APPLe (code-trained),8x32,55.1819999733555,31.399999999999935,A
+mbpp,adaptive,APPLe (code-trained),8x32,91.32599986549097,35.59999999999994,A
+mbpp,published,SAS (3-shot),1x256,256.0,41.0,S
+mbpp,published,SAS (3-shot),4x64,32.0,16.67,S
+mbpp,published,SAS (3-shot),4x64,64.0,14.0,S
+mbpp,published,SAS (3-shot),4x64,256.0,40.7,S
+mbpp,published,SAS (3-shot),8x32,256.0,40.0,S

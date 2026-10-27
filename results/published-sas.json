@@ -1,0 +1,70 @@
+{
+  "method": "SAS",
+  "source_tag": "S",
+  "citation_key": "sas",
+  "source_url": "https://arxiv.org/html/2606.23567v1",
+  "source_version": "arXiv:2606.23567v1",
+  "verified_on": "2026-10-24",
+  "backbone": "LLaDA-8B-Instruct, frozen",
+  "answer_length": 256,
+  "score_unit": "fraction",
+  "budget_mapping": "Table 7 and Table 9 give L-B-T explicitly. Table 5 gives L-B for sequential one-token-per-call decoding, so T=L=256. Block count is not NFE.",
+  "protocol": "Published reference only. Table 5 specifies GSM8K 5-shot and MBPP 3-shot with lm-eval-harness; Table 7 is the parallel-decoding continuation of the same evaluation section. Table 9 does not specify MATH500 prompting. Evaluation equivalence with ReMaRL has not been established.",
+  "benchmarks": {
+    "GSM8K": [
+      {
+        "block_length": 256,
+        "shots": 5,
+        "points": [{"nfe": 256, "score": 0.760, "table": 9}]
+      },
+      {
+        "block_length": 64,
+        "shots": 5,
+        "points": [
+          {"nfe": 32, "score": 0.58, "table": 7},
+          {"nfe": 64, "score": 0.61, "table": 7},
+          {"nfe": 256, "score": 0.810, "table": 5}
+        ]
+      },
+      {
+        "block_length": 32,
+        "shots": 5,
+        "points": [{"nfe": 256, "score": 0.800, "table": 9}]
+      }
+    ],
+    "MATH500": [
+      {
+        "block_length": 256,
+        "shots": null,
+        "points": [{"nfe": 256, "score": 0.2467, "table": 9}]
+      },
+      {
+        "block_length": 32,
+        "shots": null,
+        "points": [{"nfe": 256, "score": 0.300, "table": 9}]
+      }
+    ],
+    "MBPP": [
+      {
+        "block_length": 256,
+        "shots": 3,
+        "points": [{"nfe": 256, "score": 0.410, "table": 5}]
+      },
+      {
+        "block_length": 64,
+        "shots": 3,
+        "points": [
+          {"nfe": 32, "score": 0.1667, "table": 7},
+          {"nfe": 64, "score": 0.14, "table": 7},
+          {"nfe": 256, "score": 0.407, "table": 5}
+        ]
+      },
+      {
+        "block_length": 32,
+        "shots": 3,
+        "points": [{"nfe": 256, "score": 0.400, "table": 5}]
+      }
+    ],
+    "HumanEval": []
+  }
+}

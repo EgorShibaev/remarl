@@ -1,0 +1,73 @@
+{
+  "Uncode": {
+    "repository": "NEUIR/Uncode",
+    "commit": "5b3ae300c550a16f00fe03a22f1fd2947e1442b8",
+    "files": {
+      "src/generate.py": "3d8ef0fbfb1f57f0e1e88890ba5ee4607f0dc0d163941c9d1db83b1657de870d",
+      "data/baseline/reference_corpus_llada.json": "d3added6fe3b1e470a5558d612cc1f52b521415260b76a582b4a367241984749",
+      "scripts/eval_pc_sampler.sh": "63ef04f250803d83faa260b915c91085e05ba012a9623f83db8f58d1e59e061f",
+      "scripts/eval_eb_sampler.sh": "8881fad7ca63912bc8fa1ae2d1867c4f968f128c09b0ea6e93278dc373c4f751",
+      "README.md": "c3996aba7fe72421759ddb0d15362008db307763aabbda97b1ee54e288efcb6d",
+      "LICENSE": "6c9fdd625aec5ed9c8f9b850d9a66643d3ac3ee19afd33aadd7d3498d1d48a91"
+    }
+  },
+  "WINO": {
+    "repository": "Feng-Hong/WINO-DLLM",
+    "commit": "9549a1d0c3cbd9dc9b8f7cd09be8a7aac322d6fb",
+    "files": {
+      "LLaDA/decoding.py": "ad684084ed9f215a1ca67d7757a10958d2b0865cd8cd03af1865c7e8e541ed7c",
+      "README.md": "b79f3fed0e30daec1092b9f3d1e106075e65b39d921adc4d2e8425193a5e8588",
+      "LLaDA/configuration_llada.py": "c947a64d8b735affa69d5adeb416c83ce607c8925270884e4471ae11068e2bfe",
+      "LLaDA/modeling_llada.py": "9ec08ad73bbc2b8cc47581f8495e229eec61770ce018dc7a66011fdfb713864f"
+    }
+  },
+  "mdpo": {
+    "repository": "autonomousvision/mdpo",
+    "commit": "e6ae43906d202a11813860746c9f361d2da3ab5d",
+    "files": {
+      "src/llada/generate.py": "664289b1b0c23d97a1e891333aa907dd1288173fa0b64b768979035543d24a56",
+      "src/mdlm_generation_utils.py": "0a556008fcbf83384b0fbe02bdd502bfb10f46a92abb288d36fc5463d35a850a",
+      "README.md": "5f64269ec62e9ff1ba740c7c996c91342c7b0c57b34e85dd0a853c363433facf"
+    }
+  },
+  "CoRe": {
+    "repository": "UCF-CRCV/CoRe",
+    "commit": "ad15d9150a87f8a0ee436ce84d69b2f1925993be",
+    "files": {
+      "generate.py": "daf826adbd4baa40dff2db6c3ae30bac0adcbe2270681cb7cb189f41e7404f82",
+      "README.md": "ad24ffccadd0ffc262db7a931edf55b989d2e9e133b7b0a62e3b0978f776cfe7",
+      "LICENSE": "77b52efc2a30893c4d829fe666d19aedc60be89140791b6c8c3014bf2b228beb"
+    }
+  },
+  "DAPD": {
+    "repository": "quasar529/DAPD",
+    "commit": "05727b08da4cb4008a275123d7d9885dd5714f7c",
+    "files": {
+      "dapd/__init__.py": "6cb87cbed835ee36d60b2b9cf66d28f7e3335136b77d55b66de1b5bd8d5d64d2",
+      "dapd/core.py": "ee29d94f5ed66a364fbdd8f8df2cb659fc6b0aaf215715eb0ec00d0141071912",
+      "dapd/generation.py": "0f51497bf9beb50e4effe3f9145a3f9f207693cea5f42b880122f31f6b6bbd37",
+      "dapd/dream_core.py": "5bff451dd562afec9dfba873dfdfb0af7098db838589723bc3eff6a718bdda06",
+      "dapd/dream_generation.py": "7579c22a48e75cfc4afe984c9642189d43eabc90eb3259598499610ed44113c5",
+      "README.md": "ceb5204660c79acdbe9cab055d4c86a6fb1fc47378f18a425e03112b3ff50875",
+      "LICENSE": "fe4c13b2d69032839cf1e151ad55af467170abacde340591bd82017f372af515"
+    }
+  },
+  "KLASS": {
+    "repository": "shkim0116/KLASS",
+    "commit": "ad87ecbe9fdef4a6e93701afbc150cb9213fbcd7",
+    "files": {
+      "src/model/llada_klass.py": "1c68212915214f6e3fa1d25a457c91b086c2f18a9ae6c69f83ffc0715716985e",
+      "LICENSE": "150942d5b0f6e57d54caa2d27990868dc2f4361e7ea0d9e720255edf657021bf",
+      "README.md": "d1419806d92165c0958d7b465ee4e07a93d914ab222fbb1ec1ee855c451740f5"
+    }
+  },
+  "ReMDM": {
+    "repository": "kuleshov-group/remdm",
+    "commit": "f830d659fb98d9b2c79ff71bfa12d578312b688a",
+    "files": {
+      "diffusion.py": "9d8f90d29eac816901dd388a52e3a3f11dbb01f0aa31ebe52f693c0724a7a08f",
+      "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "README.md": "e9f4ca21bc75c0b3e14dd5e409b48bfddfc5cf27b034ca0a5f3b8acc813cfec7"
+    }
+  }
+}

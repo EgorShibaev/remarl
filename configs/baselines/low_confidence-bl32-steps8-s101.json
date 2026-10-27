@@ -1,0 +1,6 @@
+{
+  "mode": "low_confidence",
+  "block": 32,
+  "steps": 8,
+  "seed": 101
+}

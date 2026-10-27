@@ -1,0 +1,7 @@
+{
+  "mode": "wino",
+  "block": 256,
+  "threshold": 0.6,
+  "threshold_back": 0.9,
+  "seed": 101
+}

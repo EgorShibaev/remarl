@@ -1,48 +1,88 @@
-# Training and evaluation
+# Training
 
-The exact production sources are included. Start by reading `configs/math8-32k.json` and `native/train_batch_grpo.py`; defaults in legacy classes are not the paper recipe. Main policies use 32k accepted groups. Component and data-size ablations use 16k.
+## Runtime
+
+Training uses one complete frozen backbone replica per GPU. An 80 GB NVIDIA GPU provides room for the eight-answer rollout batches; multiple GPUs collect independent question groups. For NFE64 training, allow at least 64 GB of host RAM for replay and model loading.
+
+The paper used BF16 backbone weights, FP32 policy/replay features, fused projections, and vLLM's noncausal FlashAttention kernel. [production-packages.txt](../environments/production-packages.txt) records that environment. `--backend torch` uses PyTorch SDPA. Backend and package changes can affect BF16 rounding and generated answers.
+
+Install with `pip install -e '.[gpu,test]'`. For CPU tests and data preparation, `pip install -e '.[test]'` suffices. This repository uses the vLLM attention kernel directly; it does not start a model server.
 
 ## Math
 
-The production trainer accepts explicit run, asset, and GPU paths:
+```bash
+remarl download backbone --output assets/llada
+remarl download math-data --output assets/raw/math
+remarl prepare math --raw-data assets/raw/math --model assets/llada --output assets/data/math
 
-```sh
-PYTHONPATH=native python native/train_batch_grpo.py validate \
-  --root /absolute/path/to/prepared-run --assets /absolute/path/to/assets --gpus 0,1,2,3
-PYTHONPATH=native python native/train_batch_grpo.py train \
-  --root /absolute/path/to/prepared-run --assets /absolute/path/to/assets --gpus 0,1,2,3
+remarl train --config configs/math/nfe8.json \
+  --model assets/llada --data assets/data/math --output runs/math8 \
+  --devices cuda:0,cuda:1,cuda:2,cuda:3
 ```
 
-Use a fresh run directory, copy the contents of `native/` there, and copy the chosen `configs/math*-32k.json` to its `recipe.json`. The run must contain `inputs.pt`, `rows.json`, `data-audit.json`, `source.sha256`, and the `official/` scorers. `prepare_paper.py` builds the input tensors and data audit from the four source Arrow files named in that script. It uses the pinned tokenizer and APPLe prompts without truncating prompts.
+Use `configs/math/nfe4.json`, `nfe8.json`, `nfe16.json`, `nfe32.json`, or `nfe64.json`. Omit `--devices` to use one GPU.
 
-The asset directory contains `sota-selector.pt` from the Drive archive, `checkpoint_manifest.json` identifying the backbone files, and `local_root.txt`, whose contents are the local directory containing `models/LLaDA-8B-Instruct`. The recorded backbone manifest is included at `training/code16/runtime/checkpoint_manifest.json`. The seed checkpoint supplies architecture settings for fresh training. The recipe sets `initialization: fresh`; it does not initialize from that checkpoint's trained weights.
-
-The math mixture is GSM8K train plus MATH train. Use the revisions and raw-file hashes in `provenance/*/data-audit.json`. Source manifests are checksums of the copied run files. Recompute manifests for a deliberately relocated run; do not replace historical receipts or disable input checks to force a run through. `--resume` expects the original run state and matching source/data receipts.
-
-The validation stage runs real GPU checks. No training or full GPU validation was launched while creating this repository. For a different CUDA/vLLM installation, run validation before starting a long job.
+The mixture contains 7,473 GSM8K and 7,500 MATH training questions. Preparation uses pinned public data files, the original APPLe task prompts and answer extraction, and no prompt truncation. It checks for exact train/test question overlap. The manifest records file hashes, tokenized-row hashes, and split sizes.
 
 ## Code
 
-`training/code16/train_code.py` contains the production code-training loop. Its `source/` directory contains the corresponding selector, optimizer, and rollout implementation. `protocol/` contains the prompt preparation, sanitization, and isolated execution code; `cohort/` contains retained/excluded source IDs and the benchmark-overlap quarantine. NFE8 has its own recorded source snapshot because its historical cohort differs slightly.
+Install and validate the [code execution sandbox](evaluation.md#code-execution) first.
 
-These runners preserve hard-coded job IDs, validation receipts, and launch paths from the original cluster. They are inspectable production code, not portable launch commands. To run on a new allocation, relocate the `BASE`/runtime paths, select the desired GPU IDs and NFE recipe, and perform the sandbox/runtime validation sequence before training. Do not remove the sandbox security checks. `training/code32-training/` preserves the later ordered pipeline used to complete NFE32.
+```bash
+remarl download code-data --output assets/raw/code
+remarl prepare code --raw-data assets/raw/code --model assets/llada \
+  --cohort code16 --output assets/data/code16
 
-Code rewards execute model-generated programs. Run them in an isolated Linux environment with the supplied resource limits, process isolation, and validated seccomp sandbox. Do not run them on a personal machine with access to credentials or private files.
-
-## Baselines and ablations
-
-`experiments/` contains the scripts used for component removal, training-set size, and remaining baseline evaluations. These also retain original workspace paths. Reuse the recorded input IDs, source revisions, answer length, and measured-NFE conventions when relocating them. APPLe/UPO/SAS published scores are references, not checkpoints trained or reproduced by this release.
-
-The separate `remarl-plots` repository contains all reported numbers and provenance. Rendering those results does not require running these experiments again.
-
-## CPU checks
-
-```sh
-python -m pip install -r requirements-test.txt
-PYTHONPATH=native python -m pytest native/test_worker.py native/test_batch_grpo.py native/test_evaluate_p2.py -q
-python verify_checkpoints.py checkpoints
+remarl train --config configs/code/nfe32.json \
+  --model assets/llada --data assets/data/code16 --output runs/code32 \
+  --devices cuda:0,cuda:1,cuda:2,cuda:3
 ```
 
-The CPU tests use fake backbones. They check ordered probabilities, transitions, rollout/replay agreement, and training utilities without downloading LLaDA or executing generated code.
+`configs/code/nfe16.json` and `nfe32.json` use the `code16` cohort. For `configs/code/nfe8.json`, prepare `--cohort code8` in a separate directory. The saved allowlists retain 9,148 and 9,149 KodCode questions, respectively. Preparation verifies every retained row against its recorded hash. The allowlists include the reference-execution audit and benchmark-overlap exclusions used in the experiments.
 
-On 27 October 2026, all 61 tests above passed in the environment recorded in `environments/local-qa-packages.txt`. All eight released policy files and the architecture asset passed SHA256 verification. These checks do not establish GPU parity for the new `generate.py` wrapper.
+HumanEval and MBPP prompts, test code, and sanitization are shared with evaluation. Generated code runs only after the sandbox's isolation and correctness probes pass.
+
+## Recipe and outputs
+
+The main configurations train from a zero-initialized score correction for 32,768 accepted groups. Each group contains eight answers to one question. Groups with constant correctness rewards are discarded. A batch contains 16 accepted groups, followed by four full-batch GRPO updates with the behavior policy fixed. AdamW uses a constant learning rate of `1e-4`, zero weight decay, clipping at `0.2`, and gradient norm clipping at `1.0`. The frozen backbone receives no updates.
+
+| Output | Contents |
+|---|---|
+| `config.json` | Training settings |
+| `initial.pt` | Initial policy and random state |
+| `latest.pt` | Latest completed batch, including optimizer and random state |
+| `policy-004096.pt`, … | Checkpoints every 4k groups and at the final group count |
+| `training.jsonl` | Accuracy, optimization diagnostics, elapsed time, and policy hashes |
+| `attempts.jsonl` | Question IDs, group rewards, acceptance, and revision counts |
+
+Resume a run made by this trainer with the same configuration and prepared data:
+
+```bash
+remarl train --config configs/math/nfe8.json \
+  --model assets/llada --data assets/data/math --output runs/math8 \
+  --resume runs/math8/latest.pt
+```
+
+Released checkpoints load for inference and evaluation. Their original optimizer-state format is not the new trainer's resume format. A fresh run follows the saved recipe; evaluating the released weights reproduces the original checkpoint selection.
+
+## Ablations
+
+Component ablations use NFE8 and 16k accepted groups:
+
+```bash
+remarl train --config configs/ablations/no_hidden.json \
+  --model assets/llada --data assets/data/math --output runs/no-hidden
+```
+
+Available configurations are `full`, `no_hidden`, `no_position`, `no_revision`, and `bias_only`. The no-revision variant also changes the action support and likelihood so that visible tokens remain visible.
+
+For training-data size:
+
+```bash
+remarl train --config configs/data_size/n512-seed7.json \
+  --model assets/llada --data assets/data/math --output runs/data512-seed7
+```
+
+The filename gives the total question count: 8, 64, 512, or 4,096, split equally between GSM8K and MATH. Within each seed, larger subsets contain the smaller subsets. Seeds 7 and 17 are provided. Subsets repeat when exhausted; the budget remains 16k accepted groups at NFE8. The full-data reference uses the main NFE8 run's 16k checkpoint.
+
+Evaluation is explicit: pass any saved policy to `remarl evaluate`. Test scores do not control training duration or checkpoint saving.

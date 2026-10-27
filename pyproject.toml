@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "remarl-decoding"
+version = "0.1.0"
+description = "Learning to Unmask and Remask in Frozen Diffusion Language Models"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["torch>=2.6", "numpy>=1.26", "transformers>=4.46", "safetensors>=0.4", "huggingface-hub>=0.26", "pyarrow>=18", "gdown>=5.2", "truststore>=0.10"]
+
+[project.optional-dependencies]
+gpu = ["vllm>=0.10"]
+test = ["pytest>=8", "build>=1.2", "ruff>=0.9"]
+
+[project.scripts]
+remarl = "remarl.cli:main"
+
+[project.urls]
+Repository = "https://github.com/EgorShibaev/remarl"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+remarl = ["data/**/*.json", "data/**/*.jsonl", "baselines/*.json", "protocols/official/*.py", "resources/*.json"]
+
+[tool.setuptools.data-files]
+"share/remarl/licenses" = ["THIRD_PARTY.md", "third_party/APPLE-LICENSE", "third_party/VLLM-LICENSE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
