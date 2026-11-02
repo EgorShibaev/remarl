@@ -74,7 +74,20 @@ remarl train --config configs/ablations/no_hidden.json \
   --model assets/llada --data assets/data/math --output runs/no-hidden
 ```
 
-Available configurations are `full`, `no_hidden`, `no_position`, `no_revision`, and `bias_only`. The no-revision variant also changes the action support and likelihood so that visible tokens remain visible.
+Component configurations are `full`, `no_hidden`, `no_position`, `no_revision`, and `bias_only`. The no-revision variant also changes the action support and likelihood so that unmasked tokens stay unmasked. Each loaded policy keeps its own ablation settings.
+
+The initialization ablation uses the same features and architecture, with randomly initialized MLP output weights, output bias, and linear skip weights. Its score is `MLP(features) + linear_skip(features)`, with no fixed confidence residual. Confidence remains an input feature. It trains from scratch at NFE8 for 16,384 accepted groups on the full math mixture, using seed 7 and the same GRPO recipe:
+
+```bash
+remarl train --config configs/ablations/random_mlp_nfe8.json \
+  --model assets/llada --data assets/data/math --output runs/random-init \
+  --devices cuda:0,cuda:1,cuda:2,cuda:3
+
+remarl evaluate --policy runs/random-init/policy-016384.pt --nfe 8 \
+  --model assets/llada --data assets/data/math --output runs/random-init-eval
+```
+
+`policy_initialization: random_mlp_no_confidence_residual` selects this ablation. Its checkpoints record both `confidence_residual: false` and `zero_initialize_output: false` in `selector_config`; evaluation and resume preserve these settings. Configurations without this option retain ReMaRL's zero-initialized correction and fixed confidence residual. Compare against `configs/ablations/full.json` at the same 16k endpoint. The historical study also evaluated checkpoints at 0, 4,096, and 8,192 groups using three inference seeds.
 
 For training-data size:
 
@@ -83,6 +96,6 @@ remarl train --config configs/data_size/n512-seed7.json \
   --model assets/llada --data assets/data/math --output runs/data512-seed7
 ```
 
-The filename gives the total question count: 8, 64, 512, or 4,096, split equally between GSM8K and MATH. Within each seed, larger subsets contain the smaller subsets. Seeds 7 and 17 are provided. Subsets repeat when exhausted; the budget remains 16k accepted groups at NFE8. The full-data reference uses the main NFE8 run's 16k checkpoint.
+The filename gives the total question count: 8, 64, 512, or 4,096, split equally between GSM8K and MATH. Within each seed, larger subsets contain the smaller subsets. All three training seeds (7, 17, and 27) are provided at every size. Each seed controls both subset sampling and training. Subsets repeat when exhausted; the budget remains 16k accepted groups at NFE8. The full-data reference uses the main NFE8 run's 16k checkpoint.
 
 Evaluation is explicit: pass any saved policy to `remarl evaluate`. Test scores do not control training duration or checkpoint saving.

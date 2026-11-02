@@ -214,13 +214,17 @@ def collect(
                 logits, hidden if cfg.backbone_hidden_dim else None, answer, backbone.mask_token_id
             )
             z = selector(f.reshape(batch * length, width), sc.flatten()).reshape(batch, length)
+            temperature = getattr(selector, "temperature", 1.0)
             if getattr(selector, "variant", "full") == "no_revision":
                 from .ablations import select_order, action_logprob
 
-                order = select_order(z, uniforms[step], count, masked)
-                logp = action_logprob(z, order, masked)
+                order = select_order(
+                    z, uniforms[step], count, masked, mode=selector.variant, temperature=temperature
+                )
+                logp = action_logprob(
+                    z, order, masked, mode=selector.variant, temperature=temperature
+                )
             else:
-                temperature = getattr(selector, "temperature", 1.0)
                 if temperature == 0:
                     order = z.argsort(dim=-1, descending=True, stable=True)[:, :count]
                     logp = z.sum(-1) * 0

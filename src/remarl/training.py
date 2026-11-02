@@ -20,6 +20,17 @@ from .protocols.scoring import Scorer
 from .runtime import Generator, configure_compute
 
 
+def policy_config_for_training(cfg):
+    initialization = cfg.get("policy_initialization", "p2_prime")
+    if initialization == "p2_prime":
+        return PolicyConfig()
+    if initialization == "random_mlp_no_confidence_residual":
+        if cfg.get("variant", "full") != "full":
+            raise ValueError("The initialization ablation uses the full policy features")
+        return PolicyConfig(confidence_residual=False, zero_initialize_output=False)
+    raise ValueError(f"Unknown policy initialization: {initialization}")
+
+
 def validate_config(cfg):
     if (
         cfg["nfe"] not in (4, 8, 16, 32, 64)
@@ -36,6 +47,7 @@ def validate_config(cfg):
         )
     if cfg["initialization"] != "fresh" or cfg["answer_length"] != 256:
         raise ValueError("Training starts from a fresh policy with 256 answer positions")
+    policy_config_for_training(cfg)
 
 
 class Trainer:
@@ -84,6 +96,8 @@ class Trainer:
     def restore(self, saved):
         if saved["config"] != self.config or saved["data_manifest"] != self.manifest:
             raise ValueError("Resume requires the same configuration and prepared data")
+        if PolicyConfig.from_dict(saved["selector_config"]) != self.policy.config:
+            raise ValueError("Resume requires the same policy architecture and scoring rule")
         if state_digest(saved["model"]) != saved["policy_sha256"]:
             raise ValueError("Resume policy hash mismatch")
         self.policy.load_state_dict(saved["model"])
@@ -208,15 +222,14 @@ def train(config, data, model, output, devices, backend="vllm", resume=None):
     torch.backends.cuda.matmul.allow_tf32 = False
     torch.backends.cudnn.allow_tf32 = False
     torch.use_deterministic_algorithms(True)
-    from .ablations import configure, selector_class
+    from .ablations import selector_class
 
-    configure(cfg.get("variant", "full"))
-    policy_class = (
-        ReMaRLPolicy if cfg.get("variant", "full") == "full" else selector_class(ReMaRLPolicy)
-    )
-    policy = policy_class(PolicyConfig()).to(devices[0]).eval()
+    variant = cfg.get("variant", "full")
+    policy_class = ReMaRLPolicy if variant == "full" else selector_class(ReMaRLPolicy, variant)
+    policy_config = policy_config_for_training(cfg)
+    policy = policy_class(policy_config).to(devices[0]).eval()
     replicas = [
-        Generator(model, policy_class(PolicyConfig()), d, backend, manifest["required_canvas"])
+        Generator(model, policy_class(policy_config), d, backend, manifest["required_canvas"])
         for d in devices
     ]
     scorer = Scorer(replicas[0].tokenizer, cfg["domain"])

@@ -35,11 +35,10 @@ def load_policy(path, device="cpu"):
     digest = state_digest(state)
     if digest != saved["policy_sha256"]:
         raise ValueError(f"Policy hash mismatch: {path}")
-    from .ablations import configure, selector_class
+    from .ablations import selector_class
 
     variant = saved.get("config", {}).get("variant", "full")
-    configure(variant)
-    policy_class = ReMaRLPolicy if variant == "full" else selector_class(ReMaRLPolicy)
+    policy_class = ReMaRLPolicy if variant == "full" else selector_class(ReMaRLPolicy, variant)
     policy = policy_class(PolicyConfig.from_dict(saved["selector_config"])).to(device).eval()
     policy.load_state_dict(state, strict=True)
     return policy, saved

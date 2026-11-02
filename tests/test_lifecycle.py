@@ -10,7 +10,7 @@ from remarl.rollout import collect
 from remarl.runtime import canvas, load_policy
 from remarl.training import Trainer
 from remarl.optimization import replay_error
-from remarl.ablations import configure, selector_class
+from remarl.ablations import selector_class
 from remarl.sampling import P2Scores
 
 
@@ -58,8 +58,7 @@ class ToyScorer:
 
 
 def policy(variant="full"):
-    configure(variant)
-    cls = ReMaRLPolicy if variant == "full" else selector_class(ReMaRLPolicy)
+    cls = ReMaRLPolicy if variant == "full" else selector_class(ReMaRLPolicy, variant)
     return cls(PolicyConfig(hidden_dim=8, backbone_hidden_dim=3, hidden_projection_dim=4)).eval()
 
 

@@ -1,6 +1,7 @@
 """Complete-benchmark evaluation with per-question seeds and resumable output."""
 
 import json
+import math
 from pathlib import Path
 import statistics
 import torch
@@ -18,8 +19,14 @@ def evaluate(generator, scorer, rows, output, *, nfe, seeds, identity, batch_siz
     output.mkdir(parents=True, exist_ok=True)
     request = dict(identity, nfe=nfe, seeds=list(seeds), count=len(rows), batch_size=batch_size)
     request_path = output / "evaluation.json"
-    if request_path.exists() and json.loads(request_path.read_text()) != request:
-        raise ValueError("Output belongs to another evaluation; choose a new directory")
+    if request_path.exists():
+        previous = json.loads(request_path.read_text())
+        # Earlier releases supported trained policies only at position temperature 1.
+        if previous.get("method") == "remarl" and "position_temperature" in request:
+            previous.setdefault("position_temperature", 1.0)
+            previous.setdefault("confidence_residual", True)
+        if previous != request:
+            raise ValueError("Output belongs to another evaluation; choose a new directory")
     save_json(request_path, request)
     summaries = []
     for seed in seeds:
@@ -82,13 +89,21 @@ def run_evaluation(
     temperature=1.0,
     retention_bonus=0.0,
 ):
-    if policy_path and (temperature != 1.0 or retention_bonus != 0.0):
-        raise ValueError("Temperature and retention controls apply only to --p2-prime")
+    if not math.isfinite(temperature) or temperature < 0:
+        raise ValueError("Position temperature must be finite and nonnegative")
+    if policy_path and retention_bonus != 0.0:
+        raise ValueError("Retention controls apply only to --p2-prime")
     configure_compute()
     rows, manifest = load_prepared(data)
     if policy_path:
         policy, saved = load_policy(policy_path, device)
-        identity = dict(method="remarl", policy_sha256=saved["policy_sha256"])
+        policy.temperature = temperature
+        identity = dict(
+            method="remarl",
+            policy_sha256=saved["policy_sha256"],
+            position_temperature=temperature,
+            confidence_residual=policy.config.confidence_residual,
+        )
     else:
         policy = P2Scores(temperature, retention_bonus)
         identity = dict(

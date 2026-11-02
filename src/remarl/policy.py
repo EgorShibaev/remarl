@@ -18,6 +18,8 @@ class PolicyConfig:
     feature_encoding: str = "none"
     backbone_hidden_dim: int = 4096
     hidden_projection_dim: int = 64
+    confidence_residual: bool = True
+    zero_initialize_output: bool = True
 
     @classmethod
     def from_dict(cls, values):
@@ -30,6 +32,7 @@ class ReMaRLPolicy(nn.Module):
     def __init__(self, config=PolicyConfig()):
         super().__init__()
         self.config = config
+        self.temperature = 1.0
         if (
             config.architecture != "mlp"
             or config.input_node_dim != 3
@@ -54,11 +57,13 @@ class ReMaRLPolicy(nn.Module):
             nn.GELU(),
             nn.Linear(config.hidden_dim, 1),
         )
-        nn.init.zeros_(self.pointwise[-1].weight)
-        nn.init.zeros_(self.pointwise[-1].bias)
+        if config.zero_initialize_output:
+            nn.init.zeros_(self.pointwise[-1].weight)
+            nn.init.zeros_(self.pointwise[-1].bias)
         if config.linear_skip:
             self.linear_skip = nn.Linear(width, 1, bias=False)
-            nn.init.zeros_(self.linear_skip.weight)
+            if config.zero_initialize_output:
+                nn.init.zeros_(self.linear_skip.weight)
 
     def delta(self, features):
         if features.numel() == 0:
@@ -76,4 +81,5 @@ class ReMaRLPolicy(nn.Module):
         return correction
 
     def forward(self, features, confidence):
-        return confidence + self.delta(features)
+        output = self.delta(features)
+        return confidence + output if self.config.confidence_residual else output

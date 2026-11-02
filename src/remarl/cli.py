@@ -41,7 +41,10 @@ def parser():
     ev.add_argument("--backend", choices=("vllm", "torch"), default="vllm")
     ev.add_argument("--batch-size", type=int, default=8)
     ev.add_argument(
-        "--temperature", type=float, default=1.0, help="P2-prime position temperature; 0 is greedy"
+        "--temperature",
+        type=float,
+        default=1.0,
+        help="Position temperature for a trained policy or P2-prime; 0 is greedy",
     )
     ev.add_argument(
         "--retention-bonus", type=float, default=0.0, help="P2-prime visible-token bonus"

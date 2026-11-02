@@ -130,11 +130,16 @@ def replay_chunks(groups, device, groups_per_chunk=4):
 
 def replay_logp(selector, features, scores, orders):
     z = selector(features.flatten(0, 1), scores.flatten()).reshape_as(scores)
+    temperature = getattr(selector, "temperature", 1.0)
     if getattr(selector, "variant", "full") == "no_revision":
         from .ablations import action_logprob
 
-        return action_logprob(z, orders, features[..., 1].bool())
-    return ordered_logprob(z, orders)
+        return action_logprob(
+            z, orders, features[..., 1].bool(), mode=selector.variant, temperature=temperature
+        )
+    if temperature == 0:
+        return z.sum(-1) * 0
+    return ordered_logprob(z, orders, temperature)
 
 
 @torch.no_grad()

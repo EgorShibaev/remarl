@@ -1,18 +1,6 @@
 """Explicit action supports and feature-removal controls for the NFE8 study."""
 
-import os
 import torch
-
-MODE = os.environ.get("ABLATION_VARIANT", "full")
-TEMPERATURE = 1.0
-RETENTION_BONUS = 0.0
-
-
-def configure(mode, temperature=1.0, retention_bonus=0.0):
-    global MODE, TEMPERATURE, RETENTION_BONUS
-    assert mode in ("full", "no_revision", "no_hidden", "no_position", "bias_only", "p2")
-    assert temperature >= 0 and retention_bonus >= 0
-    MODE, TEMPERATURE, RETENTION_BONUS = mode, temperature, retention_bonus
 
 
 def pl_logprob(scores, order, temperature=1.0):
@@ -38,28 +26,32 @@ def masked_pool(scores, masked):
     return ids, scores.gather(1, ids)
 
 
-def select_order(scores, uniforms, count, masked):
-    scores = scores + RETENTION_BONUS * (~masked).to(scores.dtype)
+def select_order(
+    scores, uniforms, count, masked, *, mode="full", temperature=1.0, retention_bonus=0.0
+):
+    scores = scores + retention_bonus * (~masked).to(scores.dtype)
     noise = -torch.log(-torch.log(uniforms.clamp(1e-10, 1.0)))
-    logits = scores if TEMPERATURE == 0 else scores / TEMPERATURE + noise
-    if MODE != "no_revision":
-        return torch.argsort(logits, descending=True, stable=(TEMPERATURE == 0))[:, :count]
+    logits = scores if temperature == 0 else scores / temperature + noise
+    if mode != "no_revision":
+        return torch.argsort(logits, descending=True, stable=(temperature == 0))[:, :count]
     masked_ids, _ = masked_pool(scores, masked)
     visible_count = scores.shape[1] - masked_ids.shape[1]
     added = count - visible_count
     assert added >= 0
     indices = torch.arange(scores.shape[1], device=scores.device).expand_as(masked)
     visible = (indices + masked * scores.shape[1]).argsort(-1)[:, :visible_count]
-    local = logits.gather(1, masked_ids).argsort(-1, descending=True)[:, :added]
+    local = logits.gather(1, masked_ids).argsort(
+        dim=-1, descending=True, stable=(temperature == 0)
+    )[:, :added]
     return torch.cat((visible, masked_ids.gather(1, local)), -1)
 
 
-def action_logprob(scores, order, masked):
-    scores = scores + RETENTION_BONUS * (~masked).to(scores.dtype)
-    if TEMPERATURE == 0:
+def action_logprob(scores, order, masked, *, mode="full", temperature=1.0, retention_bonus=0.0):
+    scores = scores + retention_bonus * (~masked).to(scores.dtype)
+    if temperature == 0:
         return scores.sum(-1) * 0
-    if MODE != "no_revision":
-        return pl_logprob(scores, order, TEMPERATURE)
+    if mode != "no_revision":
+        return pl_logprob(scores, order, temperature)
     masked_ids, pool = masked_pool(scores, masked)
     visible_count = scores.shape[1] - masked_ids.shape[1]
     assert (~masked).gather(1, order[:, :visible_count]).all()
@@ -68,14 +60,17 @@ def action_logprob(scores, order, masked):
     inverse = torch.empty_like(scores, dtype=torch.long).scatter(
         1, masked_ids, torch.arange(pool.shape[1], device=scores.device).expand_as(masked_ids)
     )
-    return pl_logprob(pool, inverse.gather(1, new), TEMPERATURE)
+    return pl_logprob(pool, inverse.gather(1, new), temperature)
 
 
-def selector_class(base):
+def selector_class(base, variant):
+    if variant not in ("full", "no_revision", "no_hidden", "no_position", "bias_only"):
+        raise ValueError(f"Unknown policy variant: {variant}")
+
     class AblatedSelector(base):
         def __init__(self, config):
             super().__init__(config)
-            self.variant = MODE
+            self.variant = variant
             if self.variant == "no_hidden":
                 for p in self.hidden_projection.parameters():
                     p.requires_grad_(False)

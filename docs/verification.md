@@ -1,5 +1,15 @@
 # Release verification
 
+Checks added on 2 November 2026:
+
+- All 12 data-size recipes cover seeds 7, 17, and 27 and agree with the recorded training costs.
+- The public evaluation command supports trained-policy position temperatures, including greedy selection. Tests compare rollout and replay likelihoods, reject invalid temperatures, and prevent resuming into results from another temperature or confidence-residual rule.
+- Loading or evaluating a second policy leaves the first policy's ablation and temperature settings unchanged.
+- The initialization ablation trains, saves, loads, and resumes through the public commands with a small CPU generator. Resumed weights match uninterrupted training exactly. Its random output heads and absence of a fixed confidence residual are checked explicitly.
+- Fifteen CPU parity checks against the pre-fix release and the historical experiment source passed. Default seeded weights and scores are unchanged for all five component variants; random-initialization weights and scores match the historical implementation; isolated ablation sampling and likelihoods agree at temperatures 0, 0.25, 1, and 2.
+
+These checks use CPU fixtures; they do not rerun the full GPU experiments.
+
 Checks run locally on 27 October 2026:
 
 - Public checkpoint download without Google cookies or a login; archive and all eight file hashes verified.

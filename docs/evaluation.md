@@ -23,9 +23,24 @@ remarl evaluate --p2-prime --nfe 8 --model assets/llada \
 
 P2-prime scores visible positions using their retained token's probability. Original P2 uses the fresh proposal's probability and has a separate baseline configuration.
 
-For P2-prime, `--temperature 0` selects greedy positions and `--temperature 0.25` applies the paper's calibrated temperature. `--retention-bonus VALUE` adds a fixed bonus to visible positions. Choose control settings on training questions before evaluating the test sets. These options leave token proposals greedy.
+`--temperature` controls position selection for both trained ReMaRL policies and P2-prime. It defaults to 1; 0 selects positions greedily. For P2-prime, 0.25 is the paper's calibrated temperature. `--retention-bonus VALUE` applies only to P2-prime and adds a fixed bonus to unmasked positions. Choose control settings on training questions before evaluating the test sets. These options leave token proposals greedy.
 
-Each benchmark directory stores generated token IDs and scored answers in `answers-seed*.jsonl`, a summary per seed, and an aggregate `summary.json`. Accuracy is stored as a fraction and as `accuracy_percent`. Repeating the command resumes an incomplete evaluation. A different checkpoint, dataset, budget, seed list, or backend requires a different output directory.
+To reproduce the trained NFE8 policy's temperature sweep with fixed weights:
+
+```bash
+for tau in 0 0.1 0.25 0.5 0.75 0.85 0.9 0.95 1 1.05 1.1 1.15 1.25 1.5 2; do
+  seeds=101,202,303
+  if [ "$tau" = 0 ]; then seeds=101; fi
+  remarl evaluate --policy checkpoints/math8-32k.pt --nfe 8 \
+    --temperature "$tau" --seeds "$seeds" \
+    --model assets/llada --data assets/data/math \
+    --output "runs/math8-temperature/tau-$tau"
+done
+```
+
+Positive temperatures use three inference seeds; the deterministic setting uses one. Evaluation records `position_temperature` alongside the checkpoint hash. Saved trained-policy evaluations from older releases, which omitted this field, are treated as temperature 1.
+
+Each benchmark directory stores generated token IDs and scored answers in `answers-seed*.jsonl`, a summary per seed, and an aggregate `summary.json`. Accuracy is stored as a fraction and as `accuracy_percent`. Repeating the command resumes an incomplete evaluation. A different checkpoint, dataset, budget, position temperature, retention bonus, seed list, or backend requires a different output directory.
 
 ## Baselines
 
