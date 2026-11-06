@@ -33,3 +33,5 @@ Full GPU parity after reorganization remains unverified. Released policies and r
 The Linux sandbox was retained from the validated experiment implementation, with installation paths made portable. Its probes must pass on the machine used for code evaluation. They cannot run on macOS.
 
 Run `python -m pytest -q`. Upstream-reference tests are skipped until `remarl download baseline-sources --output assets/baselines` has been run. They use small CPU models and do not download backbone weights.
+
+Archived source paths use the release naming. Recorded measurements and policy-state hashes are unchanged.

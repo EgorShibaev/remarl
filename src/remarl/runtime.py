@@ -52,8 +52,6 @@ def backbone_spec(model):
         config_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
     )
     metadata = Path(model) / "remarl-model.json"
-    if not metadata.exists():
-        metadata = Path(model) / "remarl-model.json"  # Existing backbone receipts.
     if metadata.exists():
         receipt = json.loads(metadata.read_text())
         result.update(model_id=receipt["model_id"], revision=receipt["revision"])

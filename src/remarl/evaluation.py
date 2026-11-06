@@ -23,7 +23,7 @@ def evaluate(generator, scorer, rows, output, *, nfe, seeds, identity, batch_siz
     if request_path.exists():
         previous = json.loads(request_path.read_text())
         # Earlier releases supported trained policies only at position temperature 1.
-        if previous.get("method") in {"remarl", "remarl"} and "position_temperature" in request:
+        if previous.get("method") == "remarl" and "position_temperature" in request:
             previous.setdefault("position_temperature", 1.0)
             previous.setdefault("confidence_residual", True)
         if previous != request:
