@@ -29,7 +29,11 @@ class PolicyConfig:
     def from_dict(cls, values):
         # Older checkpoints also record unused attention-architecture options.
         names = {f.name for f in fields(cls)}
-        return cls(**{k: v for k, v in values.items() if k in names})
+        options = {k: v for k, v in values.items() if k in names}
+        # Published transformer checkpoints use the original architecture key.
+        if options.get("architecture") == "remarl_jazbec_dit":
+            options["architecture"] = "remarl_jazbec_dit"
+        return cls(**options)
 
 
 class ReMaRLPolicy(nn.Module):
