@@ -22,3 +22,5 @@ remarl generate --model assets/llada --policy checkpoints/math64-32k.pt \
 ```
 
 All released policies use 256 answer positions. Token proposals are greedy; position choices use stochastic ordered sampling. The final call fills the remaining masks.
+
+For Dream, use `assets/dream`, a `dream-*-32k.pt` checkpoint, and `--backend torch`. Download the Dream backbone first with `remarl download dream-backbone --output assets/dream`.

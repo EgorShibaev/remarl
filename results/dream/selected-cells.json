@@ -1,0 +1,3242 @@
+[
+  {
+    "benchmark": "GSM8K",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 8,
+    "score": 47.86454384634825,
+    "mean_nfe": 8,
+    "receipt": "outputs/cluster_runs/2026-10-27-dream-nfe8/evals/remarl-32k/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 16,
+    "score": 58.15011372251706,
+    "mean_nfe": 16,
+    "receipt": "outputs/cluster_runs/2026-10-27-dream-nfe16/evals/remarl-32k/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 32,
+    "score": 65.47889815516805,
+    "mean_nfe": 32,
+    "receipt": "outputs/cluster_runs/2026-10-28-dream-nfe32/evals/remarl-32k/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 128,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 256,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 8,
+    "score": 20.29315137730604,
+    "mean_nfe": 8,
+    "receipt": "outputs/cluster_runs/2026-10-27-dream-nfe8/evals/p2-prime/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 16,
+    "score": 38.51402577710387,
+    "mean_nfe": 16,
+    "receipt": "outputs/cluster_runs/2026-10-27-dream-nfe16/evals/p2-prime/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 32,
+    "score": 50.72024260803639,
+    "mean_nfe": 32,
+    "receipt": "outputs/cluster_runs/2026-10-28-dream-nfe32/evals/p2-prime/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 64,
+    "score": 57.417235279251955,
+    "mean_nfe": 64,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/evals/p2-prime/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 128,
+    "score": 60.72782410917361,
+    "mean_nfe": 128,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-t1/128/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 256,
+    "score": 60.57619408642911,
+    "mean_nfe": 256,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-t1/256/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 8,
+    "score": 2.1986353297952994,
+    "mean_nfe": 8,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/8/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 16,
+    "score": 9.628506444275967,
+    "mean_nfe": 16,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/16/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 32,
+    "score": 27.293404094010615,
+    "mean_nfe": 32,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/32/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 64,
+    "score": 38.81728582259287,
+    "mean_nfe": 64,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/64/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 128,
+    "score": 39.57543593631539,
+    "mean_nfe": 128,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/128/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 256,
+    "score": 35.70887035633055,
+    "mean_nfe": 256,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/256/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 8,
+    "score": 1.592115238817286,
+    "mean_nfe": 8,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/8/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 16,
+    "score": 8.567096285064443,
+    "mean_nfe": 16,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/16/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 32,
+    "score": 32.297194844579224,
+    "mean_nfe": 32,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/32/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 64,
+    "score": 42.98711144806672,
+    "mean_nfe": 64,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/64/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 128,
+    "score": 33.586050037907505,
+    "mean_nfe": 128,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/128/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 256,
+    "score": 35.78468536770281,
+    "mean_nfe": 256,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/256/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 8,
+    "score": 0.0,
+    "mean_nfe": 8,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/8/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 16,
+    "score": 0.9097801364670205,
+    "mean_nfe": 16,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/16/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 32,
+    "score": 13.722517058377559,
+    "mean_nfe": 32,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/32/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 64,
+    "score": 54.965883244882484,
+    "mean_nfe": 64,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/64/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 128,
+    "score": 75.5117513267627,
+    "mean_nfe": 128,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/128/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 256,
+    "score": 81.57695223654284,
+    "mean_nfe": 256,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/256/test_gsm8k/summary.json"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": 3.10841546626232,
+    "mean_nfe": 6.913570887035633,
+    "receipt": "adaptive/fastdllm/math/256/0.2/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": 3.10841546626232,
+    "mean_nfe": 6.913570887035633,
+    "receipt": "adaptive/fastdllm/math/256/0.2/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 27.748294162244125,
+    "mean_nfe": 19.034116755117513,
+    "receipt": "adaptive/fastdllm/math/256/0.4/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 27.748294162244125,
+    "mean_nfe": 19.034116755117513,
+    "receipt": "adaptive/fastdllm/math/256/0.4/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 36.46702047005307,
+    "mean_nfe": 117.95678544351782,
+    "receipt": "adaptive/fastdllm/math/256/0.9/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 36.46702047005307,
+    "mean_nfe": 117.95678544351782,
+    "receipt": "adaptive/fastdllm/math/256/0.9/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": 0.0,
+    "mean_nfe": 8.0,
+    "receipt": "adaptive/fastdllm/math/32/0.0/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": 0.0,
+    "mean_nfe": 8.0,
+    "receipt": "adaptive/fastdllm/math/32/0.0/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 3.335860500379075,
+    "mean_nfe": 19.540561031084156,
+    "receipt": "adaptive/fastdllm/math/32/0.2/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 78.46853677028052,
+    "mean_nfe": 62.83093252463988,
+    "receipt": "adaptive/fastdllm/math/32/0.7/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 81.12206216830933,
+    "mean_nfe": 117.23199393479909,
+    "receipt": "adaptive/fastdllm/math/32/0.97/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 81.12206216830933,
+    "mean_nfe": 117.23199393479909,
+    "receipt": "adaptive/fastdllm/math/32/0.97/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": 4.624715693707354,
+    "mean_nfe": 7.970432145564822,
+    "receipt": "adaptive/eb/math/256/50.0/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": 17.058377558756632,
+    "mean_nfe": 13.065959059893858,
+    "receipt": "adaptive/eb/math/256/20.0/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 17.058377558756632,
+    "mean_nfe": 13.065959059893858,
+    "receipt": "adaptive/eb/math/256/20.0/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 38.66565579984837,
+    "mean_nfe": 32.84230477634571,
+    "receipt": "adaptive/eb/math/256/5.0/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 38.66565579984837,
+    "mean_nfe": 32.84230477634571,
+    "receipt": "adaptive/eb/math/256/5.0/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 38.66565579984837,
+    "mean_nfe": 32.84230477634571,
+    "receipt": "adaptive/eb/math/256/5.0/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": 0.0,
+    "mean_nfe": 9.342683851402578,
+    "receipt": "adaptive/eb/math/32/100.0/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 0.0,
+    "mean_nfe": 9.342683851402578,
+    "receipt": "adaptive/eb/math/32/100.0/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 61.78923426838514,
+    "mean_nfe": 35.709628506444275,
+    "receipt": "adaptive/eb/math/32/5.0/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 80.59135708870356,
+    "mean_nfe": 72.2289613343442,
+    "receipt": "adaptive/eb/math/32/0.5/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 80.74298711144807,
+    "mean_nfe": 256.0,
+    "receipt": "adaptive/eb/math/32/0.0/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 40.030326004548904,
+    "mean_nfe": 115.68309325246399,
+    "receipt": "adaptive/klass/math/256/0.5/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 40.030326004548904,
+    "mean_nfe": 115.68309325246399,
+    "receipt": "adaptive/klass/math/256/0.5/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 80.89461713419257,
+    "mean_nfe": 256.0,
+    "receipt": "adaptive/klass/math/32/1.0/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 51.40257771038666,
+    "mean_nfe": 48.00833965125095,
+    "receipt": "adaptive/dapd_direct/math/256/None/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 51.40257771038666,
+    "mean_nfe": 48.00833965125095,
+    "receipt": "adaptive/dapd_direct/math/256/None/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 51.40257771038666,
+    "mean_nfe": 48.00833965125095,
+    "receipt": "adaptive/dapd_direct/math/256/None/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 78.69598180439728,
+    "mean_nfe": 93.46171341925701,
+    "receipt": "adaptive/dapd_direct/math/32/None/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 78.69598180439728,
+    "mean_nfe": 93.46171341925701,
+    "receipt": "adaptive/dapd_direct/math/32/None/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 50.56861258529189,
+    "mean_nfe": 56.77179681576952,
+    "receipt": "adaptive/dapd_staged/math/256/None/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 50.56861258529189,
+    "mean_nfe": 56.77179681576952,
+    "receipt": "adaptive/dapd_staged/math/256/None/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 50.56861258529189,
+    "mean_nfe": 56.77179681576952,
+    "receipt": "adaptive/dapd_staged/math/256/None/test_gsm8k"
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "GSM8K",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 78.54435178165276,
+    "mean_nfe": 135.34723275208492,
+    "receipt": "adaptive/dapd_staged/math/32/None/test_gsm8k"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 8,
+    "score": 18.6,
+    "mean_nfe": 8,
+    "receipt": "outputs/cluster_runs/2026-10-27-dream-nfe8/evals/remarl-32k/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 16,
+    "score": 24.333333333333332,
+    "mean_nfe": 16,
+    "receipt": "outputs/cluster_runs/2026-10-27-dream-nfe16/evals/remarl-32k/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 32,
+    "score": 27.400000000000002,
+    "mean_nfe": 32,
+    "receipt": "outputs/cluster_runs/2026-10-28-dream-nfe32/evals/remarl-32k/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 128,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 256,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 8,
+    "score": 8.733333333333333,
+    "mean_nfe": 8,
+    "receipt": "outputs/cluster_runs/2026-10-27-dream-nfe8/evals/p2-prime/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 16,
+    "score": 16.0,
+    "mean_nfe": 16,
+    "receipt": "outputs/cluster_runs/2026-10-27-dream-nfe16/evals/p2-prime/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 32,
+    "score": 20.666666666666668,
+    "mean_nfe": 32,
+    "receipt": "outputs/cluster_runs/2026-10-28-dream-nfe32/evals/p2-prime/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 64,
+    "score": 22.8,
+    "mean_nfe": 64,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/evals/p2-prime/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 128,
+    "score": 22.26666666666667,
+    "mean_nfe": 128,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-t1/128/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 256,
+    "score": 21.53333333333333,
+    "mean_nfe": 256,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-t1/256/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 8,
+    "score": 0.6,
+    "mean_nfe": 8,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/8/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 16,
+    "score": 3.8,
+    "mean_nfe": 16,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/16/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 32,
+    "score": 12.8,
+    "mean_nfe": 32,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/32/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 64,
+    "score": 19.8,
+    "mean_nfe": 64,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/64/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 128,
+    "score": 19.2,
+    "mean_nfe": 128,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/128/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 256,
+    "score": 21.6,
+    "mean_nfe": 256,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/256/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 8,
+    "score": 1.0,
+    "mean_nfe": 8,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/8/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 16,
+    "score": 3.8,
+    "mean_nfe": 16,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/16/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 32,
+    "score": 15.0,
+    "mean_nfe": 32,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/32/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 64,
+    "score": 21.0,
+    "mean_nfe": 64,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/64/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 128,
+    "score": 17.2,
+    "mean_nfe": 128,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/128/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 256,
+    "score": 21.2,
+    "mean_nfe": 256,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/256/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 8,
+    "score": 0.0,
+    "mean_nfe": 8,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/8/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 16,
+    "score": 1.2,
+    "mean_nfe": 16,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/16/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 32,
+    "score": 9.2,
+    "mean_nfe": 32,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/32/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 64,
+    "score": 27.0,
+    "mean_nfe": 64,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/64/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 128,
+    "score": 38.800000000000004,
+    "mean_nfe": 128,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/128/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 256,
+    "score": 43.6,
+    "mean_nfe": 256,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/256/test_math/summary.json"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": 2.4,
+    "mean_nfe": 7.9,
+    "receipt": "adaptive/fastdllm/math/256/0.2/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": 2.4,
+    "mean_nfe": 7.9,
+    "receipt": "adaptive/fastdllm/math/256/0.2/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 18.8,
+    "mean_nfe": 20.57,
+    "receipt": "adaptive/fastdllm/math/256/0.4/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 18.8,
+    "mean_nfe": 20.57,
+    "receipt": "adaptive/fastdllm/math/256/0.4/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 19.0,
+    "mean_nfe": 64.426,
+    "receipt": "adaptive/fastdllm/math/256/0.7/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 21.4,
+    "mean_nfe": 134.724,
+    "receipt": "adaptive/fastdllm/math/256/0.9/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": 0.0,
+    "mean_nfe": 8.0,
+    "receipt": "adaptive/fastdllm/math/32/0.0/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": 0.0,
+    "mean_nfe": 8.0,
+    "receipt": "adaptive/fastdllm/math/32/0.0/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 2.6,
+    "mean_nfe": 25.53,
+    "receipt": "adaptive/fastdllm/math/32/0.2/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 21.8,
+    "mean_nfe": 45.054,
+    "receipt": "adaptive/fastdllm/math/32/0.4/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 39.6,
+    "mean_nfe": 74.89,
+    "receipt": "adaptive/fastdllm/math/32/0.7/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 42.8,
+    "mean_nfe": 256.0,
+    "receipt": "adaptive/fastdllm/math/32/0.999/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": 9.0,
+    "mean_nfe": 14.59,
+    "receipt": "adaptive/eb/math/256/20.0/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 9.0,
+    "mean_nfe": 14.59,
+    "receipt": "adaptive/eb/math/256/20.0/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 20.2,
+    "mean_nfe": 41.94,
+    "receipt": "adaptive/eb/math/256/5.0/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 20.2,
+    "mean_nfe": 41.94,
+    "receipt": "adaptive/eb/math/256/5.0/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 20.4,
+    "mean_nfe": 256.0,
+    "receipt": "adaptive/eb/math/256/0.0/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": 0.2,
+    "mean_nfe": 11.37,
+    "receipt": "adaptive/eb/math/32/50.0/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 0.2,
+    "mean_nfe": 11.37,
+    "receipt": "adaptive/eb/math/32/50.0/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 29.2,
+    "mean_nfe": 41.328,
+    "receipt": "adaptive/eb/math/32/5.0/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 41.0,
+    "mean_nfe": 84.574,
+    "receipt": "adaptive/eb/math/32/0.5/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 43.6,
+    "mean_nfe": 164.04,
+    "receipt": "adaptive/eb/math/32/0.01/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 21.4,
+    "mean_nfe": 133.85,
+    "receipt": "adaptive/klass/math/256/0.5/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 42.8,
+    "mean_nfe": 256.0,
+    "receipt": "adaptive/klass/math/32/1.0/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 29.4,
+    "mean_nfe": 53.666,
+    "receipt": "adaptive/dapd_direct/math/256/None/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 29.4,
+    "mean_nfe": 53.666,
+    "receipt": "adaptive/dapd_direct/math/256/None/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 29.4,
+    "mean_nfe": 53.666,
+    "receipt": "adaptive/dapd_direct/math/256/None/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 40.4,
+    "mean_nfe": 108.314,
+    "receipt": "adaptive/dapd_direct/math/32/None/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 40.4,
+    "mean_nfe": 108.314,
+    "receipt": "adaptive/dapd_direct/math/32/None/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 26.2,
+    "mean_nfe": 62.47,
+    "receipt": "adaptive/dapd_staged/math/256/None/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 26.2,
+    "mean_nfe": 62.47,
+    "receipt": "adaptive/dapd_staged/math/256/None/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 26.2,
+    "mean_nfe": 62.47,
+    "receipt": "adaptive/dapd_staged/math/256/None/test_math"
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MATH500",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 38.6,
+    "mean_nfe": 145.652,
+    "receipt": "adaptive/dapd_staged/math/32/None/test_math"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 8,
+    "score": 24.390243902439025,
+    "mean_nfe": 8,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/evals/remarl-32k/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 16,
+    "score": 38.00813008130081,
+    "mean_nfe": 16,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/evals/remarl-32k/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 32,
+    "score": 46.95121951219512,
+    "mean_nfe": 32,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code32/evals/remarl-32k/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 128,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 256,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 8,
+    "score": 10.16260162601626,
+    "mean_nfe": 8,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/evals/p2-prime/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 16,
+    "score": 19.308943089430894,
+    "mean_nfe": 16,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/evals/p2-prime/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 32,
+    "score": 26.21951219512195,
+    "mean_nfe": 32,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code32/evals/p2-prime/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 64,
+    "score": 30.691056910569102,
+    "mean_nfe": 64,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code64/evals/p2-prime/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 128,
+    "score": 31.70731707317073,
+    "mean_nfe": 128,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/p2-prime-t1/128/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 256,
+    "score": 33.94308943089431,
+    "mean_nfe": 256,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/p2-prime-t1/256/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 8,
+    "score": 7.317073170731707,
+    "mean_nfe": 8,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/p2-prime-greedy/8/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 16,
+    "score": 14.02439024390244,
+    "mean_nfe": 16,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/p2-prime-greedy/16/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 32,
+    "score": 18.902439024390244,
+    "mean_nfe": 32,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code32/extended-evals/p2-prime-greedy/32/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 64,
+    "score": 28.04878048780488,
+    "mean_nfe": 64,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code64/extended-evals/p2-prime-greedy/64/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 128,
+    "score": 29.268292682926827,
+    "mean_nfe": 128,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/p2-prime-greedy/128/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 256,
+    "score": 33.53658536585366,
+    "mean_nfe": 256,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/p2-prime-greedy/256/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 8,
+    "score": 9.146341463414634,
+    "mean_nfe": 8,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/confidence-bl256/8/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 16,
+    "score": 11.585365853658537,
+    "mean_nfe": 16,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/confidence-bl256/16/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 32,
+    "score": 21.341463414634145,
+    "mean_nfe": 32,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code32/extended-evals/confidence-bl256/32/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 64,
+    "score": 28.65853658536585,
+    "mean_nfe": 64,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code64/extended-evals/confidence-bl256/64/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 128,
+    "score": 28.65853658536585,
+    "mean_nfe": 128,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/confidence-bl256/128/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 256,
+    "score": 26.21951219512195,
+    "mean_nfe": 256,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/confidence-bl256/256/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 8,
+    "score": 0.6097560975609756,
+    "mean_nfe": 8,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/confidence-bl32/8/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 16,
+    "score": 1.8292682926829267,
+    "mean_nfe": 16,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/confidence-bl32/16/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 32,
+    "score": 6.707317073170732,
+    "mean_nfe": 32,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code32/extended-evals/confidence-bl32/32/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 64,
+    "score": 25.609756097560975,
+    "mean_nfe": 64,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code64/extended-evals/confidence-bl32/64/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 128,
+    "score": 48.78048780487805,
+    "mean_nfe": 128,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/confidence-bl32/128/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 256,
+    "score": 61.58536585365854,
+    "mean_nfe": 256,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/confidence-bl32/256/test_humaneval/summary.json"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": 8.536585365853659,
+    "mean_nfe": 7.341463414634147,
+    "receipt": "adaptive/fastdllm/code/256/0.3/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": 13.414634146341463,
+    "mean_nfe": 9.231707317073171,
+    "receipt": "adaptive/fastdllm/code/256/0.4/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 13.414634146341463,
+    "mean_nfe": 9.231707317073171,
+    "receipt": "adaptive/fastdllm/code/256/0.4/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 26.21951219512195,
+    "mean_nfe": 41.33536585365854,
+    "receipt": "adaptive/fastdllm/code/256/0.7/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 26.829268292682926,
+    "mean_nfe": 107.9390243902439,
+    "receipt": "adaptive/fastdllm/code/256/0.9/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 27.4390243902439,
+    "mean_nfe": 256.0,
+    "receipt": "adaptive/fastdllm/code/256/0.999/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": 0.6097560975609756,
+    "mean_nfe": 8.0,
+    "receipt": "adaptive/fastdllm/code/32/0.0/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": 0.6097560975609756,
+    "mean_nfe": 8.0,
+    "receipt": "adaptive/fastdllm/code/32/0.0/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 21.341463414634145,
+    "mean_nfe": 29.067073170731707,
+    "receipt": "adaptive/fastdllm/code/32/0.4/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 51.829268292682926,
+    "mean_nfe": 54.46341463414634,
+    "receipt": "adaptive/fastdllm/code/32/0.7/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 61.58536585365854,
+    "mean_nfe": 104.4451219512195,
+    "receipt": "adaptive/fastdllm/code/32/0.99/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 61.58536585365854,
+    "mean_nfe": 104.4451219512195,
+    "receipt": "adaptive/fastdllm/code/32/0.99/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": 6.097560975609756,
+    "mean_nfe": 6.9573170731707314,
+    "receipt": "adaptive/eb/code/256/50.0/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": 6.097560975609756,
+    "mean_nfe": 6.9573170731707314,
+    "receipt": "adaptive/eb/code/256/50.0/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 23.78048780487805,
+    "mean_nfe": 28.01829268292683,
+    "receipt": "adaptive/eb/code/256/5.0/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 23.78048780487805,
+    "mean_nfe": 28.01829268292683,
+    "receipt": "adaptive/eb/code/256/5.0/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 29.26829268292683,
+    "mean_nfe": 118.90243902439025,
+    "receipt": "adaptive/eb/code/256/0.5/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 29.26829268292683,
+    "mean_nfe": 118.90243902439025,
+    "receipt": "adaptive/eb/code/256/0.5/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": 3.658536585365854,
+    "mean_nfe": 15.475609756097562,
+    "receipt": "adaptive/eb/code/32/20.0/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 28.048780487804876,
+    "mean_nfe": 27.432926829268293,
+    "receipt": "adaptive/eb/code/32/5.0/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 54.8780487804878,
+    "mean_nfe": 57.75,
+    "receipt": "adaptive/eb/code/32/0.5/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 60.36585365853659,
+    "mean_nfe": 108.0,
+    "receipt": "adaptive/eb/code/32/0.01/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 62.19512195121951,
+    "mean_nfe": 256.0,
+    "receipt": "adaptive/eb/code/32/0.0/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 21.951219512195124,
+    "mean_nfe": 52.3719512195122,
+    "receipt": "adaptive/klass/code/256/0.5/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 28.658536585365855,
+    "mean_nfe": 92.21341463414635,
+    "receipt": "adaptive/klass/code/256/0.7/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 28.658536585365855,
+    "mean_nfe": 92.21341463414635,
+    "receipt": "adaptive/klass/code/256/0.7/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 58.53658536585366,
+    "mean_nfe": 99.45731707317073,
+    "receipt": "adaptive/klass/code/32/0.5/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 61.58536585365854,
+    "mean_nfe": 256.0,
+    "receipt": "adaptive/klass/code/32/1.0/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 25.609756097560975,
+    "mean_nfe": 132.90243902439025,
+    "receipt": "adaptive/dapd_direct/code/256/None/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 57.31707317073171,
+    "mean_nfe": 73.53048780487805,
+    "receipt": "adaptive/dapd_direct/code/32/None/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 57.31707317073171,
+    "mean_nfe": 73.53048780487805,
+    "receipt": "adaptive/dapd_direct/code/32/None/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 27.4390243902439,
+    "mean_nfe": 154.78658536585365,
+    "receipt": "adaptive/dapd_staged/code/256/None/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 54.8780487804878,
+    "mean_nfe": 127.41463414634147,
+    "receipt": "adaptive/dapd_staged/code/32/None/test_humaneval"
+  },
+  {
+    "benchmark": "HumanEval",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 54.8780487804878,
+    "mean_nfe": 127.41463414634147,
+    "receipt": "adaptive/dapd_staged/code/32/None/test_humaneval"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 8,
+    "score": 29.26666666666667,
+    "mean_nfe": 8,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/evals/remarl-32k/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 16,
+    "score": 40.13333333333333,
+    "mean_nfe": 16,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/evals/remarl-32k/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 32,
+    "score": 51.866666666666674,
+    "mean_nfe": 32,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code32/evals/remarl-32k/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 128,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "remarl",
+    "section": "fixed",
+    "budget": 256,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 8,
+    "score": 23.6,
+    "mean_nfe": 8,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/evals/p2-prime/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 16,
+    "score": 34.06666666666667,
+    "mean_nfe": 16,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/evals/p2-prime/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 32,
+    "score": 41.86666666666666,
+    "mean_nfe": 32,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code32/evals/p2-prime/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 64,
+    "score": 45.93333333333333,
+    "mean_nfe": 64,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code64/evals/p2-prime/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 128,
+    "score": 47.333333333333336,
+    "mean_nfe": 128,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/p2-prime-t1/128/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "p2-t1",
+    "section": "fixed",
+    "budget": 256,
+    "score": 49.53333333333333,
+    "mean_nfe": 256,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/p2-prime-t1/256/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 8,
+    "score": 0.6,
+    "mean_nfe": 8,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/p2-prime-greedy/8/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 16,
+    "score": 9.2,
+    "mean_nfe": 16,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/p2-prime-greedy/16/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 32,
+    "score": 23.400000000000002,
+    "mean_nfe": 32,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code32/extended-evals/p2-prime-greedy/32/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 64,
+    "score": 39.800000000000004,
+    "mean_nfe": 64,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code64/extended-evals/p2-prime-greedy/64/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 128,
+    "score": 45.4,
+    "mean_nfe": 128,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/p2-prime-greedy/128/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "p2-greedy",
+    "section": "fixed",
+    "budget": 256,
+    "score": 45.6,
+    "mean_nfe": 256,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/p2-prime-greedy/256/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 8,
+    "score": 1.4000000000000001,
+    "mean_nfe": 8,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/confidence-bl256/8/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 16,
+    "score": 6.6000000000000005,
+    "mean_nfe": 16,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/confidence-bl256/16/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 32,
+    "score": 22.8,
+    "mean_nfe": 32,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code32/extended-evals/confidence-bl256/32/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 64,
+    "score": 44.4,
+    "mean_nfe": 64,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code64/extended-evals/confidence-bl256/64/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 128,
+    "score": 45.800000000000004,
+    "mean_nfe": 128,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/confidence-bl256/128/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "confidence-bl256",
+    "section": "fixed",
+    "budget": 256,
+    "score": 47.599999999999994,
+    "mean_nfe": 256,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/confidence-bl256/256/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 8,
+    "score": 0.6,
+    "mean_nfe": 8,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/confidence-bl32/8/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 16,
+    "score": 4.0,
+    "mean_nfe": 16,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/confidence-bl32/16/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 32,
+    "score": 16.8,
+    "mean_nfe": 32,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code32/extended-evals/confidence-bl32/32/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 64,
+    "score": 31.2,
+    "mean_nfe": 64,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code64/extended-evals/confidence-bl32/64/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 128,
+    "score": 44.6,
+    "mean_nfe": 128,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/confidence-bl32/128/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "confidence-bl32",
+    "section": "fixed",
+    "budget": 256,
+    "score": 55.60000000000001,
+    "mean_nfe": 256,
+    "receipt": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/confidence-bl32/256/test_mbpp/summary.json"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": 18.2,
+    "mean_nfe": 6.776,
+    "receipt": "adaptive/fastdllm/code/256/0.4/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": 18.2,
+    "mean_nfe": 6.776,
+    "receipt": "adaptive/fastdllm/code/256/0.4/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 45.2,
+    "mean_nfe": 27.988,
+    "receipt": "adaptive/fastdllm/code/256/0.7/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 48.8,
+    "mean_nfe": 57.614,
+    "receipt": "adaptive/fastdllm/code/256/0.9/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 48.8,
+    "mean_nfe": 57.614,
+    "receipt": "adaptive/fastdllm/code/256/0.9/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "fastdllm-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 48.8,
+    "mean_nfe": 57.614,
+    "receipt": "adaptive/fastdllm/code/256/0.9/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": 0.8,
+    "mean_nfe": 8.0,
+    "receipt": "adaptive/fastdllm/code/32/0.0/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": 20.0,
+    "mean_nfe": 15.304,
+    "receipt": "adaptive/fastdllm/code/32/0.4/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 50.2,
+    "mean_nfe": 22.466,
+    "receipt": "adaptive/fastdllm/code/32/0.7/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 55.6,
+    "mean_nfe": 47.696,
+    "receipt": "adaptive/fastdllm/code/32/0.99/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 55.6,
+    "mean_nfe": 47.696,
+    "receipt": "adaptive/fastdllm/code/32/0.99/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "fastdllm-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 55.6,
+    "mean_nfe": 47.696,
+    "receipt": "adaptive/fastdllm/code/32/0.99/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": 3.8,
+    "mean_nfe": 4.818,
+    "receipt": "adaptive/eb/code/256/50.0/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": 37.6,
+    "mean_nfe": 15.166,
+    "receipt": "adaptive/eb/code/256/5.0/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 37.6,
+    "mean_nfe": 15.166,
+    "receipt": "adaptive/eb/code/256/5.0/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 48.2,
+    "mean_nfe": 63.792,
+    "receipt": "adaptive/eb/code/256/0.5/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 48.2,
+    "mean_nfe": 63.792,
+    "receipt": "adaptive/eb/code/256/0.5/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "eb-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 48.6,
+    "mean_nfe": 256.0,
+    "receipt": "adaptive/eb/code/256/0.0/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": 9.2,
+    "mean_nfe": 12.736,
+    "receipt": "adaptive/eb/code/32/20.0/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 52.8,
+    "mean_nfe": 28.15,
+    "receipt": "adaptive/eb/code/32/0.5/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 55.4,
+    "mean_nfe": 50.974,
+    "receipt": "adaptive/eb/code/32/0.01/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 55.4,
+    "mean_nfe": 50.974,
+    "receipt": "adaptive/eb/code/32/0.01/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "eb-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 55.4,
+    "mean_nfe": 50.974,
+    "receipt": "adaptive/eb/code/32/0.01/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 46.8,
+    "mean_nfe": 53.706,
+    "receipt": "adaptive/klass/code/256/0.7/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 46.8,
+    "mean_nfe": 53.706,
+    "receipt": "adaptive/klass/code/256/0.7/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "klass-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 48.4,
+    "mean_nfe": 256.0,
+    "receipt": "adaptive/klass/code/256/1.0/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 49.8,
+    "mean_nfe": 54.516,
+    "receipt": "adaptive/klass/code/32/0.5/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 49.8,
+    "mean_nfe": 54.516,
+    "receipt": "adaptive/klass/code/32/0.5/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "klass-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 55.6,
+    "mean_nfe": 256.0,
+    "receipt": "adaptive/klass/code/32/1.0/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": 51.6,
+    "mean_nfe": 26.678,
+    "receipt": "adaptive/dapd_direct/code/256/None/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 51.6,
+    "mean_nfe": 26.678,
+    "receipt": "adaptive/dapd_direct/code/256/None/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 51.6,
+    "mean_nfe": 26.678,
+    "receipt": "adaptive/dapd_direct/code/256/None/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_direct-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 51.6,
+    "mean_nfe": 26.678,
+    "receipt": "adaptive/dapd_direct/code/256/None/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 55.4,
+    "mean_nfe": 34.112,
+    "receipt": "adaptive/dapd_direct/code/32/None/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 55.4,
+    "mean_nfe": 34.112,
+    "receipt": "adaptive/dapd_direct/code/32/None/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_direct-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 55.4,
+    "mean_nfe": 34.112,
+    "receipt": "adaptive/dapd_direct/code/32/None/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 64,
+    "score": 51.2,
+    "mean_nfe": 47.27,
+    "receipt": "adaptive/dapd_staged/code/256/None/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 51.2,
+    "mean_nfe": 47.27,
+    "receipt": "adaptive/dapd_staged/code/256/None/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_staged-bl256",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 51.2,
+    "mean_nfe": 47.27,
+    "receipt": "adaptive/dapd_staged/code/256/None/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 8,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 16,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 32,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 64,
+    "score": null,
+    "mean_nfe": null,
+    "receipt": null
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 128,
+    "score": 56.2,
+    "mean_nfe": 119.408,
+    "receipt": "adaptive/dapd_staged/code/32/None/test_mbpp"
+  },
+  {
+    "benchmark": "MBPP",
+    "family": "dapd_staged-bl32",
+    "section": "adaptive",
+    "budget": 256,
+    "score": 56.2,
+    "mean_nfe": 119.408,
+    "receipt": "adaptive/dapd_staged/code/32/None/test_mbpp"
+  }
+]

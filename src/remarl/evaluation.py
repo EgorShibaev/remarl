@@ -8,7 +8,8 @@ import torch
 from .data.prepare import load_prepared
 from .io import append_json, save_json
 from .protocols.scoring import Scorer
-from .runtime import Generator, load_policy, configure_compute
+from .runtime import (Generator, load_policy, configure_compute,
+                      backbone_spec, check_prepared_backbone)
 from .sampling import draws, P2Scores
 
 
@@ -95,8 +96,12 @@ def run_evaluation(
         raise ValueError("Retention controls apply only to --p2-prime")
     configure_compute()
     rows, manifest = load_prepared(data)
+    spec = backbone_spec(model)
+    check_prepared_backbone(manifest, spec)
     if policy_path:
         policy, saved = load_policy(policy_path, device)
+        if saved.get("config", {}).get("backbone", spec) != spec:
+            raise ValueError("Policy was trained with a different frozen model")
         policy.temperature = temperature
         identity = dict(
             method="remarl",
@@ -109,7 +114,7 @@ def run_evaluation(
         identity = dict(
             method="p2-prime", position_temperature=temperature, retention_bonus=retention_bonus
         )
-    identity.update(data_sha256=manifest["rows_sha256"], backend=backend)
+    identity.update(data_sha256=manifest["rows_sha256"], backend=backend, backbone=spec)
     generator = Generator(model, policy, device, backend, manifest["required_canvas"])
     scorer = Scorer(generator.tokenizer, manifest["domain"])
     splits = [split] if split else [s for s in rows if s.startswith("test_")]

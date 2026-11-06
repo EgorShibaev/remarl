@@ -10,7 +10,7 @@ def parser():
     sub = p.add_subparsers(dest="command", required=True)
     fetch = sub.add_parser("download", help="Download pinned model, data, or released policies")
     fetch.add_argument(
-        "asset", choices=("backbone", "checkpoints", "math-data", "code-data", "baseline-sources")
+        "asset", choices=("backbone", "dream-backbone", "checkpoints", "math-data", "code-data", "baseline-sources")
     )
     fetch.add_argument("--output", type=Path, required=True)
     prep = sub.add_parser("prepare", help="Build the exact task prompts and training cohort")

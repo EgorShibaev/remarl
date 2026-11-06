@@ -1,0 +1,110 @@
+{
+  "snapshot_epoch": 1793954037.562583,
+  "complete_observations": 230,
+  "complete_per_benchmark": {
+    "GSM8K": 57,
+    "MATH500": 57,
+    "HumanEval": 58,
+    "MBPP": 58
+  },
+  "column_winners": {
+    "gsm8k": {
+      "8": [
+        "remarl"
+      ],
+      "16": [
+        "remarl"
+      ],
+      "32": [
+        "remarl"
+      ],
+      "64": [
+        "fastdllm-bl32"
+      ],
+      "128": [
+        "fastdllm-bl32"
+      ],
+      "256": [
+        "confidence-bl32"
+      ]
+    },
+    "math500": {
+      "8": [
+        "remarl"
+      ],
+      "16": [
+        "remarl"
+      ],
+      "32": [
+        "remarl"
+      ],
+      "64": [
+        "dapd_direct-bl256"
+      ],
+      "128": [
+        "eb-bl32"
+      ],
+      "256": [
+        "confidence-bl32",
+        "eb-bl32"
+      ]
+    },
+    "humaneval": {
+      "8": [
+        "remarl"
+      ],
+      "16": [
+        "remarl"
+      ],
+      "32": [
+        "remarl"
+      ],
+      "64": [
+        "eb-bl32"
+      ],
+      "128": [
+        "fastdllm-bl32"
+      ],
+      "256": [
+        "eb-bl32"
+      ]
+    },
+    "mbpp": {
+      "8": [
+        "remarl"
+      ],
+      "16": [
+        "remarl"
+      ],
+      "32": [
+        "eb-bl32"
+      ],
+      "64": [
+        "fastdllm-bl32"
+      ],
+      "128": [
+        "dapd_staged-bl32"
+      ],
+      "256": [
+        "dapd_staged-bl32"
+      ]
+    }
+  },
+  "adaptive_selection": "Highest observed test accuracy with exact mean NFE <= column budget; ties prefer fewer calls.",
+  "source_sha256": {
+    "outputs/cluster_runs/2026-10-27-dream-nfe16/evals/p2-prime/test_gsm8k/summary.json": "b85c8340560f13869a2d365563b2fff4287596d9744a7e682237ec6061111c5c",
+    "outputs/cluster_runs/2026-10-27-dream-nfe16/evals/p2-prime/test_math/summary.json": "699a333dd387ab227ed48fe8d5f07307ec27a96e2d24af7dddfd182bcf4c0048",
+    "outputs/cluster_runs/2026-10-27-dream-nfe16/evals/remarl-32k/test_gsm8k/summary.json": "e08bf66e79f277b16576efad3faf20909d489f061a2e804e57e56dc6bd02eb2c",
+    "outputs/cluster_runs/2026-10-27-dream-nfe16/evals/remarl-32k/test_math/summary.json": "ddc41fb4aae7b771e8413b7a442031b113caa4cb4b681a187a34d24045edccb4",
+    "outputs/cluster_runs/2026-10-27-dream-nfe8/evals/p2-prime/test_gsm8k/summary.json": "bb302a6cd51b428fa5d1f45670342bf03218af2a04fc4a6f22aa229067ccffaa",
+    "outputs/cluster_runs/2026-10-27-dream-nfe8/evals/p2-prime/test_math/summary.json": "9e3a6a973021abf1b318ac2995e67a18c04e05929e44332a2d6a098459f536db",
+    "outputs/cluster_runs/2026-10-27-dream-nfe8/evals/remarl-32k/test_gsm8k/summary.json": "728d10c0e73bd91f550ebd9c2c4c313ea79de9b0ce938268d7a8bcc6a46c5124",
+    "outputs/cluster_runs/2026-10-27-dream-nfe8/evals/remarl-32k/test_math/summary.json": "6a6b251ec9fba0c31120cfbb4bfe3644119b879fbf45ab444cfb0974f27b2457",
+    "outputs/cluster_runs/2026-10-28-dream-nfe32/evals/p2-prime/test_gsm8k/summary.json": "d9ec2632c99ad0044779a2125d89d85c67822de7c4e125c892715c2b7a79d35d",
+    "outputs/cluster_runs/2026-10-28-dream-nfe32/evals/p2-prime/test_math/summary.json": "9886f44d4b938ea056d8f78e3a541a49de2ab29ae281b59671c59b7aa56a2d1e",
+    "outputs/cluster_runs/2026-10-28-dream-nfe32/evals/remarl-32k/test_gsm8k/summary.json": "b829dd07e6637c8411ec24921520bd4176b0420414ffafa44b772332327edd0a",
+    "outputs/cluster_runs/2026-10-28-dream-nfe32/evals/remarl-32k/test_math/summary.json": "3a80bccd9337d2a31786f69900468df2e19a80446d5a4c8180b6b5ad3f6f0e2e",
+    "outputs/cluster_runs/2026-11-04-capella-dream-joint/baseline-points.json": "a2837fbc6d2bddce97599c7e35ba16cfb8086d16fda54e4be950f41cda41f825",
+    "outputs/cluster_runs/2026-11-04-capella-dream-joint/baseline-status.json": "4c13d3636f9369ff111227ebfe9cadc6114a64a45752518ae6cb4e809ab1e88f"
+  }
+}

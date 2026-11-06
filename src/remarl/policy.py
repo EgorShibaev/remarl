@@ -20,6 +20,10 @@ class PolicyConfig:
     hidden_projection_dim: int = 64
     confidence_residual: bool = True
     zero_initialize_output: bool = True
+    node_dim: int = 128
+    st_heads: int = 2
+    st_blocks: int = 1
+    dropout: float = 0.0
 
     @classmethod
     def from_dict(cls, values):
@@ -83,3 +87,20 @@ class ReMaRLPolicy(nn.Module):
     def forward(self, features, confidence):
         output = self.delta(features)
         return confidence + output if self.config.confidence_residual else output
+
+
+def policy_class_for(config):
+    if config.architecture == "mlp":
+        return ReMaRLPolicy
+    if config.architecture == "remarl_jazbec_dit":
+        from .transformer_policy import TransformerPolicy
+
+        return TransformerPolicy
+    raise ValueError(f"Unsupported policy architecture: {config.architecture}")
+
+
+def position_scores(policy, features, confidence):
+    """Preserve answer boundaries for attention policies during rollout and replay."""
+    if policy.config.architecture == "remarl_jazbec_dit":
+        return policy(features, confidence)
+    return policy(features.flatten(0, 1), confidence.flatten()).reshape_as(confidence)

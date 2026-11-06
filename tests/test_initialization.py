@@ -101,6 +101,7 @@ def test_random_training_cli_resume_and_evaluation_loading(tmp_path, monkeypatch
         return result
 
     monkeypatch.setattr(training, "configure_compute", lambda: None)
+    monkeypatch.setattr(training, "backbone_spec", lambda _: dict(kind="llada", hidden_size=4096, mask_id=126336, config_sha256="toy-model"))
     monkeypatch.setattr(training, "load_prepared", lambda _: ({"train": rows}, manifest))
     monkeypatch.setattr(training, "policy_config_for_training", fixture_config)
     monkeypatch.setattr(training, "Generator", generator)

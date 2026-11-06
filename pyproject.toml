@@ -12,6 +12,7 @@ dependencies = ["torch>=2.6", "numpy>=1.26", "transformers>=4.46", "safetensors>
 
 [project.optional-dependencies]
 gpu = ["vllm>=0.10"]
+dream = ["transformers==4.46.3", "accelerate==1.6.0"]
 test = ["pytest>=8", "build>=1.2", "ruff>=0.9"]
 
 [project.scripts]

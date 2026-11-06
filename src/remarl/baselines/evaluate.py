@@ -22,10 +22,17 @@ def run(config, data, model, output, device="cuda:0", backend="vllm"):
 
     cfg = json.loads(Path(config).read_text())
     rows, manifest = load_prepared(data)
-    engine = LLaDAOfflineModel.from_local_checkpoint(
-        model, device=device, backend=backend, fuse_projections=True
-    )
-    extend(engine, manifest["required_canvas"], model)
+    dream = cfg.get("backbone") == "dream"
+    if cfg.get("domain", manifest["domain"]) != manifest["domain"]:
+        raise ValueError("Configuration and prepared data domains differ")
+    if dream:
+        from .dream import DreamBaseline
+        engine = DreamBaseline(model, manifest, device, backend)
+    else:
+        engine = LLaDAOfflineModel.from_local_checkpoint(
+            model, device=device, backend=backend, fuse_projections=True
+        )
+        extend(engine, manifest["required_canvas"], model)
     scorer = Scorer(load_tokenizer(model), manifest["domain"])
     method = cfg["mode"]
     ref = reference(engine) if method in ("rcr", "core", "dapd") else None
@@ -37,6 +44,8 @@ def run(config, data, model, output, device="cuda:0", backend="vllm"):
             identity = dict(
                 config=cfg, split=split, data_sha256=manifest["rows_sha256"], backend=backend
             )
+            if dream:
+                identity["backbone"] = engine.spec
             spec = folder / "evaluation.json"
             if spec.exists() and json.loads(spec.read_text()) != identity:
                 raise ValueError("Output belongs to another baseline evaluation")
@@ -57,7 +66,9 @@ def run(config, data, model, output, device="cuda:0", backend="vllm"):
                 prompt = torch.tensor([row["prompt_ids"]], device=device)
                 key = f"{split}:{index}:{cfg.get('seed', 101)}:{cfg.get('steps', cfg.get('threshold'))}"
                 torch.manual_seed(int(hashlib.sha256(key.encode()).hexdigest()[:15], 16))
-                if method in ("low_confidence", "random", "fastdllm"):
+                if dream:
+                    adapter, decoder = engine, lambda a, p, c: a.decode(p, c)
+                elif method in ("low_confidence", "random", "fastdllm"):
                     adapter, decoder = NativeAdapter(engine, prompt), confidence.decode
                 elif method in ("p2_original", "margin", "pc_sampler", "klass", "eb_sampler"):
                     adapter, decoder = NativeAdapter(engine, prompt), standard.decode
@@ -70,7 +81,8 @@ def run(config, data, model, output, device="cuda:0", backend="vllm"):
                 result = decoder(adapter, prompt, cfg)
                 tokens = result.sequences[0, -256:].tolist()
                 calls = int(result.steps_taken[0])
-                if calls != adapter.calls or 126336 in tokens:
+                mask_id = engine.spec["mask_id"] if dream else 126336
+                if calls != adapter.calls or mask_id in tokens:
                     raise RuntimeError("Incorrect call count or incomplete answer")
                 answer = scorer([tokens], [row["gold"]])[0]
                 record = dict(index=index, tokens=tokens, nfe=calls, **answer)

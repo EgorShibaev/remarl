@@ -1,0 +1,51 @@
+% Generated from verified complete Dream evaluations; do not edit numerical cells.
+\begingroup
+\definecolor{scorebar}{HTML}{D9ECF5}
+\ifdefined\scorecellwidth\else\newlength{\scorecellwidth}\fi
+\setlength{\scorecellwidth}{36pt}
+\newcommand{\scorecell}[3]{%
+ \makebox[\scorecellwidth][l]{%
+  \rlap{\raisebox{-2.2pt}[0pt][0pt]{\color{scorebar}\rule{#1\scorecellwidth}{10pt}}}%
+  \makebox[30pt][r]{#2}\makebox[6pt][l]{#3}}}
+\newcommand{\emptycell}{\makebox[\scorecellwidth][c]{\textemdash}}
+
+\fontsize{9.5}{10.5}\selectfont
+\setlength{\LTcapwidth}{\textwidth}
+\setlength{\LTpre}{3pt}
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.0}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{4.1cm} c *{6}{r}@{}}
+\caption{Dream GSM8K accuracy (\%). Adaptive cells show the best observed test score within each mean-NFE budget, with actual mean NFE below. All scores are computed here. Bars scale from zero to the column maximum; bold marks the highest score. Dashes indicate an unmeasured budget or no eligible operating point.}\label{tab:dream-gsm8k}\\
+\toprule
+ & & \multicolumn{6}{c}{Mean-NFE budget}\\
+Method & Blocks & \makebox[36pt][c]{8} & \makebox[36pt][c]{16} & \makebox[36pt][c]{32} & \makebox[36pt][c]{64} & \makebox[36pt][c]{128} & \makebox[36pt][c]{256} \\
+\midrule
+\endfirsthead
+\multicolumn{8}{l}{\textit{Dream GSM8K comparison (continued)}}\\
+\toprule
+ & & \multicolumn{6}{c}{Mean-NFE budget}\\
+Method & Blocks & \makebox[36pt][c]{8} & \makebox[36pt][c]{16} & \makebox[36pt][c]{32} & \makebox[36pt][c]{64} & \makebox[36pt][c]{128} & \makebox[36pt][c]{256} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\multicolumn{8}{l}{\textit{Fixed-budget decoding}}\\
+\textbf{ReMaRL} & $1\times256$ & \scorecell{1.00000000}{\textbf{47.86}}{} & \scorecell{1.00000000}{\textbf{58.15}}{} & \scorecell{1.00000000}{\textbf{65.48}}{} & \emptycell & \emptycell & \emptycell \\
+P2$'$ ($\tau=1$) & $1\times256$ & \scorecell{0.42397043}{20.29}{} & \scorecell{0.66232073}{38.51}{} & \scorecell{0.77460440}{50.72}{} & \scorecell{0.73172303}{57.42}{} & \scorecell{0.74859813}{60.73}{} & \scorecell{0.74256506}{60.58}{} \\
+P2$'$ (greedy) & $1\times256$ & \scorecell{0.04593453}{2.20}{} & \scorecell{0.16558018}{9.63}{} & \scorecell{0.41682748}{27.29}{} & \scorecell{0.49468599}{38.82}{} & \scorecell{0.48785047}{39.58}{} & \scorecell{0.43773234}{35.71}{} \\
+Confidence & $1\times256$ & \scorecell{0.03326294}{1.59}{} & \scorecell{0.14732725}{8.57}{} & \scorecell{0.49324585}{32.30}{} & \scorecell{0.54782609}{42.99}{} & \scorecell{0.41401869}{33.59}{} & \scorecell{0.43866171}{35.78}{} \\
+Confidence & $8\times32$ & \scorecell{0.00000000}{0.00}{} & \scorecell{0.01564537}{0.91}{} & \scorecell{0.20957159}{13.72}{} & \scorecell{0.70048309}{54.97}{} & \scorecell{0.93084112}{75.51}{} & \scorecell{1.00000000}{\textbf{81.58}}{} \\
+\midrule
+\multicolumn{8}{l}{\textit{Adaptive decoding}}\\
+Fast-dLLM & $1\times256$ & \begin{tabular}[t]{@{}c@{}}\scorecell{0.06494192}{3.11}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(6.9)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.05345502}{3.11}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(6.9)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.42377460}{27.75}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(19.0)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.35362319}{27.75}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(19.0)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.44953271}{36.47}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(118.0)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.44702602}{36.47}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(118.0)}\end{tabular} \\
+Fast-dLLM & $8\times32$ & \begin{tabular}[t]{@{}c@{}}\scorecell{0.00000000}{0.00}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(8.0)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.00000000}{0.00}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(8.0)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.05094558}{3.34}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(19.5)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{1.00000000}{\textbf{78.47}}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(62.8)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{1.00000000}{\textbf{81.12}}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(117.2)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.99442379}{81.12}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(117.2)}\end{tabular} \\
+EB-Sampler & $1\times256$ & \begin{tabular}[t]{@{}c@{}}\scorecell{0.09662091}{4.62}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(8.0)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.29335072}{17.06}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(13.1)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.26051717}{17.06}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(13.1)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.49275362}{38.67}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(32.8)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.47663551}{38.67}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(32.8)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.47397770}{38.67}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(32.8)}\end{tabular} \\
+EB-Sampler & $8\times32$ & \emptycell & \begin{tabular}[t]{@{}c@{}}\scorecell{0.00000000}{0.00}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(9.3)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.00000000}{0.00}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(9.3)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.78743961}{61.79}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(35.7)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.99345794}{80.59}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(72.2)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.98977695}{80.74}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(256.0)}\end{tabular} \\
+KLASS & $1\times256$ & \emptycell & \emptycell & \emptycell & \emptycell & \begin{tabular}[t]{@{}c@{}}\scorecell{0.49345794}{40.03}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(115.7)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.49070632}{40.03}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(115.7)}\end{tabular} \\
+KLASS & $8\times32$ & \emptycell & \emptycell & \emptycell & \emptycell & \emptycell & \begin{tabular}[t]{@{}c@{}}\scorecell{0.99163569}{80.89}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(256.0)}\end{tabular} \\
+DAPD-Direct & $1\times256$ & \emptycell & \emptycell & \emptycell & \begin{tabular}[t]{@{}c@{}}\scorecell{0.65507246}{51.40}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(48.0)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.63364486}{51.40}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(48.0)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.63011152}{51.40}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(48.0)}\end{tabular} \\
+DAPD-Direct & $8\times32$ & \emptycell & \emptycell & \emptycell & \emptycell & \begin{tabular}[t]{@{}c@{}}\scorecell{0.97009346}{78.70}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(93.5)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.96468401}{78.70}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(93.5)}\end{tabular} \\
+DAPD-Staged & $1\times256$ & \emptycell & \emptycell & \emptycell & \begin{tabular}[t]{@{}c@{}}\scorecell{0.64444444}{50.57}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(56.8)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.62336449}{50.57}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(56.8)}\end{tabular} & \begin{tabular}[t]{@{}c@{}}\scorecell{0.61988848}{50.57}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(56.8)}\end{tabular} \\
+DAPD-Staged & $8\times32$ & \emptycell & \emptycell & \emptycell & \emptycell & \emptycell & \begin{tabular}[t]{@{}c@{}}\scorecell{0.96282528}{78.54}{}\\[-2pt]{\fontsize{7.5}{9}\selectfont\color{black!65}(135.3)}\end{tabular} \\
+\end{longtable}
+\endgroup

@@ -15,19 +15,25 @@ from .optimization import (
     replay_error,
     state_digest,
 )
-from .policy import ReMaRLPolicy, PolicyConfig
+from .policy import PolicyConfig, policy_class_for
 from .protocols.scoring import Scorer
-from .runtime import Generator, configure_compute
+from .runtime import Generator, configure_compute, backbone_spec, check_prepared_backbone
 
 
 def policy_config_for_training(cfg):
+    hidden = cfg.get("backbone", {}).get("hidden_size", 4096)
+    architecture = cfg.get("policy_architecture", "mlp")
+    if architecture not in ("mlp", "remarl_jazbec_dit"):
+        raise ValueError(f"Unknown policy architecture: {architecture}")
+    if architecture != "mlp" and (hidden != 4096 or cfg.get("variant", "full") != "full"):
+        raise ValueError("The transformer ablation uses full LLaDA features")
     initialization = cfg.get("policy_initialization", "p2_prime")
     if initialization == "p2_prime":
-        return PolicyConfig()
+        return PolicyConfig(backbone_hidden_dim=hidden, architecture=architecture)
     if initialization == "random_mlp_no_confidence_residual":
-        if cfg.get("variant", "full") != "full":
+        if cfg.get("variant", "full") != "full" or architecture != "mlp":
             raise ValueError("The initialization ablation uses the full policy features")
-        return PolicyConfig(confidence_residual=False, zero_initialize_output=False)
+        return PolicyConfig(backbone_hidden_dim=hidden, confidence_residual=False, zero_initialize_output=False)
     raise ValueError(f"Unknown policy initialization: {initialization}")
 
 
@@ -94,7 +100,12 @@ class Trainer:
         )
 
     def restore(self, saved):
-        if saved["config"] != self.config or saved["data_manifest"] != self.manifest:
+        previous_config = dict(saved["config"])
+        # Older LLaDA checkpoints predate explicit backbone metadata. The model
+        # is still checked when train() constructs its generator and dataset.
+        if "backbone" not in previous_config and self.config.get("backbone", {}).get("kind") == "llada":
+            previous_config["backbone"] = self.config["backbone"]
+        if previous_config != self.config or saved["data_manifest"] != self.manifest:
             raise ValueError("Resume requires the same configuration and prepared data")
         if PolicyConfig.from_dict(saved["selector_config"]) != self.policy.config:
             raise ValueError("Resume requires the same policy architecture and scoring rule")
@@ -201,10 +212,15 @@ def train(config, data, model, output, devices, backend="vllm", resume=None):
     configure_compute()
     cfg = json.loads(Path(config).read_text())
     cfg["backend"] = backend
+    spec = backbone_spec(model)
+    if cfg.get("backbone", spec) != spec:
+        raise ValueError("Training recipe specifies a different frozen model")
+    cfg["backbone"] = spec
     if not devices or len(set(devices)) != len(devices):
         raise ValueError("Provide one or more distinct GPU devices")
     validate_config(cfg)
     rows, manifest = load_prepared(data)
+    check_prepared_backbone(manifest, spec)
     if cfg["domain"] != manifest["domain"]:
         raise ValueError("Configuration and dataset domains differ")
     if cfg["domain"] == "code" and cfg["cohort"] != manifest["cohort"]:
@@ -225,8 +241,9 @@ def train(config, data, model, output, devices, backend="vllm", resume=None):
     from .ablations import selector_class
 
     variant = cfg.get("variant", "full")
-    policy_class = ReMaRLPolicy if variant == "full" else selector_class(ReMaRLPolicy, variant)
     policy_config = policy_config_for_training(cfg)
+    base_class = policy_class_for(policy_config)
+    policy_class = base_class if variant == "full" else selector_class(base_class, variant)
     policy = policy_class(policy_config).to(devices[0]).eval()
     replicas = [
         Generator(model, policy_class(policy_config), d, backend, manifest["required_canvas"])

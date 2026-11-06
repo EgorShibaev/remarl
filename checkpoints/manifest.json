@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-11-06",
   "drive_folder": "https://drive.google.com/drive/u/0/folders/1UFagh30vsvA-3jK-3sAf_iREaiQ3mxki",
   "backbone": {
     "repo": "GSAI-ML/LLaDA-8B-Instruct",
@@ -15,7 +15,8 @@
       "sha256": "60014f2d7655360cacddcb405f7e7a5659f0bd0c685eee0126e263996561dd51",
       "bytes": 3461002,
       "policy_sha256": "826a88b56d3c6bf6168f1ba4ba6ca58bfd8c4f5257903d787d1b0bd605a865b5",
-      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state",
+      "backbone": "llada"
     },
     {
       "file": "code32-32k.pt",
@@ -25,7 +26,8 @@
       "sha256": "2bb9dcd5c19668160d773deebc1e9e513a9b0243b305720a32dae048230eb1cb",
       "bytes": 3442506,
       "policy_sha256": "99dd33cf3fb71f166be0ec6243e118f7b5b0697da68a891a6323c455665001df",
-      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state",
+      "backbone": "llada"
     },
     {
       "file": "code8-32k.pt",
@@ -35,7 +37,8 @@
       "sha256": "3c9f4e6028e5f01da97f848f4a340d2f1c91b91e87f4a265206daecfe9f2b8c2",
       "bytes": 3444170,
       "policy_sha256": "cd29d19dbc27b9c3bb37b3eb6ff94d260745e871b866fd75f689b70d576ac401",
-      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state",
+      "backbone": "llada"
     },
     {
       "file": "math16-32k.pt",
@@ -45,7 +48,8 @@
       "sha256": "add545dd944fe73a2302200b8411c6b928cc0c7685b24bef663ccb55817d9705",
       "bytes": 3479306,
       "policy_sha256": "cd5154ff262d94b876819873259594f8f2d9ab7ccd5af76174237178848fd727",
-      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state",
+      "backbone": "llada"
     },
     {
       "file": "math32-32k.pt",
@@ -55,7 +59,8 @@
       "sha256": "bb7ee666fd31223d82e372256249eb51df6e3460b46cd1065309d7070c32fd43",
       "bytes": 3467850,
       "policy_sha256": "1e094cc10f7f3d3cf762fdbfd3aeee466467095110bc4d0544da5666abe69d0c",
-      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state",
+      "backbone": "llada"
     },
     {
       "file": "math4-32k.pt",
@@ -65,7 +70,8 @@
       "sha256": "a1d5d06143d89a98f52c72571892951ec7db44e9e8be60c2345907ff183c70c5",
       "bytes": 3440842,
       "policy_sha256": "0e22ff43d93a5fa0fe526a2d6e9ab814f86974211a7398e15ff49cf878768987",
-      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state",
+      "backbone": "llada"
     },
     {
       "file": "math64-32k.pt",
@@ -75,7 +81,8 @@
       "sha256": "58556599a9c0a568cb14d0def426fcf19ebd7b67acdb523c432380d7a00b8824",
       "bytes": 3482826,
       "policy_sha256": "ed750039ac736242a85c0fbde9ef46d52b76da3d779fa4cb0387411ffeef04bc",
-      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state",
+      "backbone": "llada"
     },
     {
       "file": "math8-32k.pt",
@@ -85,10 +92,117 @@
       "sha256": "39bf7fcdf2f4574a8344a46c62e22309eb7ff5184dd135fc4456acf41055ac52",
       "bytes": 3483594,
       "policy_sha256": "906cbcb371135667593ca29b18542c1c1c994bd8287e985dbf13d3ad08986f76",
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state",
+      "backbone": "llada"
+    },
+    {
+      "file": "dream-code16-32k.pt",
+      "domain": "code",
+      "train_nfe": 16,
+      "accepted_groups": 32768,
+      "backbone": "dream",
+      "sha256": "6ed4cc0ef6d2ac986054ab5acf838e599192b5ba8855692ee5e0dc6e2660859d",
+      "bytes": 3041683,
+      "policy_sha256": "90b5a1a242e25296132993f7e938b73e6a4a4cd55042bf5c1ce676629c78089b",
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+    },
+    {
+      "file": "dream-code32-32k.pt",
+      "domain": "code",
+      "train_nfe": 32,
+      "accepted_groups": 32768,
+      "backbone": "dream",
+      "sha256": "2efdec265095622dbaac26feacc4007bce28f9e27770cbb00d84aae1acf858d2",
+      "bytes": 3053146,
+      "policy_sha256": "6d6ea0e9e04e5ae37f6d3ef90e52d95236e027e99900c8ebd7e48e4b97a00d5b",
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+    },
+    {
+      "file": "dream-code8-32k.pt",
+      "domain": "code",
+      "train_nfe": 8,
+      "accepted_groups": 32768,
+      "backbone": "dream",
+      "sha256": "20227d506fef65cd2f4c1912a9ade2884a7756230ecfa2b85189aa5eea9be949",
+      "bytes": 3061587,
+      "policy_sha256": "690e87a1764ee41381281a76b0c3fae7ffc2e004fd15a19ba0463ed6f23e682c",
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+    },
+    {
+      "file": "dream-math16-32k.pt",
+      "domain": "math",
+      "train_nfe": 16,
+      "accepted_groups": 32768,
+      "backbone": "dream",
+      "sha256": "b2ea927371a4669a2851b38a7d331980a3606f597352a6576deeeff6e8a76a6e",
+      "bytes": 3043802,
+      "policy_sha256": "06529b3b446b93347ffbd9817e344bc2c7643f7734c7db196b27711d6a59b739",
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+    },
+    {
+      "file": "dream-math32-32k.pt",
+      "domain": "math",
+      "train_nfe": 32,
+      "accepted_groups": 32768,
+      "backbone": "dream",
+      "sha256": "7ffd8394359a3cf843157a0cfbf35e43303d6eb1acdd8a9fb4ff788af850dac6",
+      "bytes": 3046042,
+      "policy_sha256": "356b477830d451108189d2aa5d6555e1f563259d82f89c5d60f926fabbbe492f",
+      "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
+    },
+    {
+      "file": "dream-math8-32k.pt",
+      "domain": "math",
+      "train_nfe": 8,
+      "accepted_groups": 32768,
+      "backbone": "dream",
+      "sha256": "9ed8c7b9869af46de09486685e6aa8315a00ab635c601419ddf41e76328adaf7",
+      "bytes": 3041242,
+      "policy_sha256": "f1174bbece3f5bfdb3cf6eb5317a7bfb2a93a8edd96bf01de7da00d77e88d20f",
       "format": "original training checkpoint; model + selector_config + optimizer/RNG state"
     }
   ],
   "archive_url": "https://drive.google.com/file/d/11OaCmTI9Zz4Yyas4PT7rqWUtpNRIP7mn/view",
   "archive_sha256": "fadb5dfc42bf8bee908beef3e98a583bd484a59504c70d7d47e3b0c7b534025c",
-  "access": "public, anyone with the link, viewer"
+  "access": "public, anyone with the link, viewer",
+  "backbones": {
+    "llada": {
+      "repo": "GSAI-ML/LLaDA-8B-Instruct",
+      "revision": "08b83a6feb34df1a6011b80c3c00c7563e963b07",
+      "distributed": false
+    },
+    "dream": {
+      "repo": "Dream-org/Dream-v0-Instruct-7B",
+      "revision": "05334cb9faaf763692dcf9d8737c642be2b2a6ae",
+      "distributed": false
+    }
+  },
+  "archives": [
+    {
+      "url": "https://drive.google.com/file/d/11OaCmTI9Zz4Yyas4PT7rqWUtpNRIP7mn/view",
+      "sha256": "fadb5dfc42bf8bee908beef3e98a583bd484a59504c70d7d47e3b0c7b534025c",
+      "files": [
+        "code16-32k.pt",
+        "code32-32k.pt",
+        "code8-32k.pt",
+        "math16-32k.pt",
+        "math32-32k.pt",
+        "math4-32k.pt",
+        "math64-32k.pt",
+        "math8-32k.pt"
+      ]
+    },
+    {
+      "url": "https://drive.google.com/file/d/1KhZMkUd6kaiXpqc2SYU6SuZ7O_0rVflY/view",
+      "sha256": "d19984169bdbb801c676679620ca4eadbefa7e2fb685e2c40bdc24d20b13e0eb",
+      "files": [
+        "dream-code16-32k.pt",
+        "dream-code32-32k.pt",
+        "dream-code8-32k.pt",
+        "dream-math16-32k.pt",
+        "dream-math32-32k.pt",
+        "dream-math8-32k.pt"
+      ]
+    }
+  ]
 }

@@ -4,7 +4,7 @@
 
 Training uses one complete frozen backbone replica per GPU. An 80 GB NVIDIA GPU provides room for the eight-answer rollout batches; multiple GPUs collect independent question groups. For NFE64 training, allow at least 64 GB of host RAM for replay and model loading.
 
-The paper used BF16 backbone weights, FP32 policy/replay features, fused projections, and vLLM's noncausal FlashAttention kernel. [production-packages.txt](../environments/production-packages.txt) records that environment. `--backend torch` uses PyTorch SDPA. Backend and package changes can affect BF16 rounding and generated answers.
+The LLaDA experiments used BF16 backbone weights, FP32 policy/replay features, fused projections, and vLLM's noncausal FlashAttention kernel. [production-packages.txt](../environments/production-packages.txt) records that environment. `--backend torch` uses PyTorch SDPA. Backend and package changes can affect BF16 rounding and generated answers.
 
 Install with `pip install -e '.[gpu,test]'`. For CPU tests and data preparation, `pip install -e '.[test]'` suffices. This repository uses the vLLM attention kernel directly; it does not start a model server.
 
@@ -41,6 +41,8 @@ remarl train --config configs/code/nfe32.json \
 `configs/code/nfe16.json` and `nfe32.json` use the `code16` cohort. For `configs/code/nfe8.json`, prepare `--cohort code8` in a separate directory. The saved allowlists retain 9,148 and 9,149 KodCode questions, respectively. Preparation verifies every retained row against its recorded hash. The allowlists include the reference-execution audit and benchmark-overlap exclusions used in the experiments.
 
 HumanEval and MBPP prompts, test code, and sanitization are shared with evaluation. Generated code runs only after the sandbox's isolation and correctness probes pass.
+
+Dream training uses a separate runtime and tokenizer. See [Dream](dream.md) for its six recipes.
 
 ## Recipe and outputs
 
@@ -88,6 +90,18 @@ remarl evaluate --policy runs/random-init/policy-016384.pt --nfe 8 \
 ```
 
 `policy_initialization: random_mlp_no_confidence_residual` selects this ablation. Its checkpoints record both `confidence_residual: false` and `zero_initialize_output: false` in `selector_config`; evaluation and resume preserve these settings. Configurations without this option retain ReMaRL's zero-initialized correction and fixed confidence residual. Compare against `configs/ablations/full.json` at the same 16k endpoint. The historical study also evaluated checkpoints at 0, 4,096, and 8,192 groups using three inference seeds.
+
+The transformer ablation replaces the pointwise MLP with one APPLe RoPE DiT block: hidden width 128, two attention heads, feed-forward width 512, GELU, and zero dropout. It keeps ReMaRL's confidence residual, input features, and zero-initialized output/skip. It has 583,187 trainable parameters, compared with 284,115 for the MLP. Attention runs across the 256 positions within each answer, never across answers.
+
+```bash
+remarl train --config configs/ablations/transformer_nfe8.json \
+  --model assets/llada --data assets/data/math --output runs/transformer \
+  --devices cuda:0,cuda:1,cuda:2,cuda:3
+remarl evaluate --policy runs/transformer/policy-016384.pt --nfe 8 \
+  --model assets/llada --data assets/data/math --output runs/transformer-eval
+```
+
+This experiment changes the scorer architecture; it reuses APPLe's attention block, not APPLe's full policy or training objective. Its NFE8, 16k-group recipe and recorded results are supplied.
 
 For training-data size:
 

@@ -129,7 +129,9 @@ def replay_chunks(groups, device, groups_per_chunk=4):
 
 
 def replay_logp(selector, features, scores, orders):
-    z = selector(features.flatten(0, 1), scores.flatten()).reshape_as(scores)
+    from .policy import position_scores
+
+    z = position_scores(selector, features, scores)
     temperature = getattr(selector, "temperature", 1.0)
     if getattr(selector, "variant", "full") == "no_revision":
         from .ablations import action_logprob

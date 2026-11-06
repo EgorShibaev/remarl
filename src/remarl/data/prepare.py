@@ -11,7 +11,7 @@ import pyarrow.parquet as pq
 from ..io import save_json, sha256
 from ..protocols.math import official, prompt
 from ..protocols.hashes import digest_row
-from ..runtime import load_tokenizer
+from ..runtime import load_tokenizer, backbone_spec
 
 OFFICIAL = Path(__file__).resolve().parents[1] / "protocols/official"
 
@@ -221,6 +221,7 @@ def prepare(domain, raw, model, output, cohort="code16"):
         output / "manifest.json",
         dict(
             domain=domain,
+            backbone=backbone_spec(model),
             cohort=cohort if domain == "code" else None,
             counts={s: len(v) for s, v in rows.items()},
             required_canvas=required,

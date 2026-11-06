@@ -21,9 +21,9 @@ remarl evaluate --p2-prime --nfe 8 --model assets/llada \
   --data assets/data/math --output runs/p2-prime8
 ```
 
-P2-prime scores visible positions using their retained token's probability. Original P2 uses the fresh proposal's probability and has a separate baseline configuration.
+P2-prime scores unmasked positions using their retained token's probability. Original P2 uses the fresh proposal's probability and has a separate baseline configuration.
 
-`--temperature` controls position selection for both trained ReMaRL policies and P2-prime. It defaults to 1; 0 selects positions greedily. For P2-prime, 0.25 is the paper's calibrated temperature. `--retention-bonus VALUE` applies only to P2-prime and adds a fixed bonus to unmasked positions. Choose control settings on training questions before evaluating the test sets. These options leave token proposals greedy.
+`--temperature` controls position selection for both trained ReMaRL policies and P2-prime. It defaults to 1; 0 selects positions greedily. For P2-prime, 0.25 is the calibrated math NFE8 temperature. `--retention-bonus VALUE` applies only to P2-prime and adds a fixed bonus to unmasked positions. Choose control settings on training questions before evaluating the test sets. These options leave token proposals greedy.
 
 To reproduce the trained NFE8 policy's temperature sweep with fixed weights:
 
@@ -41,6 +41,8 @@ done
 Positive temperatures use three inference seeds; the deterministic setting uses one. Evaluation records `position_temperature` alongside the checkpoint hash. Saved trained-policy evaluations from older releases, which omitted this field, are treated as temperature 1.
 
 Each benchmark directory stores generated token IDs and scored answers in `answers-seed*.jsonl`, a summary per seed, and an aggregate `summary.json`. Accuracy is stored as a fraction and as `accuracy_percent`. Repeating the command resumes an incomplete evaluation. A different checkpoint, dataset, budget, position temperature, retention bonus, seed list, or backend requires a different output directory.
+
+Dream uses the same evaluation command with its own model, tokenizer, prepared data, and `--backend torch`; see [Dream evaluation](dream.md#evaluate).
 
 ## Baselines
 

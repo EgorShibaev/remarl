@@ -130,8 +130,8 @@ def collect(
     Request IDs/group IDs are carried by the caller; collection never filters
     or reorders groups and cannot update the policy.
     """
-    if selector.training or selector.config.architecture != "mlp":
-        raise ValueError("Frozen eval-mode pointwise MLP required")
+    if selector.training or selector.config.architecture not in ("mlp", "remarl_jazbec_dit"):
+        raise ValueError("Eval-mode ReMaRL policy required")
     cfg = selector.config
     if (
         cfg.input_node_dim != 3
@@ -213,7 +213,9 @@ def collect(
             f, sc, masked = features_from_answer(
                 logits, hidden if cfg.backbone_hidden_dim else None, answer, backbone.mask_token_id
             )
-            z = selector(f.reshape(batch * length, width), sc.flatten()).reshape(batch, length)
+            from .policy import position_scores
+
+            z = position_scores(selector, f, sc)
             temperature = getattr(selector, "temperature", 1.0)
             if getattr(selector, "variant", "full") == "no_revision":
                 from .ablations import select_order, action_logprob

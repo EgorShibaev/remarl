@@ -1,0 +1,1025 @@
+{
+  "captured_at": "2026-11-01T21:09:14.295669+00:00",
+  "initialization": {
+    "policy_config": {
+      "input_node_dim": 3,
+      "hidden_dim": 64,
+      "architecture": "mlp",
+      "linear_skip": true,
+      "position_encoding": "learned",
+      "position_dim": 16,
+      "position_count": 256,
+      "position_column": 2,
+      "feature_encoding": "none",
+      "backbone_hidden_dim": 4096,
+      "hidden_projection_dim": 64,
+      "confidence_residual": false,
+      "zero_initialize_output": false
+    },
+    "policy_sha256": "418fa93dca9d99025b09e638c050a472b56d1449b5b64d8cec20c6de6341995c",
+    "backbone_frozen": true,
+    "output_rule": "MLP(features) + learned_linear_skip(features); no fixed confidence addition",
+    "initialization": "PyTorch Linear reset_parameters, random final weights/bias and random skip"
+  },
+  "config": {
+    "initialization": "fresh",
+    "training_questions": 14973,
+    "accepted_groups_per_batch": 16,
+    "groups_per_minibatch": 16,
+    "passes": 4,
+    "target_accepted_groups": 16384,
+    "lr_schedule": "constant",
+    "learning_rate": 0.0001,
+    "nfe": 8,
+    "domain": "math",
+    "seed": 7,
+    "group_size": 8,
+    "answer_length": 256,
+    "save_every_groups": 4096,
+    "policy_initialization": "random_mlp_no_confidence_residual",
+    "backbone": {
+      "kind": "llada",
+      "hidden_size": 4096,
+      "mask_id": 126336,
+      "config_sha256": "5f99fefe855fdb5100bb6cadb57bdb09fae723ad54811f95c00ecacf29d58a6a",
+      "model_id": "GSAI-ML/LLaDA-8B-Instruct",
+      "revision": "08b83a6feb34df1a6011b80c3c00c7563e963b07"
+    },
+    "backend": "vllm"
+  },
+  "evaluations": [
+    {
+      "complete": true,
+      "groups": 0,
+      "policy_sha256": "418fa93dca9d99025b09e638c050a472b56d1449b5b64d8cec20c6de6341995c",
+      "accuracy_percent": {
+        "test_gsm8k": 25.018953752843064,
+        "test_math": 11.466666666666669
+      },
+      "seed_results": [
+        {
+          "groups": 0,
+          "split": "test_gsm8k",
+          "policy_sha256": "418fa93dca9d99025b09e638c050a472b56d1449b5b64d8cec20c6de6341995c",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 101,
+              "count": 1319,
+              "correct": 330.0,
+              "accuracy": 0.25018953752843065
+            }
+          ],
+          "count": 1319,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.25018953752843065,
+          "accuracy_percent": 25.018953752843064,
+          "seed_std": null
+        },
+        {
+          "groups": 0,
+          "split": "test_math",
+          "policy_sha256": "418fa93dca9d99025b09e638c050a472b56d1449b5b64d8cec20c6de6341995c",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 202,
+              "count": 500,
+              "correct": 57.0,
+              "accuracy": 0.114
+            }
+          ],
+          "count": 500,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.114,
+          "accuracy_percent": 11.4,
+          "seed_std": null
+        },
+        {
+          "groups": 0,
+          "split": "test_gsm8k",
+          "policy_sha256": "418fa93dca9d99025b09e638c050a472b56d1449b5b64d8cec20c6de6341995c",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 202,
+              "count": 1319,
+              "correct": 340.0,
+              "accuracy": 0.2577710386656558
+            }
+          ],
+          "count": 1319,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.2577710386656558,
+          "accuracy_percent": 25.777103866565582,
+          "seed_std": null
+        },
+        {
+          "groups": 0,
+          "split": "test_math",
+          "policy_sha256": "418fa93dca9d99025b09e638c050a472b56d1449b5b64d8cec20c6de6341995c",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 303,
+              "count": 500,
+              "correct": 57.0,
+              "accuracy": 0.114
+            }
+          ],
+          "count": 500,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.114,
+          "accuracy_percent": 11.4,
+          "seed_std": null
+        },
+        {
+          "groups": 0,
+          "split": "test_gsm8k",
+          "policy_sha256": "418fa93dca9d99025b09e638c050a472b56d1449b5b64d8cec20c6de6341995c",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 303,
+              "count": 1319,
+              "correct": 320.0,
+              "accuracy": 0.24260803639120546
+            }
+          ],
+          "count": 1319,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.24260803639120546,
+          "accuracy_percent": 24.260803639120546,
+          "seed_std": null
+        },
+        {
+          "groups": 0,
+          "split": "test_math",
+          "policy_sha256": "418fa93dca9d99025b09e638c050a472b56d1449b5b64d8cec20c6de6341995c",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 101,
+              "count": 500,
+              "correct": 58.0,
+              "accuracy": 0.116
+            }
+          ],
+          "count": 500,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.116,
+          "accuracy_percent": 11.600000000000001,
+          "seed_std": null
+        }
+      ]
+    },
+    {
+      "complete": true,
+      "groups": 4096,
+      "policy_sha256": "6fa97219e9e905ca0c47847fe3f4129375dee702928477294eeac2ed418f395f",
+      "accuracy_percent": {
+        "test_gsm8k": 33.45969168562042,
+        "test_math": 16.133333333333333
+      },
+      "seed_results": [
+        {
+          "groups": 4096,
+          "split": "test_gsm8k",
+          "policy_sha256": "6fa97219e9e905ca0c47847fe3f4129375dee702928477294eeac2ed418f395f",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 101,
+              "count": 1319,
+              "correct": 444.0,
+              "accuracy": 0.3366186504927976
+            }
+          ],
+          "count": 1319,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.3366186504927976,
+          "accuracy_percent": 33.66186504927976,
+          "seed_std": null
+        },
+        {
+          "groups": 4096,
+          "split": "test_math",
+          "policy_sha256": "6fa97219e9e905ca0c47847fe3f4129375dee702928477294eeac2ed418f395f",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 202,
+              "count": 500,
+              "correct": 86.0,
+              "accuracy": 0.172
+            }
+          ],
+          "count": 500,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.172,
+          "accuracy_percent": 17.2,
+          "seed_std": null
+        },
+        {
+          "groups": 4096,
+          "split": "test_gsm8k",
+          "policy_sha256": "6fa97219e9e905ca0c47847fe3f4129375dee702928477294eeac2ed418f395f",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 202,
+              "count": 1319,
+              "correct": 436.0,
+              "accuracy": 0.3305534495830174
+            }
+          ],
+          "count": 1319,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.3305534495830174,
+          "accuracy_percent": 33.05534495830174,
+          "seed_std": null
+        },
+        {
+          "groups": 4096,
+          "split": "test_math",
+          "policy_sha256": "6fa97219e9e905ca0c47847fe3f4129375dee702928477294eeac2ed418f395f",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 303,
+              "count": 500,
+              "correct": 73.0,
+              "accuracy": 0.146
+            }
+          ],
+          "count": 500,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.146,
+          "accuracy_percent": 14.6,
+          "seed_std": null
+        },
+        {
+          "groups": 4096,
+          "split": "test_gsm8k",
+          "policy_sha256": "6fa97219e9e905ca0c47847fe3f4129375dee702928477294eeac2ed418f395f",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 303,
+              "count": 1319,
+              "correct": 444.0,
+              "accuracy": 0.3366186504927976
+            }
+          ],
+          "count": 1319,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.3366186504927976,
+          "accuracy_percent": 33.66186504927976,
+          "seed_std": null
+        },
+        {
+          "groups": 4096,
+          "split": "test_math",
+          "policy_sha256": "6fa97219e9e905ca0c47847fe3f4129375dee702928477294eeac2ed418f395f",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 101,
+              "count": 500,
+              "correct": 83.0,
+              "accuracy": 0.166
+            }
+          ],
+          "count": 500,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.166,
+          "accuracy_percent": 16.6,
+          "seed_std": null
+        }
+      ]
+    },
+    {
+      "complete": true,
+      "groups": 8192,
+      "policy_sha256": "9b3f57d38dfb786db32bc4d4e653c4a00c20d52f36cbf220ea5c4d02eba5b321",
+      "accuracy_percent": {
+        "test_gsm8k": 40.485216072782414,
+        "test_math": 16.533333333333335
+      },
+      "seed_results": [
+        {
+          "groups": 8192,
+          "split": "test_gsm8k",
+          "policy_sha256": "9b3f57d38dfb786db32bc4d4e653c4a00c20d52f36cbf220ea5c4d02eba5b321",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 101,
+              "count": 1319,
+              "correct": 555.0,
+              "accuracy": 0.42077331311599697
+            }
+          ],
+          "count": 1319,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.42077331311599697,
+          "accuracy_percent": 42.0773313115997,
+          "seed_std": null
+        },
+        {
+          "groups": 8192,
+          "split": "test_math",
+          "policy_sha256": "9b3f57d38dfb786db32bc4d4e653c4a00c20d52f36cbf220ea5c4d02eba5b321",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 202,
+              "count": 500,
+              "correct": 81.0,
+              "accuracy": 0.162
+            }
+          ],
+          "count": 500,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.162,
+          "accuracy_percent": 16.2,
+          "seed_std": null
+        },
+        {
+          "groups": 8192,
+          "split": "test_gsm8k",
+          "policy_sha256": "9b3f57d38dfb786db32bc4d4e653c4a00c20d52f36cbf220ea5c4d02eba5b321",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 202,
+              "count": 1319,
+              "correct": 510.0,
+              "accuracy": 0.3866565579984837
+            }
+          ],
+          "count": 1319,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.3866565579984837,
+          "accuracy_percent": 38.665655799848366,
+          "seed_std": null
+        },
+        {
+          "groups": 8192,
+          "split": "test_math",
+          "policy_sha256": "9b3f57d38dfb786db32bc4d4e653c4a00c20d52f36cbf220ea5c4d02eba5b321",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 303,
+              "count": 500,
+              "correct": 83.0,
+              "accuracy": 0.166
+            }
+          ],
+          "count": 500,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.166,
+          "accuracy_percent": 16.6,
+          "seed_std": null
+        },
+        {
+          "groups": 8192,
+          "split": "test_gsm8k",
+          "policy_sha256": "9b3f57d38dfb786db32bc4d4e653c4a00c20d52f36cbf220ea5c4d02eba5b321",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 303,
+              "count": 1319,
+              "correct": 537.0,
+              "accuracy": 0.4071266110689917
+            }
+          ],
+          "count": 1319,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.4071266110689917,
+          "accuracy_percent": 40.71266110689917,
+          "seed_std": null
+        },
+        {
+          "groups": 8192,
+          "split": "test_math",
+          "policy_sha256": "9b3f57d38dfb786db32bc4d4e653c4a00c20d52f36cbf220ea5c4d02eba5b321",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 101,
+              "count": 500,
+              "correct": 84.0,
+              "accuracy": 0.168
+            }
+          ],
+          "count": 500,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.168,
+          "accuracy_percent": 16.8,
+          "seed_std": null
+        }
+      ]
+    },
+    {
+      "complete": true,
+      "groups": 16384,
+      "policy_sha256": "04dea0ce341e8ad09ed92c252705f67b953b247010047a7dec66c2e0c0642e7c",
+      "accuracy_percent": {
+        "test_gsm8k": 47.53601213040182,
+        "test_math": 18.2
+      },
+      "seed_results": [
+        {
+          "groups": 16384,
+          "split": "test_gsm8k",
+          "policy_sha256": "04dea0ce341e8ad09ed92c252705f67b953b247010047a7dec66c2e0c0642e7c",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 101,
+              "count": 1319,
+              "correct": 621.0,
+              "accuracy": 0.47081122062168307
+            }
+          ],
+          "count": 1319,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.47081122062168307,
+          "accuracy_percent": 47.081122062168305,
+          "seed_std": null
+        },
+        {
+          "groups": 16384,
+          "split": "test_math",
+          "policy_sha256": "04dea0ce341e8ad09ed92c252705f67b953b247010047a7dec66c2e0c0642e7c",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 202,
+              "count": 500,
+              "correct": 85.0,
+              "accuracy": 0.17
+            }
+          ],
+          "count": 500,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.17,
+          "accuracy_percent": 17.0,
+          "seed_std": null
+        },
+        {
+          "groups": 16384,
+          "split": "test_gsm8k",
+          "policy_sha256": "04dea0ce341e8ad09ed92c252705f67b953b247010047a7dec66c2e0c0642e7c",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 202,
+              "count": 1319,
+              "correct": 653.0,
+              "accuracy": 0.49507202426080366
+            }
+          ],
+          "count": 1319,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.49507202426080366,
+          "accuracy_percent": 49.50720242608037,
+          "seed_std": null
+        },
+        {
+          "groups": 16384,
+          "split": "test_math",
+          "policy_sha256": "04dea0ce341e8ad09ed92c252705f67b953b247010047a7dec66c2e0c0642e7c",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 303,
+              "count": 500,
+              "correct": 89.0,
+              "accuracy": 0.178
+            }
+          ],
+          "count": 500,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.178,
+          "accuracy_percent": 17.8,
+          "seed_std": null
+        },
+        {
+          "groups": 16384,
+          "split": "test_gsm8k",
+          "policy_sha256": "04dea0ce341e8ad09ed92c252705f67b953b247010047a7dec66c2e0c0642e7c",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 303,
+              "count": 1319,
+              "correct": 607.0,
+              "accuracy": 0.46019711902956784
+            }
+          ],
+          "count": 1319,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.46019711902956784,
+          "accuracy_percent": 46.019711902956786,
+          "seed_std": null
+        },
+        {
+          "groups": 16384,
+          "split": "test_math",
+          "policy_sha256": "04dea0ce341e8ad09ed92c252705f67b953b247010047a7dec66c2e0c0642e7c",
+          "position_temperature": 1.0,
+          "token_temperature": 0.0,
+          "data_sha256": "11c1e17cc2b5e6bb6251bf31e121ce34f7c6f6a0f45ca56c0dda17064ff97fd8",
+          "policy_config": {
+            "input_node_dim": 3,
+            "hidden_dim": 64,
+            "architecture": "mlp",
+            "linear_skip": true,
+            "position_encoding": "learned",
+            "position_dim": 16,
+            "position_count": 256,
+            "position_column": 2,
+            "feature_encoding": "none",
+            "backbone_hidden_dim": 4096,
+            "hidden_projection_dim": 64,
+            "confidence_residual": false,
+            "zero_initialize_output": false
+          },
+          "nfe": 8,
+          "seeds": [
+            {
+              "seed": 101,
+              "count": 500,
+              "correct": 99.0,
+              "accuracy": 0.198
+            }
+          ],
+          "count": 500,
+          "batch_size": 8,
+          "complete": true,
+          "accuracy": 0.198,
+          "accuracy_percent": 19.8,
+          "seed_std": null
+        }
+      ]
+    }
+  ],
+  "complete": {
+    "groups": 16384,
+    "time": 1793562068.651363
+  },
+  "source_sha256": {
+    "historical-runs/remarl-paper-followups-c37-20261101/random-train/training.jsonl": "f43295ff0e347eacb7ae88564e3b311cb488ebcaabf10efe1b197f594273a312",
+    "historical-runs/remarl-paper-followups-c37-20261101/random-train/evals/000000/summary.json": "f0fa9eeb9ec34247b12a76136fcb2a40d9bb454a0374e72c1514174283e7343c",
+    "historical-runs/remarl-paper-followups-c37-20261101/random-train/evals/004096/summary.json": "8424544f0ef12576b6322d7856d232100f31ed3591271acf6699db3d6fbcb11a",
+    "historical-runs/remarl-paper-followups-c37-20261101/random-train/evals/008192/summary.json": "615cf48c421bca3057b5a9d08114d1347e7491ce502dc2b1a01fbeeb7af052cf",
+    "historical-runs/remarl-paper-followups-c37-20261101/random-train/evals/016384/summary.json": "202c123edf20b973a99c87e4bb5f11da63066fb7700a9c2a427c07536236519e",
+    "historical-runs/remarl-paper-followups-c37-20261101/random-train/INITIALIZATION.json": "24e9ce7e5cdd2703084fab5544d7bd579d8b66323cc94a18e5d91fb1a5f5047b",
+    "historical-runs/remarl-paper-followups-c37-20261101/random-train/config.json": "f142589426d82fae271c4695e0155dbd508d7006df65b344ef7531bcca342dcf",
+    "historical-runs/remarl-paper-followups-c37-20261101/random-train/COMPLETE.json": "498dd1fa4bfa68e93d7cf075635417007304f05f8bffc479abad4d75a398005a"
+  },
+  "snapshot_sha256": "ed1950ffd9d4e9a48eecc7c0f58f2342bbea330e9051d4fc7a68a4750aa03ddd",
+  "description": "Random MLP output and linear skip; fixed confidence residual removed; confidence input retained. One training seed, three inference seeds per full benchmark.",
+  "provenance_note": "Source-file hashes refer to archived experiment records. Unrelated queue receipts are omitted and cluster path prefixes are replaced with historical-runs/."
+}

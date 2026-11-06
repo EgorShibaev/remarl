@@ -1,0 +1,8 @@
+{
+  "backbone": "dream",
+  "mode": "dapd_direct",
+  "domain": "math",
+  "block": 256,
+  "parameter": null,
+  "backend": "torch"
+}

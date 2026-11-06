@@ -3,12 +3,15 @@
 from pathlib import Path
 import torch
 from .protocols.math import official, prompt
-from .runtime import Generator, load_policy, load_tokenizer, configure_compute
+from .runtime import Generator, load_policy, load_tokenizer, configure_compute, backbone_spec
 
 
 def generate(args):
     configure_compute()
     policy, saved = load_policy(args.policy, args.device)
+    spec = backbone_spec(args.model)
+    if saved.get("config", {}).get("backbone", spec) != spec:
+        raise ValueError("Policy checkpoint belongs to another frozen model")
     tokenizer = load_tokenizer(args.model)
     text = args.prompt
     if args.task != "raw":

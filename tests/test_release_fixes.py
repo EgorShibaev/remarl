@@ -70,6 +70,7 @@ def toy_evaluation(monkeypatch):
         return result
 
     monkeypatch.setattr(evaluation, "configure_compute", lambda: None)
+    monkeypatch.setattr(evaluation, "backbone_spec", lambda _: {"kind": "llada", "hidden_size": 4})
     monkeypatch.setattr(evaluation, "load_prepared", lambda _: ({"test_gsm8k": rows}, manifest))
     monkeypatch.setattr(evaluation, "Generator", generator)
     monkeypatch.setattr(ToyGenerator, "tokenizer", None, raising=False)

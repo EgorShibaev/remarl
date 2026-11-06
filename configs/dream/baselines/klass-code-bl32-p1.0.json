@@ -1,0 +1,8 @@
+{
+  "backbone": "dream",
+  "mode": "klass",
+  "domain": "code",
+  "block": 32,
+  "parameter": 1.0,
+  "backend": "torch"
+}

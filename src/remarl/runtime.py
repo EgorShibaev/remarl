@@ -2,12 +2,14 @@
 
 from pathlib import Path
 from types import SimpleNamespace
+import hashlib
+import json
 import os
 import torch
 from .backbone import LLaDAOfflineModel
 from .context import extend
 from .optimization import state_digest
-from .policy import ReMaRLPolicy, PolicyConfig
+from .policy import PolicyConfig, policy_class_for
 from .rollout import collect
 
 MASK_ID = 126336
@@ -29,6 +31,39 @@ def load_tokenizer(model):
     return AutoTokenizer.from_pretrained(model, local_files_only=True, trust_remote_code=True)
 
 
+def backbone_spec(model):
+    path = Path(model) / "config.json"
+    cfg = json.loads(path.read_text())
+    kind = cfg.get("model_type", "").lower()
+    if kind == "dream":
+        hidden = cfg["hidden_size"]
+        mask = cfg["mask_token_id"]
+    elif kind == "llada":
+        hidden = cfg.get("d_model", cfg.get("hidden_size"))
+        mask = cfg.get("mask_token_id", MASK_ID)
+    else:
+        raise ValueError(f"Unsupported frozen generator: {kind}")
+    if not isinstance(hidden, int) or hidden <= 0:
+        raise ValueError("Generator configuration has no hidden size")
+    result = dict(
+        kind=kind,
+        hidden_size=hidden,
+        mask_id=mask,
+        config_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+    )
+    metadata = Path(model) / "remarl-model.json"
+    if metadata.exists():
+        receipt = json.loads(metadata.read_text())
+        result.update(model_id=receipt["model_id"], revision=receipt["revision"])
+    return result
+
+
+def check_prepared_backbone(manifest, spec):
+    recorded = manifest.get("backbone")
+    if recorded is not None and recorded != spec:
+        raise ValueError("Prepared prompts belong to another generator/tokenizer")
+
+
 def load_policy(path, device="cpu"):
     saved = torch.load(path, map_location="cpu", weights_only=True)
     state = saved["model"]
@@ -38,8 +73,10 @@ def load_policy(path, device="cpu"):
     from .ablations import selector_class
 
     variant = saved.get("config", {}).get("variant", "full")
-    policy_class = ReMaRLPolicy if variant == "full" else selector_class(ReMaRLPolicy, variant)
-    policy = policy_class(PolicyConfig.from_dict(saved["selector_config"])).to(device).eval()
+    config = PolicyConfig.from_dict(saved["selector_config"])
+    base_class = policy_class_for(config)
+    policy_class = base_class if variant == "full" else selector_class(base_class, variant)
+    policy = policy_class(config).to(device).eval()
     policy.load_state_dict(state, strict=True)
     return policy, saved
 
@@ -64,19 +101,31 @@ class Generator:
         self.device = torch.device(device)
         self.policy = policy.to(self.device).eval()
         self.tokenizer = load_tokenizer(model)
-        self.engine = LLaDAOfflineModel.from_local_checkpoint(
-            Path(model), device=self.device, backend=backend, fuse_projections=True
-        )
-        extend(self.engine, max_length, model)
+        self.spec = backbone_spec(model)
+        self.mask_id = self.spec["mask_id"]
+        if self.policy.config.backbone_hidden_dim not in (0, self.spec["hidden_size"]):
+            raise ValueError("Policy hidden size differs from the frozen generator")
+        if self.spec["kind"] == "dream":
+            if backend != "torch":
+                raise ValueError("Dream currently requires --backend torch")
+            from .dream import DreamAnswerModel
+
+            self.engine = DreamAnswerModel.from_local_checkpoint(model, self.device)
+        else:
+            self.engine = LLaDAOfflineModel.from_local_checkpoint(
+                Path(model), device=self.device, backend=backend, fuse_projections=True
+            )
+            extend(self.engine, max_length, model)
 
     def generate(self, rows, uniforms, record=False):
         if self.device.type == "cuda":
             torch.cuda.set_device(self.device)
         ids, attention, positions = [
-            t.to(self.device) for t in canvas(rows, self.tokenizer.pad_token_id, uniforms.shape[-1])
+            t.to(self.device)
+            for t in canvas(rows, self.tokenizer.pad_token_id, uniforms.shape[-1], self.mask_id)
         ]
         result = collect(
-            SimpleNamespace(mask_token_id=MASK_ID),
+            SimpleNamespace(mask_token_id=self.mask_id),
             self.policy,
             ids,
             attention,

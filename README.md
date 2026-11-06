@@ -2,7 +2,7 @@
 
 Code for **ReMaRL: Learning to Unmask and Remask in Frozen Diffusion Language Models**.
 
-ReMaRL learns which answer positions to reveal, retain, or remask while keeping LLaDA-8B-Instruct frozen. A small MLP reads token confidence, mask state, position, and hidden features. GRPO trains the policy using final-answer correctness rewards.
+ReMaRL learns which answer positions to reveal, retain, or remask while keeping the diffusion model frozen. A small MLP reads token confidence, mask state, position, and hidden features. GRPO trains the policy using final-answer correctness rewards.
 
 [Public checkpoints](https://drive.google.com/drive/u/0/folders/1UFagh30vsvA-3jK-3sAf_iREaiQ3mxki) · [Training](docs/training.md) · [Evaluation](docs/evaluation.md) · [Inference](docs/inference.md)
 
@@ -28,12 +28,14 @@ remarl download backbone --output assets/llada
 remarl download checkpoints --output checkpoints
 ```
 
-Checkpoint downloads are public and require no Google account. The command downloads, extracts, and verifies the eight policies automatically. The frozen backbone is downloaded separately from its pinned Hugging Face revision.
+Checkpoint downloads are public and require no Google account. The command downloads, extracts, and verifies the 14 LLaDA and Dream policies automatically. The frozen backbone is downloaded separately from its pinned Hugging Face revision.
 
-| Domain | Training NFE | Checkpoint files |
+| Frozen model / domain | Training NFE | Checkpoint files |
 |---|---|---|
-| Math | 4, 8, 16, 32, 64 | `math4-32k.pt`, `math8-32k.pt`, `math16-32k.pt`, `math32-32k.pt`, `math64-32k.pt` |
-| Code | 8, 16, 32 | `code8-32k.pt`, `code16-32k.pt`, `code32-32k.pt` |
+| LLaDA / math | 4, 8, 16, 32, 64 | `math4-32k.pt`, `math8-32k.pt`, `math16-32k.pt`, `math32-32k.pt`, `math64-32k.pt` |
+| LLaDA / code | 8, 16, 32 | `code8-32k.pt`, `code16-32k.pt`, `code32-32k.pt` |
+| Dream / math | 8, 16, 32 | `dream-math8-32k.pt`, `dream-math16-32k.pt`, `dream-math32-32k.pt` |
+| Dream / code | 8, 16, 32 | `dream-code8-32k.pt`, `dream-code16-32k.pt`, `dream-code32-32k.pt` |
 
 All released policies were trained for 32k accepted groups. File and policy hashes are in [the checkpoint manifest](checkpoints/manifest.json).
 
@@ -61,6 +63,12 @@ remarl train --config configs/math/nfe8.json \
 ```
 
 The trainer initializes the policy directly; training does not require a released checkpoint. It saves checkpoints, training metrics, and the configuration used. The same commands support math, code, component ablations, and training-data-size experiments through their configurations.
+
+## Dream and architecture ablations
+
+[Dream instructions](docs/dream.md) cover the pinned backbone, data preparation, training, inference, and baseline evaluations. The six Dream policies were trained separately on frozen Dream-v0-Instruct-7B. [Recorded Dream results](results/dream/) include all four benchmark tables and their numerical inputs.
+
+The [ablation recipes](docs/training.md#ablations) include random initialization without the confidence residual and the transformer scorer. [Architecture results](results/ablations/architecture.json) retain the measured checkpoints and training histories; [initialization results](results/ablations/random-initialization.json) contain the completed initialization ablation.
 
 ## Repository
 

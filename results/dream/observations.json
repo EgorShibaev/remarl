@@ -1,0 +1,2072 @@
+[
+  {
+    "family": "p2-t1",
+    "split": "test_humaneval",
+    "nfe": 16,
+    "score": 19.308943089430894,
+    "low": 17.682926829268293,
+    "high": 21.951219512195124,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/evals/p2-prime/test_humaneval/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_mbpp",
+    "nfe": 16,
+    "score": 34.06666666666667,
+    "low": 33.2,
+    "high": 34.8,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/evals/p2-prime/test_mbpp/summary.json"
+  },
+  {
+    "family": "remarl",
+    "split": "test_humaneval",
+    "nfe": 16,
+    "score": 38.00813008130081,
+    "low": 36.58536585365854,
+    "high": 39.63414634146341,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/evals/remarl-32k/test_humaneval/summary.json"
+  },
+  {
+    "family": "remarl",
+    "split": "test_mbpp",
+    "nfe": 16,
+    "score": 40.13333333333333,
+    "low": 38.800000000000004,
+    "high": 41.199999999999996,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/evals/remarl-32k/test_mbpp/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_humaneval",
+    "nfe": 16,
+    "score": 11.585365853658537,
+    "low": 11.585365853658537,
+    "high": 11.585365853658537,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/confidence-bl256/16/test_humaneval/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_mbpp",
+    "nfe": 16,
+    "score": 6.6000000000000005,
+    "low": 6.6000000000000005,
+    "high": 6.6000000000000005,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/confidence-bl256/16/test_mbpp/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_humaneval",
+    "nfe": 256,
+    "score": 26.21951219512195,
+    "low": 26.21951219512195,
+    "high": 26.21951219512195,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/confidence-bl256/256/test_humaneval/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_mbpp",
+    "nfe": 256,
+    "score": 47.599999999999994,
+    "low": 47.599999999999994,
+    "high": 47.599999999999994,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/confidence-bl256/256/test_mbpp/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_humaneval",
+    "nfe": 16,
+    "score": 1.8292682926829267,
+    "low": 1.8292682926829267,
+    "high": 1.8292682926829267,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/confidence-bl32/16/test_humaneval/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_mbpp",
+    "nfe": 16,
+    "score": 4.0,
+    "low": 4.0,
+    "high": 4.0,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/confidence-bl32/16/test_mbpp/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_humaneval",
+    "nfe": 256,
+    "score": 61.58536585365854,
+    "low": 61.58536585365854,
+    "high": 61.58536585365854,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/confidence-bl32/256/test_humaneval/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_mbpp",
+    "nfe": 256,
+    "score": 55.60000000000001,
+    "low": 55.60000000000001,
+    "high": 55.60000000000001,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/confidence-bl32/256/test_mbpp/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_humaneval",
+    "nfe": 16,
+    "score": 14.02439024390244,
+    "low": 14.02439024390244,
+    "high": 14.02439024390244,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/p2-prime-greedy/16/test_humaneval/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_mbpp",
+    "nfe": 16,
+    "score": 9.2,
+    "low": 9.2,
+    "high": 9.2,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/p2-prime-greedy/16/test_mbpp/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_humaneval",
+    "nfe": 256,
+    "score": 33.53658536585366,
+    "low": 33.53658536585366,
+    "high": 33.53658536585366,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/p2-prime-greedy/256/test_humaneval/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_mbpp",
+    "nfe": 256,
+    "score": 45.6,
+    "low": 45.6,
+    "high": 45.6,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/p2-prime-greedy/256/test_mbpp/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_humaneval",
+    "nfe": 256,
+    "score": 33.94308943089431,
+    "low": 32.31707317073171,
+    "high": 34.756097560975604,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/p2-prime-t1/256/test_humaneval/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_mbpp",
+    "nfe": 256,
+    "score": 49.53333333333333,
+    "low": 46.800000000000004,
+    "high": 51.4,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code16/extended-evals/p2-prime-t1/256/test_mbpp/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_humaneval",
+    "nfe": 32,
+    "score": 26.21951219512195,
+    "low": 25.0,
+    "high": 27.439024390243905,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code32/evals/p2-prime/test_humaneval/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_mbpp",
+    "nfe": 32,
+    "score": 41.86666666666666,
+    "low": 41.0,
+    "high": 43.2,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code32/evals/p2-prime/test_mbpp/summary.json"
+  },
+  {
+    "family": "remarl",
+    "split": "test_humaneval",
+    "nfe": 32,
+    "score": 46.95121951219512,
+    "low": 45.73170731707317,
+    "high": 48.170731707317074,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code32/evals/remarl-32k/test_humaneval/summary.json"
+  },
+  {
+    "family": "remarl",
+    "split": "test_mbpp",
+    "nfe": 32,
+    "score": 51.866666666666674,
+    "low": 51.0,
+    "high": 52.6,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code32/evals/remarl-32k/test_mbpp/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_humaneval",
+    "nfe": 32,
+    "score": 21.341463414634145,
+    "low": 21.341463414634145,
+    "high": 21.341463414634145,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code32/extended-evals/confidence-bl256/32/test_humaneval/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_mbpp",
+    "nfe": 32,
+    "score": 22.8,
+    "low": 22.8,
+    "high": 22.8,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code32/extended-evals/confidence-bl256/32/test_mbpp/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_humaneval",
+    "nfe": 32,
+    "score": 6.707317073170732,
+    "low": 6.707317073170732,
+    "high": 6.707317073170732,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code32/extended-evals/confidence-bl32/32/test_humaneval/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_mbpp",
+    "nfe": 32,
+    "score": 16.8,
+    "low": 16.8,
+    "high": 16.8,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code32/extended-evals/confidence-bl32/32/test_mbpp/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_humaneval",
+    "nfe": 32,
+    "score": 18.902439024390244,
+    "low": 18.902439024390244,
+    "high": 18.902439024390244,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code32/extended-evals/p2-prime-greedy/32/test_humaneval/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_mbpp",
+    "nfe": 32,
+    "score": 23.400000000000002,
+    "low": 23.400000000000002,
+    "high": 23.400000000000002,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code32/extended-evals/p2-prime-greedy/32/test_mbpp/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_humaneval",
+    "nfe": 64,
+    "score": 30.691056910569102,
+    "low": 28.65853658536585,
+    "high": 31.70731707317073,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code64/evals/p2-prime/test_humaneval/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_mbpp",
+    "nfe": 64,
+    "score": 45.93333333333333,
+    "low": 43.6,
+    "high": 48.8,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code64/evals/p2-prime/test_mbpp/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_humaneval",
+    "nfe": 64,
+    "score": 28.65853658536585,
+    "low": 28.65853658536585,
+    "high": 28.65853658536585,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code64/extended-evals/confidence-bl256/64/test_humaneval/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_mbpp",
+    "nfe": 64,
+    "score": 44.4,
+    "low": 44.4,
+    "high": 44.4,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code64/extended-evals/confidence-bl256/64/test_mbpp/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_humaneval",
+    "nfe": 64,
+    "score": 25.609756097560975,
+    "low": 25.609756097560975,
+    "high": 25.609756097560975,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code64/extended-evals/confidence-bl32/64/test_humaneval/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_mbpp",
+    "nfe": 64,
+    "score": 31.2,
+    "low": 31.2,
+    "high": 31.2,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code64/extended-evals/confidence-bl32/64/test_mbpp/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_humaneval",
+    "nfe": 64,
+    "score": 28.04878048780488,
+    "low": 28.04878048780488,
+    "high": 28.04878048780488,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code64/extended-evals/p2-prime-greedy/64/test_humaneval/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_mbpp",
+    "nfe": 64,
+    "score": 39.800000000000004,
+    "low": 39.800000000000004,
+    "high": 39.800000000000004,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code64/extended-evals/p2-prime-greedy/64/test_mbpp/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_humaneval",
+    "nfe": 8,
+    "score": 10.16260162601626,
+    "low": 9.146341463414634,
+    "high": 11.585365853658537,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/evals/p2-prime/test_humaneval/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_mbpp",
+    "nfe": 8,
+    "score": 23.6,
+    "low": 22.8,
+    "high": 25.0,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/evals/p2-prime/test_mbpp/summary.json"
+  },
+  {
+    "family": "remarl",
+    "split": "test_humaneval",
+    "nfe": 8,
+    "score": 24.390243902439025,
+    "low": 23.78048780487805,
+    "high": 25.0,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/evals/remarl-32k/test_humaneval/summary.json"
+  },
+  {
+    "family": "remarl",
+    "split": "test_mbpp",
+    "nfe": 8,
+    "score": 29.26666666666667,
+    "low": 28.000000000000004,
+    "high": 30.0,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/evals/remarl-32k/test_mbpp/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_humaneval",
+    "nfe": 128,
+    "score": 28.65853658536585,
+    "low": 28.65853658536585,
+    "high": 28.65853658536585,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/confidence-bl256/128/test_humaneval/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_mbpp",
+    "nfe": 128,
+    "score": 45.800000000000004,
+    "low": 45.800000000000004,
+    "high": 45.800000000000004,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/confidence-bl256/128/test_mbpp/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_humaneval",
+    "nfe": 8,
+    "score": 9.146341463414634,
+    "low": 9.146341463414634,
+    "high": 9.146341463414634,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/confidence-bl256/8/test_humaneval/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_mbpp",
+    "nfe": 8,
+    "score": 1.4000000000000001,
+    "low": 1.4000000000000001,
+    "high": 1.4000000000000001,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/confidence-bl256/8/test_mbpp/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_humaneval",
+    "nfe": 128,
+    "score": 48.78048780487805,
+    "low": 48.78048780487805,
+    "high": 48.78048780487805,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/confidence-bl32/128/test_humaneval/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_mbpp",
+    "nfe": 128,
+    "score": 44.6,
+    "low": 44.6,
+    "high": 44.6,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/confidence-bl32/128/test_mbpp/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_humaneval",
+    "nfe": 8,
+    "score": 0.6097560975609756,
+    "low": 0.6097560975609756,
+    "high": 0.6097560975609756,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/confidence-bl32/8/test_humaneval/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_mbpp",
+    "nfe": 8,
+    "score": 0.6,
+    "low": 0.6,
+    "high": 0.6,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/confidence-bl32/8/test_mbpp/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_humaneval",
+    "nfe": 128,
+    "score": 29.268292682926827,
+    "low": 29.268292682926827,
+    "high": 29.268292682926827,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/p2-prime-greedy/128/test_humaneval/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_mbpp",
+    "nfe": 128,
+    "score": 45.4,
+    "low": 45.4,
+    "high": 45.4,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/p2-prime-greedy/128/test_mbpp/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_humaneval",
+    "nfe": 8,
+    "score": 7.317073170731707,
+    "low": 7.317073170731707,
+    "high": 7.317073170731707,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/p2-prime-greedy/8/test_humaneval/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_mbpp",
+    "nfe": 8,
+    "score": 0.6,
+    "low": 0.6,
+    "high": 0.6,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/p2-prime-greedy/8/test_mbpp/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_humaneval",
+    "nfe": 128,
+    "score": 31.70731707317073,
+    "low": 29.268292682926827,
+    "high": 34.146341463414636,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/p2-prime-t1/128/test_humaneval/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_mbpp",
+    "nfe": 128,
+    "score": 47.333333333333336,
+    "low": 45.6,
+    "high": 48.6,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-code8/extended-evals/p2-prime-t1/128/test_mbpp/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_gsm8k",
+    "nfe": 64,
+    "score": 57.417235279251955,
+    "low": 55.951478392721754,
+    "high": 58.75663381349507,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/evals/p2-prime/test_gsm8k/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_math",
+    "nfe": 64,
+    "score": 22.8,
+    "low": 21.2,
+    "high": 24.2,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/evals/p2-prime/test_math/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_gsm8k",
+    "nfe": 128,
+    "score": 33.586050037907505,
+    "low": 33.586050037907505,
+    "high": 33.586050037907505,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/128/test_gsm8k/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_math",
+    "nfe": 128,
+    "score": 17.2,
+    "low": 17.2,
+    "high": 17.2,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/128/test_math/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_gsm8k",
+    "nfe": 16,
+    "score": 8.567096285064443,
+    "low": 8.567096285064443,
+    "high": 8.567096285064443,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/16/test_gsm8k/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_math",
+    "nfe": 16,
+    "score": 3.8,
+    "low": 3.8,
+    "high": 3.8,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/16/test_math/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_gsm8k",
+    "nfe": 256,
+    "score": 35.78468536770281,
+    "low": 35.78468536770281,
+    "high": 35.78468536770281,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/256/test_gsm8k/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_math",
+    "nfe": 256,
+    "score": 21.2,
+    "low": 21.2,
+    "high": 21.2,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/256/test_math/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_gsm8k",
+    "nfe": 32,
+    "score": 32.297194844579224,
+    "low": 32.297194844579224,
+    "high": 32.297194844579224,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/32/test_gsm8k/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_math",
+    "nfe": 32,
+    "score": 15.0,
+    "low": 15.0,
+    "high": 15.0,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/32/test_math/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_gsm8k",
+    "nfe": 64,
+    "score": 42.98711144806672,
+    "low": 42.98711144806672,
+    "high": 42.98711144806672,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/64/test_gsm8k/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_math",
+    "nfe": 64,
+    "score": 21.0,
+    "low": 21.0,
+    "high": 21.0,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/64/test_math/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_gsm8k",
+    "nfe": 8,
+    "score": 1.592115238817286,
+    "low": 1.592115238817286,
+    "high": 1.592115238817286,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/8/test_gsm8k/summary.json"
+  },
+  {
+    "family": "confidence-bl256",
+    "split": "test_math",
+    "nfe": 8,
+    "score": 1.0,
+    "low": 1.0,
+    "high": 1.0,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl256/8/test_math/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_gsm8k",
+    "nfe": 128,
+    "score": 75.5117513267627,
+    "low": 75.5117513267627,
+    "high": 75.5117513267627,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/128/test_gsm8k/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_math",
+    "nfe": 128,
+    "score": 38.800000000000004,
+    "low": 38.800000000000004,
+    "high": 38.800000000000004,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/128/test_math/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_gsm8k",
+    "nfe": 16,
+    "score": 0.9097801364670205,
+    "low": 0.9097801364670205,
+    "high": 0.9097801364670205,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/16/test_gsm8k/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_math",
+    "nfe": 16,
+    "score": 1.2,
+    "low": 1.2,
+    "high": 1.2,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/16/test_math/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_gsm8k",
+    "nfe": 256,
+    "score": 81.57695223654284,
+    "low": 81.57695223654284,
+    "high": 81.57695223654284,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/256/test_gsm8k/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_math",
+    "nfe": 256,
+    "score": 43.6,
+    "low": 43.6,
+    "high": 43.6,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/256/test_math/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_gsm8k",
+    "nfe": 32,
+    "score": 13.722517058377559,
+    "low": 13.722517058377559,
+    "high": 13.722517058377559,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/32/test_gsm8k/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_math",
+    "nfe": 32,
+    "score": 9.2,
+    "low": 9.2,
+    "high": 9.2,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/32/test_math/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_gsm8k",
+    "nfe": 64,
+    "score": 54.965883244882484,
+    "low": 54.965883244882484,
+    "high": 54.965883244882484,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/64/test_gsm8k/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_math",
+    "nfe": 64,
+    "score": 27.0,
+    "low": 27.0,
+    "high": 27.0,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/64/test_math/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_gsm8k",
+    "nfe": 8,
+    "score": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/8/test_gsm8k/summary.json"
+  },
+  {
+    "family": "confidence-bl32",
+    "split": "test_math",
+    "nfe": 8,
+    "score": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/confidence-bl32/8/test_math/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_gsm8k",
+    "nfe": 128,
+    "score": 39.57543593631539,
+    "low": 39.57543593631539,
+    "high": 39.57543593631539,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/128/test_gsm8k/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_math",
+    "nfe": 128,
+    "score": 19.2,
+    "low": 19.2,
+    "high": 19.2,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/128/test_math/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_gsm8k",
+    "nfe": 16,
+    "score": 9.628506444275967,
+    "low": 9.628506444275967,
+    "high": 9.628506444275967,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/16/test_gsm8k/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_math",
+    "nfe": 16,
+    "score": 3.8,
+    "low": 3.8,
+    "high": 3.8,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/16/test_math/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_gsm8k",
+    "nfe": 256,
+    "score": 35.70887035633055,
+    "low": 35.70887035633055,
+    "high": 35.70887035633055,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/256/test_gsm8k/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_math",
+    "nfe": 256,
+    "score": 21.6,
+    "low": 21.6,
+    "high": 21.6,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/256/test_math/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_gsm8k",
+    "nfe": 32,
+    "score": 27.293404094010615,
+    "low": 27.293404094010615,
+    "high": 27.293404094010615,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/32/test_gsm8k/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_math",
+    "nfe": 32,
+    "score": 12.8,
+    "low": 12.8,
+    "high": 12.8,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/32/test_math/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_gsm8k",
+    "nfe": 64,
+    "score": 38.81728582259287,
+    "low": 38.81728582259287,
+    "high": 38.81728582259287,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/64/test_gsm8k/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_math",
+    "nfe": 64,
+    "score": 19.8,
+    "low": 19.8,
+    "high": 19.8,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/64/test_math/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_gsm8k",
+    "nfe": 8,
+    "score": 2.1986353297952994,
+    "low": 2.1986353297952994,
+    "high": 2.1986353297952994,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/8/test_gsm8k/summary.json"
+  },
+  {
+    "family": "p2-greedy",
+    "split": "test_math",
+    "nfe": 8,
+    "score": 0.6,
+    "low": 0.6,
+    "high": 0.6,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-greedy/8/test_math/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_gsm8k",
+    "nfe": 128,
+    "score": 60.72782410917361,
+    "low": 59.81804397270659,
+    "high": 62.1683093252464,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-t1/128/test_gsm8k/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_math",
+    "nfe": 128,
+    "score": 22.26666666666667,
+    "low": 21.4,
+    "high": 22.8,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-t1/128/test_math/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_gsm8k",
+    "nfe": 256,
+    "score": 60.57619408642911,
+    "low": 59.81804397270659,
+    "high": 61.10689916603488,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-t1/256/test_gsm8k/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_math",
+    "nfe": 256,
+    "score": 21.53333333333333,
+    "low": 21.0,
+    "high": 22.0,
+    "source": "historical-runs/capella-dream-joint-20261104/dream-math64/extended-evals/p2-prime-t1/256/test_math/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_gsm8k",
+    "nfe": 8,
+    "score": 20.29315137730604,
+    "low": 19.48445792266869,
+    "high": 21.00075815011372,
+    "source": "outputs/cluster_runs/2026-10-27-dream-nfe8/evals/p2-prime/test_gsm8k/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_math",
+    "nfe": 8,
+    "score": 8.733333333333333,
+    "low": 7.8,
+    "high": 10.0,
+    "source": "outputs/cluster_runs/2026-10-27-dream-nfe8/evals/p2-prime/test_math/summary.json"
+  },
+  {
+    "family": "remarl",
+    "split": "test_gsm8k",
+    "nfe": 8,
+    "score": 47.86454384634825,
+    "low": 44.655041698256255,
+    "high": 50.03790750568613,
+    "source": "outputs/cluster_runs/2026-10-27-dream-nfe8/evals/remarl-32k/test_gsm8k/summary.json"
+  },
+  {
+    "family": "remarl",
+    "split": "test_math",
+    "nfe": 8,
+    "score": 18.6,
+    "low": 16.8,
+    "high": 20.200000000000003,
+    "source": "outputs/cluster_runs/2026-10-27-dream-nfe8/evals/remarl-32k/test_math/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_gsm8k",
+    "nfe": 16,
+    "score": 38.51402577710387,
+    "low": 37.07354056103108,
+    "high": 39.49962092494314,
+    "source": "outputs/cluster_runs/2026-10-27-dream-nfe16/evals/p2-prime/test_gsm8k/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_math",
+    "nfe": 16,
+    "score": 16.0,
+    "low": 14.799999999999999,
+    "high": 16.6,
+    "source": "outputs/cluster_runs/2026-10-27-dream-nfe16/evals/p2-prime/test_math/summary.json"
+  },
+  {
+    "family": "remarl",
+    "split": "test_gsm8k",
+    "nfe": 16,
+    "score": 58.15011372251706,
+    "low": 57.08870356330553,
+    "high": 58.90826383623957,
+    "source": "outputs/cluster_runs/2026-10-27-dream-nfe16/evals/remarl-32k/test_gsm8k/summary.json"
+  },
+  {
+    "family": "remarl",
+    "split": "test_math",
+    "nfe": 16,
+    "score": 24.333333333333332,
+    "low": 24.0,
+    "high": 24.8,
+    "source": "outputs/cluster_runs/2026-10-27-dream-nfe16/evals/remarl-32k/test_math/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_gsm8k",
+    "nfe": 32,
+    "score": 50.72024260803639,
+    "low": 49.58301743745261,
+    "high": 51.85746777862017,
+    "source": "outputs/cluster_runs/2026-10-28-dream-nfe32/evals/p2-prime/test_gsm8k/summary.json"
+  },
+  {
+    "family": "p2-t1",
+    "split": "test_math",
+    "nfe": 32,
+    "score": 20.666666666666668,
+    "low": 19.2,
+    "high": 22.0,
+    "source": "outputs/cluster_runs/2026-10-28-dream-nfe32/evals/p2-prime/test_math/summary.json"
+  },
+  {
+    "family": "remarl",
+    "split": "test_gsm8k",
+    "nfe": 32,
+    "score": 65.47889815516805,
+    "low": 64.97346474601972,
+    "high": 65.73161485974222,
+    "source": "outputs/cluster_runs/2026-10-28-dream-nfe32/evals/remarl-32k/test_gsm8k/summary.json"
+  },
+  {
+    "family": "remarl",
+    "split": "test_math",
+    "nfe": 32,
+    "score": 27.400000000000002,
+    "low": 27.0,
+    "high": 27.6,
+    "source": "outputs/cluster_runs/2026-10-28-dream-nfe32/evals/remarl-32k/test_math/summary.json"
+  },
+  {
+    "family": "dapd_direct-bl256",
+    "split": "test_humaneval",
+    "nfe": 132.90243902439025,
+    "score": 25.609756097560975,
+    "low": 25.609756097560975,
+    "high": 25.609756097560975,
+    "source": "adaptive/dapd_direct/code/256/None/test_humaneval"
+  },
+  {
+    "family": "dapd_direct-bl256",
+    "split": "test_mbpp",
+    "nfe": 26.678,
+    "score": 51.6,
+    "low": 51.6,
+    "high": 51.6,
+    "source": "adaptive/dapd_direct/code/256/None/test_mbpp"
+  },
+  {
+    "family": "dapd_direct-bl32",
+    "split": "test_humaneval",
+    "nfe": 73.53048780487805,
+    "score": 57.31707317073171,
+    "low": 57.31707317073171,
+    "high": 57.31707317073171,
+    "source": "adaptive/dapd_direct/code/32/None/test_humaneval"
+  },
+  {
+    "family": "dapd_direct-bl32",
+    "split": "test_mbpp",
+    "nfe": 34.112,
+    "score": 55.4,
+    "low": 55.4,
+    "high": 55.4,
+    "source": "adaptive/dapd_direct/code/32/None/test_mbpp"
+  },
+  {
+    "family": "dapd_direct-bl256",
+    "split": "test_gsm8k",
+    "nfe": 48.00833965125095,
+    "score": 51.40257771038666,
+    "low": 51.40257771038666,
+    "high": 51.40257771038666,
+    "source": "adaptive/dapd_direct/math/256/None/test_gsm8k"
+  },
+  {
+    "family": "dapd_direct-bl256",
+    "split": "test_math",
+    "nfe": 53.666,
+    "score": 29.4,
+    "low": 29.4,
+    "high": 29.4,
+    "source": "adaptive/dapd_direct/math/256/None/test_math"
+  },
+  {
+    "family": "dapd_direct-bl32",
+    "split": "test_gsm8k",
+    "nfe": 93.46171341925701,
+    "score": 78.69598180439728,
+    "low": 78.69598180439728,
+    "high": 78.69598180439728,
+    "source": "adaptive/dapd_direct/math/32/None/test_gsm8k"
+  },
+  {
+    "family": "dapd_direct-bl32",
+    "split": "test_math",
+    "nfe": 108.314,
+    "score": 40.4,
+    "low": 40.4,
+    "high": 40.4,
+    "source": "adaptive/dapd_direct/math/32/None/test_math"
+  },
+  {
+    "family": "dapd_staged-bl256",
+    "split": "test_humaneval",
+    "nfe": 154.78658536585365,
+    "score": 27.4390243902439,
+    "low": 27.4390243902439,
+    "high": 27.4390243902439,
+    "source": "adaptive/dapd_staged/code/256/None/test_humaneval"
+  },
+  {
+    "family": "dapd_staged-bl256",
+    "split": "test_mbpp",
+    "nfe": 47.27,
+    "score": 51.2,
+    "low": 51.2,
+    "high": 51.2,
+    "source": "adaptive/dapd_staged/code/256/None/test_mbpp"
+  },
+  {
+    "family": "dapd_staged-bl32",
+    "split": "test_humaneval",
+    "nfe": 127.41463414634147,
+    "score": 54.8780487804878,
+    "low": 54.8780487804878,
+    "high": 54.8780487804878,
+    "source": "adaptive/dapd_staged/code/32/None/test_humaneval"
+  },
+  {
+    "family": "dapd_staged-bl32",
+    "split": "test_mbpp",
+    "nfe": 119.408,
+    "score": 56.2,
+    "low": 56.2,
+    "high": 56.2,
+    "source": "adaptive/dapd_staged/code/32/None/test_mbpp"
+  },
+  {
+    "family": "dapd_staged-bl256",
+    "split": "test_gsm8k",
+    "nfe": 56.77179681576952,
+    "score": 50.56861258529189,
+    "low": 50.56861258529189,
+    "high": 50.56861258529189,
+    "source": "adaptive/dapd_staged/math/256/None/test_gsm8k"
+  },
+  {
+    "family": "dapd_staged-bl256",
+    "split": "test_math",
+    "nfe": 62.47,
+    "score": 26.2,
+    "low": 26.2,
+    "high": 26.2,
+    "source": "adaptive/dapd_staged/math/256/None/test_math"
+  },
+  {
+    "family": "dapd_staged-bl32",
+    "split": "test_gsm8k",
+    "nfe": 135.34723275208492,
+    "score": 78.54435178165276,
+    "low": 78.54435178165276,
+    "high": 78.54435178165276,
+    "source": "adaptive/dapd_staged/math/32/None/test_gsm8k"
+  },
+  {
+    "family": "dapd_staged-bl32",
+    "split": "test_math",
+    "nfe": 145.652,
+    "score": 38.6,
+    "low": 38.6,
+    "high": 38.6,
+    "source": "adaptive/dapd_staged/math/32/None/test_math"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_humaneval",
+    "nfe": 256.0,
+    "score": 27.4390243902439,
+    "low": 27.4390243902439,
+    "high": 27.4390243902439,
+    "source": "adaptive/eb/code/256/0.0/test_humaneval"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_mbpp",
+    "nfe": 256.0,
+    "score": 48.6,
+    "low": 48.6,
+    "high": 48.6,
+    "source": "adaptive/eb/code/256/0.0/test_mbpp"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_humaneval",
+    "nfe": 118.90243902439025,
+    "score": 29.26829268292683,
+    "low": 29.26829268292683,
+    "high": 29.26829268292683,
+    "source": "adaptive/eb/code/256/0.5/test_humaneval"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_mbpp",
+    "nfe": 63.792,
+    "score": 48.2,
+    "low": 48.2,
+    "high": 48.2,
+    "source": "adaptive/eb/code/256/0.5/test_mbpp"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_humaneval",
+    "nfe": 17.963414634146343,
+    "score": 17.073170731707318,
+    "low": 17.073170731707318,
+    "high": 17.073170731707318,
+    "source": "adaptive/eb/code/256/10.0/test_humaneval"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_mbpp",
+    "nfe": 10.51,
+    "score": 25.0,
+    "low": 25.0,
+    "high": 25.0,
+    "source": "adaptive/eb/code/256/10.0/test_mbpp"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_humaneval",
+    "nfe": 28.01829268292683,
+    "score": 23.78048780487805,
+    "low": 23.78048780487805,
+    "high": 23.78048780487805,
+    "source": "adaptive/eb/code/256/5.0/test_humaneval"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_mbpp",
+    "nfe": 15.166,
+    "score": 37.6,
+    "low": 37.6,
+    "high": 37.6,
+    "source": "adaptive/eb/code/256/5.0/test_mbpp"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_humaneval",
+    "nfe": 6.9573170731707314,
+    "score": 6.097560975609756,
+    "low": 6.097560975609756,
+    "high": 6.097560975609756,
+    "source": "adaptive/eb/code/256/50.0/test_humaneval"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_mbpp",
+    "nfe": 4.818,
+    "score": 3.8,
+    "low": 3.8,
+    "high": 3.8,
+    "source": "adaptive/eb/code/256/50.0/test_mbpp"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_humaneval",
+    "nfe": 256.0,
+    "score": 62.19512195121951,
+    "low": 62.19512195121951,
+    "high": 62.19512195121951,
+    "source": "adaptive/eb/code/32/0.0/test_humaneval"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_mbpp",
+    "nfe": 256.0,
+    "score": 55.4,
+    "low": 55.4,
+    "high": 55.4,
+    "source": "adaptive/eb/code/32/0.0/test_mbpp"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_humaneval",
+    "nfe": 108.0,
+    "score": 60.36585365853659,
+    "low": 60.36585365853659,
+    "high": 60.36585365853659,
+    "source": "adaptive/eb/code/32/0.01/test_humaneval"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_mbpp",
+    "nfe": 50.974,
+    "score": 55.4,
+    "low": 55.4,
+    "high": 55.4,
+    "source": "adaptive/eb/code/32/0.01/test_mbpp"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_humaneval",
+    "nfe": 57.75,
+    "score": 54.8780487804878,
+    "low": 54.8780487804878,
+    "high": 54.8780487804878,
+    "source": "adaptive/eb/code/32/0.5/test_humaneval"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_mbpp",
+    "nfe": 28.15,
+    "score": 52.8,
+    "low": 52.8,
+    "high": 52.8,
+    "source": "adaptive/eb/code/32/0.5/test_mbpp"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_humaneval",
+    "nfe": 9.323170731707316,
+    "score": 1.829268292682927,
+    "low": 1.829268292682927,
+    "high": 1.829268292682927,
+    "source": "adaptive/eb/code/32/100.0/test_humaneval"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_mbpp",
+    "nfe": 8.984,
+    "score": 1.0,
+    "low": 1.0,
+    "high": 1.0,
+    "source": "adaptive/eb/code/32/100.0/test_mbpp"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_humaneval",
+    "nfe": 15.475609756097562,
+    "score": 3.658536585365854,
+    "low": 3.658536585365854,
+    "high": 3.658536585365854,
+    "source": "adaptive/eb/code/32/20.0/test_humaneval"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_mbpp",
+    "nfe": 12.736,
+    "score": 9.2,
+    "low": 9.2,
+    "high": 9.2,
+    "source": "adaptive/eb/code/32/20.0/test_mbpp"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_humaneval",
+    "nfe": 27.432926829268293,
+    "score": 28.048780487804876,
+    "low": 28.048780487804876,
+    "high": 28.048780487804876,
+    "source": "adaptive/eb/code/32/5.0/test_humaneval"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_mbpp",
+    "nfe": 16.85,
+    "score": 31.2,
+    "low": 31.2,
+    "high": 31.2,
+    "source": "adaptive/eb/code/32/5.0/test_mbpp"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_gsm8k",
+    "nfe": 256.0,
+    "score": 36.01213040181956,
+    "low": 36.01213040181956,
+    "high": 36.01213040181956,
+    "source": "adaptive/eb/math/256/0.0/test_gsm8k"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_math",
+    "nfe": 256.0,
+    "score": 20.4,
+    "low": 20.4,
+    "high": 20.4,
+    "source": "adaptive/eb/math/256/0.0/test_math"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_gsm8k",
+    "nfe": 123.60121304018196,
+    "score": 34.116755117513264,
+    "low": 34.116755117513264,
+    "high": 34.116755117513264,
+    "source": "adaptive/eb/math/256/0.5/test_gsm8k"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_math",
+    "nfe": 133.5,
+    "score": 19.4,
+    "low": 19.4,
+    "high": 19.4,
+    "source": "adaptive/eb/math/256/0.5/test_math"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_gsm8k",
+    "nfe": 13.065959059893858,
+    "score": 17.058377558756632,
+    "low": 17.058377558756632,
+    "high": 17.058377558756632,
+    "source": "adaptive/eb/math/256/20.0/test_gsm8k"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_math",
+    "nfe": 14.59,
+    "score": 9.0,
+    "low": 9.0,
+    "high": 9.0,
+    "source": "adaptive/eb/math/256/20.0/test_math"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_gsm8k",
+    "nfe": 32.84230477634571,
+    "score": 38.66565579984837,
+    "low": 38.66565579984837,
+    "high": 38.66565579984837,
+    "source": "adaptive/eb/math/256/5.0/test_gsm8k"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_math",
+    "nfe": 41.94,
+    "score": 20.2,
+    "low": 20.2,
+    "high": 20.2,
+    "source": "adaptive/eb/math/256/5.0/test_math"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_gsm8k",
+    "nfe": 7.970432145564822,
+    "score": 4.624715693707354,
+    "low": 4.624715693707354,
+    "high": 4.624715693707354,
+    "source": "adaptive/eb/math/256/50.0/test_gsm8k"
+  },
+  {
+    "family": "eb-bl256",
+    "split": "test_math",
+    "nfe": 8.484,
+    "score": 0.6,
+    "low": 0.6,
+    "high": 0.6,
+    "source": "adaptive/eb/math/256/50.0/test_math"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_gsm8k",
+    "nfe": 256.0,
+    "score": 80.74298711144807,
+    "low": 80.74298711144807,
+    "high": 80.74298711144807,
+    "source": "adaptive/eb/math/32/0.0/test_gsm8k"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_math",
+    "nfe": 256.0,
+    "score": 43.4,
+    "low": 43.4,
+    "high": 43.4,
+    "source": "adaptive/eb/math/32/0.0/test_math"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_gsm8k",
+    "nfe": 139.62699014404853,
+    "score": 80.13646702047005,
+    "low": 80.13646702047005,
+    "high": 80.13646702047005,
+    "source": "adaptive/eb/math/32/0.01/test_gsm8k"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_math",
+    "nfe": 164.04,
+    "score": 43.6,
+    "low": 43.6,
+    "high": 43.6,
+    "source": "adaptive/eb/math/32/0.01/test_math"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_gsm8k",
+    "nfe": 72.2289613343442,
+    "score": 80.59135708870356,
+    "low": 80.59135708870356,
+    "high": 80.59135708870356,
+    "source": "adaptive/eb/math/32/0.5/test_gsm8k"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_math",
+    "nfe": 84.574,
+    "score": 41.0,
+    "low": 41.0,
+    "high": 41.0,
+    "source": "adaptive/eb/math/32/0.5/test_math"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_gsm8k",
+    "nfe": 9.342683851402578,
+    "score": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "source": "adaptive/eb/math/32/100.0/test_gsm8k"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_math",
+    "nfe": 9.276,
+    "score": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "source": "adaptive/eb/math/32/100.0/test_math"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_gsm8k",
+    "nfe": 35.709628506444275,
+    "score": 61.78923426838514,
+    "low": 61.78923426838514,
+    "high": 61.78923426838514,
+    "source": "adaptive/eb/math/32/5.0/test_gsm8k"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_math",
+    "nfe": 41.328,
+    "score": 29.2,
+    "low": 29.2,
+    "high": 29.2,
+    "source": "adaptive/eb/math/32/5.0/test_math"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_gsm8k",
+    "nfe": 11.636846095526915,
+    "score": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "source": "adaptive/eb/math/32/50.0/test_gsm8k"
+  },
+  {
+    "family": "eb-bl32",
+    "split": "test_math",
+    "nfe": 11.37,
+    "score": 0.2,
+    "low": 0.2,
+    "high": 0.2,
+    "source": "adaptive/eb/math/32/50.0/test_math"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_humaneval",
+    "nfe": 7.341463414634147,
+    "score": 8.536585365853659,
+    "low": 8.536585365853659,
+    "high": 8.536585365853659,
+    "source": "adaptive/fastdllm/code/256/0.3/test_humaneval"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_mbpp",
+    "nfe": 5.12,
+    "score": 8.4,
+    "low": 8.4,
+    "high": 8.4,
+    "source": "adaptive/fastdllm/code/256/0.3/test_mbpp"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_humaneval",
+    "nfe": 9.231707317073171,
+    "score": 13.414634146341463,
+    "low": 13.414634146341463,
+    "high": 13.414634146341463,
+    "source": "adaptive/fastdllm/code/256/0.4/test_humaneval"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_mbpp",
+    "nfe": 6.776,
+    "score": 18.2,
+    "low": 18.2,
+    "high": 18.2,
+    "source": "adaptive/fastdllm/code/256/0.4/test_mbpp"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_humaneval",
+    "nfe": 41.33536585365854,
+    "score": 26.21951219512195,
+    "low": 26.21951219512195,
+    "high": 26.21951219512195,
+    "source": "adaptive/fastdllm/code/256/0.7/test_humaneval"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_mbpp",
+    "nfe": 27.988,
+    "score": 45.2,
+    "low": 45.2,
+    "high": 45.2,
+    "source": "adaptive/fastdllm/code/256/0.7/test_mbpp"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_humaneval",
+    "nfe": 107.9390243902439,
+    "score": 26.829268292682926,
+    "low": 26.829268292682926,
+    "high": 26.829268292682926,
+    "source": "adaptive/fastdllm/code/256/0.9/test_humaneval"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_mbpp",
+    "nfe": 57.614,
+    "score": 48.8,
+    "low": 48.8,
+    "high": 48.8,
+    "source": "adaptive/fastdllm/code/256/0.9/test_mbpp"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_humaneval",
+    "nfe": 256.0,
+    "score": 27.4390243902439,
+    "low": 27.4390243902439,
+    "high": 27.4390243902439,
+    "source": "adaptive/fastdllm/code/256/0.999/test_humaneval"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_mbpp",
+    "nfe": 256.0,
+    "score": 48.6,
+    "low": 48.6,
+    "high": 48.6,
+    "source": "adaptive/fastdllm/code/256/0.999/test_mbpp"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_humaneval",
+    "nfe": 8.0,
+    "score": 0.6097560975609756,
+    "low": 0.6097560975609756,
+    "high": 0.6097560975609756,
+    "source": "adaptive/fastdllm/code/32/0.0/test_humaneval"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_mbpp",
+    "nfe": 8.0,
+    "score": 0.8,
+    "low": 0.8,
+    "high": 0.8,
+    "source": "adaptive/fastdllm/code/32/0.0/test_mbpp"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_humaneval",
+    "nfe": 16.121951219512194,
+    "score": 5.487804878048781,
+    "low": 5.487804878048781,
+    "high": 5.487804878048781,
+    "source": "adaptive/fastdllm/code/32/0.2/test_humaneval"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_mbpp",
+    "nfe": 11.942,
+    "score": 3.8,
+    "low": 3.8,
+    "high": 3.8,
+    "source": "adaptive/fastdllm/code/32/0.2/test_mbpp"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_humaneval",
+    "nfe": 29.067073170731707,
+    "score": 21.341463414634145,
+    "low": 21.341463414634145,
+    "high": 21.341463414634145,
+    "source": "adaptive/fastdllm/code/32/0.4/test_humaneval"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_mbpp",
+    "nfe": 15.304,
+    "score": 20.0,
+    "low": 20.0,
+    "high": 20.0,
+    "source": "adaptive/fastdllm/code/32/0.4/test_mbpp"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_humaneval",
+    "nfe": 54.46341463414634,
+    "score": 51.829268292682926,
+    "low": 51.829268292682926,
+    "high": 51.829268292682926,
+    "source": "adaptive/fastdllm/code/32/0.7/test_humaneval"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_mbpp",
+    "nfe": 22.466,
+    "score": 50.2,
+    "low": 50.2,
+    "high": 50.2,
+    "source": "adaptive/fastdllm/code/32/0.7/test_mbpp"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_humaneval",
+    "nfe": 104.4451219512195,
+    "score": 61.58536585365854,
+    "low": 61.58536585365854,
+    "high": 61.58536585365854,
+    "source": "adaptive/fastdllm/code/32/0.99/test_humaneval"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_mbpp",
+    "nfe": 47.696,
+    "score": 55.6,
+    "low": 55.6,
+    "high": 55.6,
+    "source": "adaptive/fastdllm/code/32/0.99/test_mbpp"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_humaneval",
+    "nfe": 256.0,
+    "score": 61.58536585365854,
+    "low": 61.58536585365854,
+    "high": 61.58536585365854,
+    "source": "adaptive/fastdllm/code/32/0.999/test_humaneval"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_mbpp",
+    "nfe": 256.0,
+    "score": 55.6,
+    "low": 55.6,
+    "high": 55.6,
+    "source": "adaptive/fastdllm/code/32/0.999/test_mbpp"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_gsm8k",
+    "nfe": 6.913570887035633,
+    "score": 3.10841546626232,
+    "low": 3.10841546626232,
+    "high": 3.10841546626232,
+    "source": "adaptive/fastdllm/math/256/0.2/test_gsm8k"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_math",
+    "nfe": 7.9,
+    "score": 2.4,
+    "low": 2.4,
+    "high": 2.4,
+    "source": "adaptive/fastdllm/math/256/0.2/test_math"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_gsm8k",
+    "nfe": 19.034116755117513,
+    "score": 27.748294162244125,
+    "low": 27.748294162244125,
+    "high": 27.748294162244125,
+    "source": "adaptive/fastdllm/math/256/0.4/test_gsm8k"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_math",
+    "nfe": 20.57,
+    "score": 18.8,
+    "low": 18.8,
+    "high": 18.8,
+    "source": "adaptive/fastdllm/math/256/0.4/test_math"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_gsm8k",
+    "nfe": 71.7983320697498,
+    "score": 34.64746019711903,
+    "low": 34.64746019711903,
+    "high": 34.64746019711903,
+    "source": "adaptive/fastdllm/math/256/0.7/test_gsm8k"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_math",
+    "nfe": 64.426,
+    "score": 19.0,
+    "low": 19.0,
+    "high": 19.0,
+    "source": "adaptive/fastdllm/math/256/0.7/test_math"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_gsm8k",
+    "nfe": 117.95678544351782,
+    "score": 36.46702047005307,
+    "low": 36.46702047005307,
+    "high": 36.46702047005307,
+    "source": "adaptive/fastdllm/math/256/0.9/test_gsm8k"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_math",
+    "nfe": 134.724,
+    "score": 21.4,
+    "low": 21.4,
+    "high": 21.4,
+    "source": "adaptive/fastdllm/math/256/0.9/test_math"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_gsm8k",
+    "nfe": 256.0,
+    "score": 36.08794541319181,
+    "low": 36.08794541319181,
+    "high": 36.08794541319181,
+    "source": "adaptive/fastdllm/math/256/0.999/test_gsm8k"
+  },
+  {
+    "family": "fastdllm-bl256",
+    "split": "test_math",
+    "nfe": 256.0,
+    "score": 20.8,
+    "low": 20.8,
+    "high": 20.8,
+    "source": "adaptive/fastdllm/math/256/0.999/test_math"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_gsm8k",
+    "nfe": 8.0,
+    "score": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "source": "adaptive/fastdllm/math/32/0.0/test_gsm8k"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_math",
+    "nfe": 8.0,
+    "score": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "source": "adaptive/fastdllm/math/32/0.0/test_math"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_gsm8k",
+    "nfe": 19.540561031084156,
+    "score": 3.335860500379075,
+    "low": 3.335860500379075,
+    "high": 3.335860500379075,
+    "source": "adaptive/fastdllm/math/32/0.2/test_gsm8k"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_math",
+    "nfe": 25.53,
+    "score": 2.6,
+    "low": 2.6,
+    "high": 2.6,
+    "source": "adaptive/fastdllm/math/32/0.2/test_math"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_gsm8k",
+    "nfe": 37.42608036391206,
+    "score": 44.730856709628505,
+    "low": 44.730856709628505,
+    "high": 44.730856709628505,
+    "source": "adaptive/fastdllm/math/32/0.4/test_gsm8k"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_math",
+    "nfe": 45.054,
+    "score": 21.8,
+    "low": 21.8,
+    "high": 21.8,
+    "source": "adaptive/fastdllm/math/32/0.4/test_math"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_gsm8k",
+    "nfe": 62.83093252463988,
+    "score": 78.46853677028052,
+    "low": 78.46853677028052,
+    "high": 78.46853677028052,
+    "source": "adaptive/fastdllm/math/32/0.7/test_gsm8k"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_math",
+    "nfe": 74.89,
+    "score": 39.6,
+    "low": 39.6,
+    "high": 39.6,
+    "source": "adaptive/fastdllm/math/32/0.7/test_math"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_gsm8k",
+    "nfe": 117.23199393479909,
+    "score": 81.12206216830933,
+    "low": 81.12206216830933,
+    "high": 81.12206216830933,
+    "source": "adaptive/fastdllm/math/32/0.97/test_gsm8k"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_math",
+    "nfe": 134.866,
+    "score": 42.6,
+    "low": 42.6,
+    "high": 42.6,
+    "source": "adaptive/fastdllm/math/32/0.97/test_math"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_gsm8k",
+    "nfe": 256.0,
+    "score": 80.89461713419257,
+    "low": 80.89461713419257,
+    "high": 80.89461713419257,
+    "source": "adaptive/fastdllm/math/32/0.999/test_gsm8k"
+  },
+  {
+    "family": "fastdllm-bl32",
+    "split": "test_math",
+    "nfe": 256.0,
+    "score": 42.8,
+    "low": 42.8,
+    "high": 42.8,
+    "source": "adaptive/fastdllm/math/32/0.999/test_math"
+  },
+  {
+    "family": "klass-bl256",
+    "split": "test_humaneval",
+    "nfe": 52.3719512195122,
+    "score": 21.951219512195124,
+    "low": 21.951219512195124,
+    "high": 21.951219512195124,
+    "source": "adaptive/klass/code/256/0.5/test_humaneval"
+  },
+  {
+    "family": "klass-bl256",
+    "split": "test_mbpp",
+    "nfe": 35.156,
+    "score": 40.6,
+    "low": 40.6,
+    "high": 40.6,
+    "source": "adaptive/klass/code/256/0.5/test_mbpp"
+  },
+  {
+    "family": "klass-bl256",
+    "split": "test_humaneval",
+    "nfe": 92.21341463414635,
+    "score": 28.658536585365855,
+    "low": 28.658536585365855,
+    "high": 28.658536585365855,
+    "source": "adaptive/klass/code/256/0.7/test_humaneval"
+  },
+  {
+    "family": "klass-bl256",
+    "split": "test_mbpp",
+    "nfe": 53.706,
+    "score": 46.8,
+    "low": 46.8,
+    "high": 46.8,
+    "source": "adaptive/klass/code/256/0.7/test_mbpp"
+  },
+  {
+    "family": "klass-bl256",
+    "split": "test_humaneval",
+    "nfe": 256.0,
+    "score": 27.4390243902439,
+    "low": 27.4390243902439,
+    "high": 27.4390243902439,
+    "source": "adaptive/klass/code/256/1.0/test_humaneval"
+  },
+  {
+    "family": "klass-bl256",
+    "split": "test_mbpp",
+    "nfe": 256.0,
+    "score": 48.4,
+    "low": 48.4,
+    "high": 48.4,
+    "source": "adaptive/klass/code/256/1.0/test_mbpp"
+  },
+  {
+    "family": "klass-bl32",
+    "split": "test_humaneval",
+    "nfe": 99.45731707317073,
+    "score": 58.53658536585366,
+    "low": 58.53658536585366,
+    "high": 58.53658536585366,
+    "source": "adaptive/klass/code/32/0.5/test_humaneval"
+  },
+  {
+    "family": "klass-bl32",
+    "split": "test_mbpp",
+    "nfe": 54.516,
+    "score": 49.8,
+    "low": 49.8,
+    "high": 49.8,
+    "source": "adaptive/klass/code/32/0.5/test_mbpp"
+  },
+  {
+    "family": "klass-bl32",
+    "split": "test_humaneval",
+    "nfe": 256.0,
+    "score": 61.58536585365854,
+    "low": 61.58536585365854,
+    "high": 61.58536585365854,
+    "source": "adaptive/klass/code/32/1.0/test_humaneval"
+  },
+  {
+    "family": "klass-bl32",
+    "split": "test_mbpp",
+    "nfe": 256.0,
+    "score": 55.6,
+    "low": 55.6,
+    "high": 55.6,
+    "source": "adaptive/klass/code/32/1.0/test_mbpp"
+  },
+  {
+    "family": "klass-bl256",
+    "split": "test_gsm8k",
+    "nfe": 115.68309325246399,
+    "score": 40.030326004548904,
+    "low": 40.030326004548904,
+    "high": 40.030326004548904,
+    "source": "adaptive/klass/math/256/0.5/test_gsm8k"
+  },
+  {
+    "family": "klass-bl256",
+    "split": "test_math",
+    "nfe": 133.85,
+    "score": 21.4,
+    "low": 21.4,
+    "high": 21.4,
+    "source": "adaptive/klass/math/256/0.5/test_math"
+  },
+  {
+    "family": "klass-bl256",
+    "split": "test_gsm8k",
+    "nfe": 256.0,
+    "score": 36.08794541319181,
+    "low": 36.08794541319181,
+    "high": 36.08794541319181,
+    "source": "adaptive/klass/math/256/1.0/test_gsm8k"
+  },
+  {
+    "family": "klass-bl256",
+    "split": "test_math",
+    "nfe": 256.0,
+    "score": 20.8,
+    "low": 20.8,
+    "high": 20.8,
+    "source": "adaptive/klass/math/256/1.0/test_math"
+  },
+  {
+    "family": "klass-bl32",
+    "split": "test_gsm8k",
+    "nfe": 131.9992418498863,
+    "score": 77.710386656558,
+    "low": 77.710386656558,
+    "high": 77.710386656558,
+    "source": "adaptive/klass/math/32/0.5/test_gsm8k"
+  },
+  {
+    "family": "klass-bl32",
+    "split": "test_math",
+    "nfe": 147.652,
+    "score": 39.8,
+    "low": 39.8,
+    "high": 39.8,
+    "source": "adaptive/klass/math/32/0.5/test_math"
+  },
+  {
+    "family": "klass-bl32",
+    "split": "test_gsm8k",
+    "nfe": 256.0,
+    "score": 80.89461713419257,
+    "low": 80.89461713419257,
+    "high": 80.89461713419257,
+    "source": "adaptive/klass/math/32/1.0/test_gsm8k"
+  },
+  {
+    "family": "klass-bl32",
+    "split": "test_math",
+    "nfe": 256.0,
+    "score": 42.8,
+    "low": 42.8,
+    "high": 42.8,
+    "source": "adaptive/klass/math/32/1.0/test_math"
+  }
+]

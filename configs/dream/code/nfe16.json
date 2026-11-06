@@ -1,0 +1,26 @@
+{
+  "initialization": "fresh",
+  "training_questions": 9148,
+  "accepted_groups_per_batch": 16,
+  "groups_per_minibatch": 16,
+  "passes": 4,
+  "target_accepted_groups": 32768,
+  "lr_schedule": "constant",
+  "learning_rate": 0.0001,
+  "nfe": 16,
+  "domain": "code",
+  "seed": 7,
+  "group_size": 8,
+  "answer_length": 256,
+  "cohort": "code16",
+  "save_every_groups": 4096,
+  "backend": "torch",
+  "backbone": {
+    "kind": "dream",
+    "hidden_size": 3584,
+    "mask_id": 151666,
+    "config_sha256": "11afc7fe7a1881e73dcd70cca6868aaaf8eb89ad45ea5fc6426c3fb82dec9340",
+    "model_id": "Dream-org/Dream-v0-Instruct-7B",
+    "revision": "05334cb9faaf763692dcf9d8737c642be2b2a6ae"
+  }
+}

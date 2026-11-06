@@ -1,0 +1,8 @@
+{
+  "backbone": "dream",
+  "mode": "fastdllm",
+  "domain": "math",
+  "block": 256,
+  "parameter": 0.9,
+  "backend": "torch"
+}

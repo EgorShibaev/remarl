@@ -49,7 +49,9 @@
       "dapd/dream_core.py": "5bff451dd562afec9dfba873dfdfb0af7098db838589723bc3eff6a718bdda06",
       "dapd/dream_generation.py": "7579c22a48e75cfc4afe984c9642189d43eabc90eb3259598499610ed44113c5",
       "README.md": "ceb5204660c79acdbe9cab055d4c86a6fb1fc47378f18a425e03112b3ff50875",
-      "LICENSE": "fe4c13b2d69032839cf1e151ad55af467170abacde340591bd82017f372af515"
+      "LICENSE": "fe4c13b2d69032839cf1e151ad55af467170abacde340591bd82017f372af515",
+      "baselines/KLASS/src/model/dream_eb_wrapper.py": "10e0a904386579bd3dd552a01cb3c90387d37164b0b5d07bfb5cdf799addfd95",
+      "baselines/KLASS/src/model/dream_klass.py": "f69f1374188354e787d1b1f49ca6e5d25a8e15ae95dfac9e2b259e5ce9e3d6ae"
     }
   },
   "KLASS": {

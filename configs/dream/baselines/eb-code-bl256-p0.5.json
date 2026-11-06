@@ -1,0 +1,8 @@
+{
+  "backbone": "dream",
+  "mode": "eb",
+  "domain": "code",
+  "block": 256,
+  "parameter": 0.5,
+  "backend": "torch"
+}

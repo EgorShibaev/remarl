@@ -1,0 +1,7 @@
+{
+  "backbone": "dream",
+  "mode": "low_confidence",
+  "block": 256,
+  "steps": 128,
+  "backend": "torch"
+}

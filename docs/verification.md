@@ -1,5 +1,13 @@
 # Release verification
 
+Checks added on 6 November 2026:
+
+- The public Dream archive downloads without a Google account or cookies. Its archive hash, six checkpoint hashes, and six policy-state hashes match the manifest; all six policies load strictly.
+- Dream fixtures check the native one-position shift of logits and hidden states, mask IDs, model/data identity checks, and policy dimensions.
+- Confidence decoding matches the pinned APPLe Dream loop at NFE8/16/32 for both full and blockwise decoding. Fast-dLLM, EB-Sampler, and KLASS fixtures check completion, block boundaries, and exact model-call counts. Dream KLASS and EB sources match the historical experiment files.
+- The transformer checkpoint loads strictly with 583,187 parameters. Tests cover zero initialization, within-answer attention, separation between answers, gradients, and rollout/replay likelihood agreement.
+- The complete CPU suite passes: 100 tests, including the fetched upstream-reference tests. Full GPU benchmarks have not been rerun after packaging.
+
 Checks added on 2 November 2026:
 
 - All 12 data-size recipes cover seeds 7, 17, and 27 and agree with the recorded training costs.
