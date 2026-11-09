@@ -32,5 +32,10 @@ def save_checkpoint(path, state):
 
 
 def append_json(path, value):
-    with Path(path).open("a") as stream:
+    path = Path(path)
+    # Some Lustre mounts reject O_CREAT | O_APPEND for a new striped file.
+    # Create it separately before opening it in append mode.
+    if not path.exists():
+        path.touch()
+    with path.open("a") as stream:
         stream.write(json.dumps(value, allow_nan=False) + "\n")
