@@ -1,0 +1,187 @@
+{
+  "head_sha256": "e12bac422a7ae13abd11def6924cf11e6a3b7dd1ae3b792f03f5c3d6354d99cd",
+  "budgets": {
+    "4": {
+      "gsm8k": {
+        "guided": {
+          "nfe": 4,
+          "loops": 1,
+          "draft_calls": 2,
+          "refinement_calls": 2,
+          "count": 1319,
+          "correct": 51,
+          "accuracy": 0.03866565579984837
+        },
+        "archived_confidence_pct": 4.4
+      },
+      "math500": {
+        "guided": {
+          "nfe": 4,
+          "loops": 1,
+          "draft_calls": 2,
+          "refinement_calls": 2,
+          "count": 500,
+          "correct": 33,
+          "accuracy": 0.066
+        },
+        "archived_confidence_pct": 6.4
+      }
+    },
+    "8": {
+      "gsm8k": {
+        "guided": {
+          "nfe": 8,
+          "loops": 1,
+          "draft_calls": 6,
+          "refinement_calls": 2,
+          "count": 1319,
+          "correct": 91,
+          "accuracy": 0.06899166034874905
+        },
+        "archived_confidence_pct": 12.74
+      },
+      "math500": {
+        "guided": {
+          "nfe": 8,
+          "loops": 1,
+          "draft_calls": 6,
+          "refinement_calls": 2,
+          "count": 500,
+          "correct": 40,
+          "accuracy": 0.08
+        },
+        "archived_confidence_pct": 8.4
+      }
+    },
+    "16": {
+      "gsm8k": {
+        "guided": {
+          "nfe": 16,
+          "loops": 1,
+          "draft_calls": 14,
+          "refinement_calls": 2,
+          "count": 1319,
+          "correct": 423,
+          "accuracy": 0.3206974981046247
+        },
+        "archived_confidence_pct": 37.38
+      },
+      "math500": {
+        "guided": {
+          "nfe": 16,
+          "loops": 1,
+          "draft_calls": 14,
+          "refinement_calls": 2,
+          "count": 500,
+          "correct": 82,
+          "accuracy": 0.164
+        },
+        "archived_confidence_pct": 16.8
+      }
+    },
+    "32": {
+      "gsm8k": {
+        "guided": {
+          "nfe": 32,
+          "loops": 4,
+          "draft_calls": 24,
+          "refinement_calls": 8,
+          "count": 1319,
+          "correct": 575,
+          "accuracy": 0.4359363153904473
+        },
+        "archived_confidence_pct": 43.82
+      },
+      "math500": {
+        "guided": {
+          "nfe": 32,
+          "loops": 4,
+          "draft_calls": 24,
+          "refinement_calls": 8,
+          "count": 500,
+          "correct": 96,
+          "accuracy": 0.192
+        },
+        "archived_confidence_pct": 18.8
+      }
+    },
+    "64": {
+      "gsm8k": {
+        "guided": {
+          "nfe": 64,
+          "loops": 8,
+          "draft_calls": 48,
+          "refinement_calls": 16,
+          "count": 1319,
+          "correct": 576,
+          "accuracy": 0.43669446550416985
+        },
+        "archived_confidence_pct": 37.68
+      },
+      "math500": {
+        "guided": {
+          "nfe": 64,
+          "loops": 8,
+          "draft_calls": 48,
+          "refinement_calls": 16,
+          "count": 500,
+          "correct": 96,
+          "accuracy": 0.192
+        },
+        "archived_confidence_pct": 19.2
+      }
+    },
+    "128": {
+      "gsm8k": {
+        "guided": {
+          "nfe": 128,
+          "loops": 16,
+          "draft_calls": 96,
+          "refinement_calls": 32,
+          "count": 1319,
+          "correct": 399,
+          "accuracy": 0.3025018953752843
+        },
+        "archived_confidence_pct": 31.61
+      },
+      "math500": {
+        "guided": {
+          "nfe": 128,
+          "loops": 16,
+          "draft_calls": 96,
+          "refinement_calls": 32,
+          "count": 500,
+          "correct": 96,
+          "accuracy": 0.192
+        },
+        "archived_confidence_pct": 19.2
+      }
+    },
+    "256": {
+      "gsm8k": {
+        "guided": {
+          "nfe": 256,
+          "loops": 32,
+          "draft_calls": 192,
+          "refinement_calls": 64,
+          "count": 1319,
+          "correct": 435,
+          "accuracy": 0.3297952994692949
+        },
+        "archived_confidence_pct": 33.74
+      },
+      "math500": {
+        "guided": {
+          "nfe": 256,
+          "loops": 32,
+          "draft_calls": 192,
+          "refinement_calls": 64,
+          "count": 500,
+          "correct": 91,
+          "accuracy": 0.182
+        },
+        "archived_confidence_pct": 18.4
+      }
+    }
+  }
+}

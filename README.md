@@ -41,6 +41,8 @@ All released policies were trained for 32k accepted groups. File and policy hash
 
 ## Reproduce an experiment
 
+The [G-Star reproduction](examples/gstar/README.md) includes the fitted error predictor and the full GSM8K and MATH500 evaluation from Appendix A.
+
 Prepare the math data:
 
 ```bash
