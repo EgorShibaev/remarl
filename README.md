@@ -4,7 +4,7 @@ Code for **ReMaRL: Learning to Unmask and Remask in Frozen Diffusion Language Mo
 
 ReMaRL learns which answer positions to reveal, retain, or remask while keeping the diffusion model frozen. A small MLP reads token confidence, mask state, position, and hidden features. GRPO trains the policy using final-answer correctness rewards.
 
-[Public checkpoints](https://drive.google.com/drive/u/0/folders/1UFagh30vsvA-3jK-3sAf_iREaiQ3mxki) · [Training](docs/training.md) · [Evaluation](docs/evaluation.md) · [Inference](docs/inference.md)
+[Paper](https://arxiv.org/abs/2611.22576) · [PDF](https://arxiv.org/pdf/2611.22576) · [Public checkpoints](https://drive.google.com/drive/u/0/folders/1UFagh30vsvA-3jK-3sAf_iREaiQ3mxki) · [Training](docs/training.md) · [Evaluation](docs/evaluation.md) · [Inference](docs/inference.md)
 
 ## Install
 
@@ -70,6 +70,12 @@ The trainer initializes the policy directly; training does not require a release
 
 The [ablation recipes](docs/training.md#ablations) include random initialization without the confidence residual and the transformer scorer. [Architecture results](results/ablations/architecture.json) retain the measured checkpoints and training histories; [initialization results](results/ablations/random-initialization.json) contain the completed initialization ablation.
 
+## Calibrated P2-prime comparison
+
+The completed [position-temperature 0.25 evaluation](results/p2-prime-temperature-025/README.md) covers GSM8K and MATH500 at 4–256 calls and HumanEval and MBPP at 8–256 calls. It includes 26 benchmark–budget points, all 78 per-seed summaries, and verification hashes. The temperature was selected separately for math and code on training questions at eight calls, then reused across budgets.
+
+[Reproduction commands](docs/evaluation.md#calibrated-p2-prime-budget-sweep) run the full grid with the existing evaluator. The results are also included in `results/benchmark-observations.csv` and `results/data-receipt.json`.
+
 ## Repository
 
 ```text
@@ -101,3 +107,17 @@ python -m pytest -q
 Checks cover the original checkpoint outputs, saved dataset rows and prompts, rollout/replay agreement, deterministic training resume, and decoder traces against pinned upstream code. Full GPU training and benchmark evaluation have not been rerun after this reorganization. See [verification details](docs/verification.md).
 
 Third-party code, data, and model weights retain their original terms; see [attribution](THIRD_PARTY.md).
+
+## Citation
+
+```bibtex
+@misc{shibaev2026remarl,
+  title = {{ReMaRL}: Learning to Unmask and Remask in Frozen Diffusion Language Models},
+  author = {Egor Shibaev and Danila Biktimirov and Ivan Klimov and Artem Makoian and Viacheslav Meshchaninov and Dmitry Vetrov},
+  year = {2026},
+  eprint = {2611.22576},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  url = {https://arxiv.org/abs/2611.22576}
+}
+```

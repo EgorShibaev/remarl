@@ -23,7 +23,7 @@ remarl evaluate --p2-prime --nfe 8 --model assets/llada \
 
 P2-prime scores unmasked positions using their retained token's probability. Original P2 uses the fresh proposal's probability and has a separate baseline configuration.
 
-`--temperature` controls position selection for both trained ReMaRL policies and P2-prime. It defaults to 1; 0 selects positions greedily. For P2-prime, 0.25 is the calibrated math NFE8 temperature. `--retention-bonus VALUE` applies only to P2-prime and adds a fixed bonus to unmasked positions. Choose control settings on training questions before evaluating the test sets. These options leave token proposals greedy.
+`--temperature` controls position selection for both trained ReMaRL policies and P2-prime. It defaults to 1; 0 selects positions greedily. For P2-prime, training-question calibration at NFE8 selects 0.25 separately for math and code; the comparison below reuses it at every budget. `--retention-bonus VALUE` applies only to P2-prime and adds a fixed bonus to unmasked positions. Choose control settings on training questions before evaluating the test sets. These options leave token proposals greedy.
 
 To reproduce the trained NFE8 policy's temperature sweep with fixed weights:
 
@@ -43,6 +43,31 @@ Positive temperatures use three inference seeds; the deterministic setting uses 
 Each benchmark directory stores generated token IDs and scored answers in `answers-seed*.jsonl`, a summary per seed, and an aggregate `summary.json`. Accuracy is stored as a fraction and as `accuracy_percent`. Repeating the command resumes an incomplete evaluation. A different checkpoint, dataset, budget, position temperature, retention bonus, seed list, or backend requires a different output directory.
 
 Dream uses the same evaluation command with its own model, tokenizer, prepared data, and `--backend torch`; see [Dream evaluation](dream.md#evaluate).
+
+## Calibrated P2-prime budget sweep
+
+The completed LLaDA sweep holds the position temperature at 0.25 and varies the number of model calls. Calibration uses 256 training questions at eight calls: 128 from GSM8K and 128 from MATH for math, and 256 from KodCode for code. It does not select a new temperature at each test budget.
+
+After preparing both domains as described in [training](training.md), run:
+
+```bash
+set -e
+for nfe in 4 8 16 32 64 128 256; do
+  remarl evaluate --p2-prime --nfe "$nfe" --temperature 0.25 \
+    --seeds 101,202,303 --model assets/llada --data assets/data/math \
+    --output "runs/p2-prime-temperature-025/math-nfe${nfe}"
+done
+
+for nfe in 8 16 32 64 128 256; do
+  remarl evaluate --p2-prime --nfe "$nfe" --temperature 0.25 \
+    --seeds 101,202,303 --model assets/llada --data assets/data/code16 \
+    --output "runs/p2-prime-temperature-025/code-nfe${nfe}"
+done
+```
+
+Each command evaluates both full benchmarks for its domain with 256-token answers and greedy token proposals. No policy checkpoint or training is required. Existing complete answers are reused when the same command resumes.
+
+[Recorded results](../results/p2-prime-temperature-025/README.md) contain all 26 means and 78 per-seed summaries. The original evaluation reused matching NFE8/16 results and the GSM8K NFE32 trajectory evaluations; their source and answer hashes are retained. The commands above generate the same evaluation grid with the release interface. They were checked against its argument parser; the full GPU sweep has not been rerun through this interface.
 
 ## Baselines
 

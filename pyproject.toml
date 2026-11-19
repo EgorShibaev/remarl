@@ -20,6 +20,7 @@ remarl = "remarl.cli:main"
 
 [project.urls]
 Repository = "https://github.com/EgorShibaev/remarl"
+Paper = "https://arxiv.org/abs/2611.22576"
 
 [tool.setuptools.packages.find]
 where = ["src"]

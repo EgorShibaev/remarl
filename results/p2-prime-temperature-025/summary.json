@@ -1,0 +1,184 @@
+[
+  {
+    "benchmark": "gsm8k",
+    "nfe": 4,
+    "mean_percent": 27.29340409401061,
+    "min_percent": 26.535253980288097,
+    "max_percent": 27.824109173616375
+  },
+  {
+    "benchmark": "math500",
+    "nfe": 4,
+    "mean_percent": 13.733333333333334,
+    "min_percent": 11.799999999999999,
+    "max_percent": 15.4
+  },
+  {
+    "benchmark": "gsm8k",
+    "nfe": 8,
+    "mean_percent": 42.304776345716455,
+    "min_percent": 41.54662623199393,
+    "max_percent": 43.290371493555725
+  },
+  {
+    "benchmark": "math500",
+    "nfe": 8,
+    "mean_percent": 17.866666666666667,
+    "min_percent": 16.6,
+    "max_percent": 18.6
+  },
+  {
+    "benchmark": "gsm8k",
+    "nfe": 16,
+    "mean_percent": 56.254738438210765,
+    "min_percent": 55.49658832448825,
+    "max_percent": 56.93707354056103
+  },
+  {
+    "benchmark": "math500",
+    "nfe": 16,
+    "mean_percent": 20.933333333333334,
+    "min_percent": 19.400000000000002,
+    "max_percent": 22.8
+  },
+  {
+    "benchmark": "gsm8k",
+    "nfe": 32,
+    "mean_percent": 63.785696234521104,
+    "min_percent": 63.07808946171342,
+    "max_percent": 64.74601971190296
+  },
+  {
+    "benchmark": "math500",
+    "nfe": 32,
+    "mean_percent": 22.6,
+    "min_percent": 22.2,
+    "max_percent": 23.200000000000003
+  },
+  {
+    "benchmark": "gsm8k",
+    "nfe": 64,
+    "mean_percent": 66.86884003032601,
+    "min_percent": 66.33813495072025,
+    "max_percent": 67.55117513267626
+  },
+  {
+    "benchmark": "math500",
+    "nfe": 64,
+    "mean_percent": 24.666666666666668,
+    "min_percent": 23.599999999999998,
+    "max_percent": 25.8
+  },
+  {
+    "benchmark": "gsm8k",
+    "nfe": 128,
+    "mean_percent": 69.11801870103614,
+    "min_percent": 68.46095526914328,
+    "max_percent": 70.28051554207732
+  },
+  {
+    "benchmark": "math500",
+    "nfe": 128,
+    "mean_percent": 26.26666666666667,
+    "min_percent": 25.6,
+    "max_percent": 27.6
+  },
+  {
+    "benchmark": "gsm8k",
+    "nfe": 256,
+    "mean_percent": 69.42127874652515,
+    "min_percent": 68.23351023502654,
+    "max_percent": 70.05307050796058
+  },
+  {
+    "benchmark": "math500",
+    "nfe": 256,
+    "mean_percent": 26.06666666666667,
+    "min_percent": 25.8,
+    "max_percent": 26.200000000000003
+  },
+  {
+    "benchmark": "humaneval",
+    "nfe": 8,
+    "mean_percent": 14.227642276422765,
+    "min_percent": 12.804878048780488,
+    "max_percent": 17.073170731707318
+  },
+  {
+    "benchmark": "mbpp",
+    "nfe": 8,
+    "mean_percent": 21.46666666666667,
+    "min_percent": 19.8,
+    "max_percent": 22.6
+  },
+  {
+    "benchmark": "humaneval",
+    "nfe": 16,
+    "mean_percent": 22.5609756097561,
+    "min_percent": 21.341463414634145,
+    "max_percent": 23.78048780487805
+  },
+  {
+    "benchmark": "mbpp",
+    "nfe": 16,
+    "mean_percent": 29.333333333333332,
+    "min_percent": 28.000000000000004,
+    "max_percent": 30.599999999999998
+  },
+  {
+    "benchmark": "humaneval",
+    "nfe": 32,
+    "mean_percent": 24.1869918699187,
+    "min_percent": 21.951219512195124,
+    "max_percent": 27.439024390243905
+  },
+  {
+    "benchmark": "mbpp",
+    "nfe": 32,
+    "mean_percent": 33.66666666666667,
+    "min_percent": 32.800000000000004,
+    "max_percent": 34.2
+  },
+  {
+    "benchmark": "humaneval",
+    "nfe": 64,
+    "mean_percent": 23.170731707317074,
+    "min_percent": 19.51219512195122,
+    "max_percent": 25.0
+  },
+  {
+    "benchmark": "mbpp",
+    "nfe": 64,
+    "mean_percent": 33.733333333333334,
+    "min_percent": 33.6,
+    "max_percent": 33.800000000000004
+  },
+  {
+    "benchmark": "humaneval",
+    "nfe": 128,
+    "mean_percent": 25.203252032520325,
+    "min_percent": 25.0,
+    "max_percent": 25.609756097560975
+  },
+  {
+    "benchmark": "mbpp",
+    "nfe": 128,
+    "mean_percent": 37.0,
+    "min_percent": 35.6,
+    "max_percent": 38.0
+  },
+  {
+    "benchmark": "humaneval",
+    "nfe": 256,
+    "mean_percent": 22.96747967479675,
+    "min_percent": 20.121951219512198,
+    "max_percent": 24.390243902439025
+  },
+  {
+    "benchmark": "mbpp",
+    "nfe": 256,
+    "mean_percent": 35.733333333333334,
+    "min_percent": 35.4,
+    "max_percent": 36.4
+  }
+]

@@ -363,7 +363,9 @@
     "outputs/cluster_runs/2026-10-25-extra-baselines/code/results/dapd-bl64-dapd_direct-test_humaneval-s101/summary.json": "1d913e65857e46791cd79ab0a712a5de00378b47de4b36314b9895d72869b0bb",
     "outputs/cluster_runs/2026-10-25-extra-baselines/code/results/dapd-bl64-dapd_direct-test_mbpp-s101/summary.json": "4c56d4fcaf20e0639a80dc2b1550cab67bbc48df6e0805caa45296c2fa46249f",
     "outputs/cluster_runs/2026-10-25-extra-baselines/code/results/dapd-bl64-dapd_staged-test_humaneval-s101/summary.json": "3de9380d81283009ed1fe9447e0301135f50aad957bbf31998c9963d20e3f74e",
-    "outputs/cluster_runs/2026-10-25-extra-baselines/code/results/dapd-bl64-dapd_staged-test_mbpp-s101/summary.json": "bed07dcaba7fc0b5697da5c1b263f0d24f78d663ad4f84c1823811dff0294bbc"
+    "outputs/cluster_runs/2026-10-25-extra-baselines/code/results/dapd-bl64-dapd_staged-test_mbpp-s101/summary.json": "bed07dcaba7fc0b5697da5c1b263f0d24f78d663ad4f84c1823811dff0294bbc",
+    "results/p2-prime-temperature-025/seed-results.json": "e4e49809df44fa9ffffa4a50ba113a19d3aa7f611c35908761d757d06691a821",
+    "results/p2-prime-temperature-025/summary.json": "8f3f099dd9a2846a4ad6ff9106258777873d54e4213f0107c4f360a9e2a2060d"
   },
   "tables": {
     "gsm8k": {
@@ -426,6 +428,48 @@
             {
               "nfe": 256.0,
               "score": 82.48673237300986,
+              "source": "C"
+            }
+          ],
+          "pending": false
+        },
+        {
+          "label": "P2$'$ ($\\tau=0.25$)",
+          "blocks": "$1\\times256$",
+          "observations": [
+            {
+              "nfe": 4.0,
+              "score": 27.29340409401061,
+              "source": "C"
+            },
+            {
+              "nfe": 8.0,
+              "score": 42.304776345716455,
+              "source": "C"
+            },
+            {
+              "nfe": 16.0,
+              "score": 56.254738438210765,
+              "source": "C"
+            },
+            {
+              "nfe": 32.0,
+              "score": 63.785696234521104,
+              "source": "C"
+            },
+            {
+              "nfe": 64.0,
+              "score": 66.86884003032601,
+              "source": "C"
+            },
+            {
+              "nfe": 128.0,
+              "score": 69.11801870103614,
+              "source": "C"
+            },
+            {
+              "nfe": 256.0,
+              "score": 69.42127874652515,
               "source": "C"
             }
           ],
@@ -3575,6 +3619,48 @@
           "pending": false
         },
         {
+          "label": "P2$'$ ($\\tau=0.25$)",
+          "blocks": "$1\\times256$",
+          "observations": [
+            {
+              "nfe": 4.0,
+              "score": 13.733333333333334,
+              "source": "C"
+            },
+            {
+              "nfe": 8.0,
+              "score": 17.866666666666667,
+              "source": "C"
+            },
+            {
+              "nfe": 16.0,
+              "score": 20.933333333333334,
+              "source": "C"
+            },
+            {
+              "nfe": 32.0,
+              "score": 22.6,
+              "source": "C"
+            },
+            {
+              "nfe": 64.0,
+              "score": 24.666666666666668,
+              "source": "C"
+            },
+            {
+              "nfe": 128.0,
+              "score": 26.26666666666667,
+              "source": "C"
+            },
+            {
+              "nfe": 256.0,
+              "score": 26.06666666666667,
+              "source": "C"
+            }
+          ],
+          "pending": false
+        },
+        {
           "label": "P2$'$ ($\\tau=1$)",
           "blocks": "$1\\times256$",
           "observations": [
@@ -6633,6 +6719,43 @@
           "pending": false
         },
         {
+          "label": "P2$'$ ($\\tau=0.25$)",
+          "blocks": "$1\\times256$",
+          "observations": [
+            {
+              "nfe": 8.0,
+              "score": 14.227642276422765,
+              "source": "C"
+            },
+            {
+              "nfe": 16.0,
+              "score": 22.5609756097561,
+              "source": "C"
+            },
+            {
+              "nfe": 32.0,
+              "score": 24.1869918699187,
+              "source": "C"
+            },
+            {
+              "nfe": 64.0,
+              "score": 23.170731707317074,
+              "source": "C"
+            },
+            {
+              "nfe": 128.0,
+              "score": 25.203252032520325,
+              "source": "C"
+            },
+            {
+              "nfe": 256.0,
+              "score": 22.96747967479675,
+              "source": "C"
+            }
+          ],
+          "pending": false
+        },
+        {
           "label": "P2$'$ ($\\tau=1$)",
           "blocks": "$1\\times256$",
           "observations": [
@@ -8269,6 +8392,43 @@
             {
               "nfe": 256.0,
               "score": 43.53333333333333,
+              "source": "C"
+            }
+          ],
+          "pending": false
+        },
+        {
+          "label": "P2$'$ ($\\tau=0.25$)",
+          "blocks": "$1\\times256$",
+          "observations": [
+            {
+              "nfe": 8.0,
+              "score": 21.46666666666667,
+              "source": "C"
+            },
+            {
+              "nfe": 16.0,
+              "score": 29.333333333333332,
+              "source": "C"
+            },
+            {
+              "nfe": 32.0,
+              "score": 33.66666666666667,
+              "source": "C"
+            },
+            {
+              "nfe": 64.0,
+              "score": 33.733333333333334,
+              "source": "C"
+            },
+            {
+              "nfe": 128.0,
+              "score": 37.0,
+              "source": "C"
+            },
+            {
+              "nfe": 256.0,
+              "score": 35.733333333333334,
               "source": "C"
             }
           ],

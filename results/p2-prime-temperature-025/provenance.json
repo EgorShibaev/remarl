@@ -1,0 +1,31 @@
+{
+  "experiment": "LLaDA P2-prime fixed position temperature 0.25 across inference budgets",
+  "completed_date": "2026-11-16",
+  "status_source": "outputs/cluster_runs/2026-11-16-trajectories-temperature-c143/status.json",
+  "status_sha256": "1894b7ca6424f327c39f64d142db74321f3f5c3ba29d673c66e8b6396228dab6",
+  "manuscript_scores_sha256": "bb9269780d308d883d9643e40f683006730d06aa6dd36eb49ff6e2aa2b3fe10d",
+  "seed_evaluations": 78,
+  "benchmark_budget_pairs": 26,
+  "original_checks": [
+    "complete benchmark coverage",
+    "binary rewards and correct-answer totals",
+    "answer-file SHA256 hashes"
+  ],
+  "calibration": {
+    "nfe": 8,
+    "math": {
+      "gsm8k_questions": 128,
+      "math_questions": 128,
+      "selected_temperature": 0.25
+    },
+    "code": {
+      "kodcode_questions": 256,
+      "selected_temperature": 0.25
+    }
+  },
+  "files": {
+    "seed-results.json": "e4e49809df44fa9ffffa4a50ba113a19d3aa7f611c35908761d757d06691a821",
+    "summary.json": "8f3f099dd9a2846a4ad6ff9106258777873d54e4213f0107c4f360a9e2a2060d",
+    "summary.csv": "36c136f4abb813a8d2c9b3cb230c67b6132aa94a0f7f4211fae4bd33647873e3"
+  }
+}
